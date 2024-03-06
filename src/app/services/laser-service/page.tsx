@@ -1,0 +1,158 @@
+"use client";
+import Input, { DoubleInput } from "@/components/Input";
+import CustomButton from "@/components/button";
+import Footer, { FooterIcon, SocialIcons } from "@/components/footer";
+import Box from "@/components/layout/box";
+import BoxSection, { BoxSplitSection } from "@/components/layout/boxSection";
+import FlowerSection from "@/components/layout/flowerSection";
+import Section, { SectionDescription, SectionTitle } from "@/components/layout/section";
+import React from "react";
+import ImageBox from "@/components/imageBox";
+import {StyledIcons} from "@/components/styledIcons";
+import {BiLogoFacebook} from "react-icons/bi";
+import {AiOutlineInstagram} from "react-icons/ai";
+import {FaPhoneAlt} from "react-icons/fa";
+import {GrMail} from "react-icons/gr";
+import CollapseSection from "@/components/layout/collapseSection";
+import styled from "styled-components";
+
+const Img3 = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 85%;
+  object-fit: contain;
+  object-position: bottom;
+`;
+const Img4 = styled.img`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 85%;
+  object-fit: contain;
+  object-position: bottom;
+`;
+const page = () => {
+    return (
+        <>
+            <BoxSection hero>
+                <BoxSplitSection>
+                    <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
+                        <div className="title">LASER</div>
+                        <div className="mini-title">HAIR REMOVAL</div>
+                        <div className="line"></div>
+                        <div className="desc">Shaving, plucking, tweezing, waxing are all temporary fixes for unwanted hair. Over time
+                            these temporary fixes increase painful ingrown hairs, further irritating the skin, NOT budget
+                            friendly and costly. </div>
+                        <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+                    </Box>
+                </BoxSplitSection>
+                    <Img3 src="../images/cropped-images/Homepage Group 3 Cropped.png" alt="image" />
+            </BoxSection>
+
+            <FlowerSection>
+                With our FDA approved Cynosure Apogee Elite + machine. the laser hair removal treatments performed by our certified laser technicians quickly and easily reduce unwanted hair on your body by targeting deep within the skin, providing longer-lasting and permanent results.
+            </FlowerSection>
+            <Section last>
+                <SectionTitle>FAQs</SectionTitle>
+                <div className="flex flex-col justify-center items-center gap-[1rem] mb-[4rem]">
+                   <CollapseSection title="How to prepare for your laser treatment">
+                       <div className="desc">1. Shave the night before. Say goodbye to waxing and plucking <br/>
+                           <br/>
+                           2. Don&apos;t apply makeup, oils, lotions, antibiotics to the desired treatment area(s) <br/><br/>
+                           3. Smile :)
+                       </div>
+                       <CustomButton href="#consultation" type="tertiary">BOOK A FREE CONSULTATION</CustomButton>
+
+                   </CollapseSection>
+                    <CollapseSection title="How many treatments will I need?">
+                        <div className="desc">Usually 6-8 treatments which are spaced 4-6 weeks apart. Varies due to the thickness of the hair and the location of the desired area.</div>
+
+                    </CollapseSection>
+                    <CollapseSection title="How painful are the treatments?">
+                        <div className="desc"> Good news is different pain tolerances for different people! Some clients are unbothered,some feel more of a sting. Our state-of-art laser machine, Cynosure Apogee Elite + utilizes cooling and chilling technology for the duration of the treatment
+                        </div>
+
+                    </CollapseSection>
+                    <CollapseSection title="Am I a true candidate for laser?">
+                        <div className="desc">Our laser machine treats all skin types and majority of hair pigment follicles. The laser machine is unable to detect hair follicles that have blonde, red, grey or white pigments. Come on in for a free consultation to determine if you are eligible </div>
+
+                    </CollapseSection>
+                    <CollapseSection title="What is the after care post treatment?">
+                        <div className="desc">Our team at Optimum Laser recommends to avoid direct sun exposure, intense physical activity, and harsh moisturizers at least for one day post treatment. Apply sunscreen to treatment areas. Redness or red bumps is normal after treatment that subsides within 2-3 hours of treatment you may apply hydrocortisone. </div>
+                    </CollapseSection>
+                </div>
+                <CustomButton href="#consultation" type="secondary" center>
+                    BOOK A FREE CONSULTATION
+                </CustomButton>
+            </Section>
+            <FlowerSection>
+                The team at <span
+                style={{
+                    fontFamily: "Broadway",
+                    fontSize: "1.3rem",
+                  }}
+            >
+                  Optimum Laser
+                </span>{" "} strives and takes pride in providing maximum results to our clients. Finding the right medical spa is difficult, and it is our promise at <span
+                style={{
+                    fontFamily: "Broadway",
+                    fontSize: "1.3rem",
+                }}
+            >
+                  Optimum Laser
+                </span> {" "} to provide safe, consistent, effective, and affordable treatments for ALL skin types! Common areas include underarms, bikini line, legs and face, as the possibilities are endless! The average time for treatments ranges from 5 minutes to one hour. Wave goodbye to ingrown hairs, razors and waxing and say hello to smooth flawless skin!            </FlowerSection>
+            <Section last id='consultation'>
+                <SectionTitle>
+                    SECURE YOUR FREE CONSULTATION NOW
+                </SectionTitle>
+                <SectionDescription>
+                    Please provide your contact information to help us schedule your free consultation
+                </SectionDescription>
+                <form action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`} method="POST" >
+                <div
+                    className="w-full mb-[4rem] flex flex-col gap-[1rem] justify-center items-center"
+                >
+                    <DoubleInput>
+                        <Input name='name' placeholder="Your Name" half />
+                        <Input name='email' placeholder="Email" half />
+                    </DoubleInput>
+                    <DoubleInput>
+                        <Input name='phone number' placeholder="Phone Number" half />
+                        <Input name='date and time' placeholder="Date and Time" half />
+                    </DoubleInput>
+                    <Input name='service' placeholder="Service" />
+                </div>
+                <CustomButton submit type="secondary" className="md:min-w-[500px] mb-[2rem]" center >
+                    BOOK NOW
+                </CustomButton>
+                </form>
+                <div className="flex justify-center items-center gap-4 mt-4">
+                    <a href="https://www.facebook.com/OptimumLaserInc/" target="_blank">
+                        <StyledIcons iconColor="black" borderColor="black">
+                            <BiLogoFacebook size={30}/>
+                        </StyledIcons>
+                    </a>
+                    <a href="https://www.instagram.com/optimum_laser/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+                        <StyledIcons iconColor="black" borderColor="black">
+                            <AiOutlineInstagram size={30}/>
+                        </StyledIcons>
+                    </a>
+                    <a href="tel:516-495-4908">
+                        <StyledIcons iconColor="black" borderColor="black">
+                            <FaPhoneAlt size={20}/>
+                        </StyledIcons>
+                    </a>
+                    <a href="mailto:optimumlaserhairremoval@gmail.com">
+                        <StyledIcons iconColor="black" borderColor="black">
+                            <GrMail size={25}/>
+                        </StyledIcons>
+                    </a>
+                </div>
+            </Section>
+            <Footer />
+        </>
+    );
+};
+
+export default page;

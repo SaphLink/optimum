@@ -1,0 +1,75 @@
+.myLink {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #35281e;
+    letter-spacing: 0.3rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: 0.3s;
+    position:relative;
+    display:block;
+    padding: 5px;
+}
+
+.myPhone{
+    font-family: "Russo One", sans-serif;
+    font-size: 1.1rem;
+    color: #35281e;
+    letter-spacing: 0.3rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: 0.3s;
+    position:relative;
+    display:block;
+    padding: 5px;
+}
+
+.myLink:hover, .myPhone:hover {
+    transform: translateY(-3px);
+}
+
+.myLink::after , .myPhone::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #35281e;
+    transition: 0.3s;
+}
+
+.myLink:hover::after, .myPhone:hover::after {
+    /* color: white; */
+    width: 100%;
+    left: 0;
+    bottom: -3px;
+    text-decoration: none;
+}
+
+.buttonStyles {
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #fefeff;
+    letter-spacing: 0.2rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0.7rem 2.5rem;
+    background-color: #35281e;
+    transition:0.3s;
+}
+
+.buttonStyles:hover{
+    background-color: #5a473d;
+    color: #fefeff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1024px) {
+    .navbarItems {
+        flex-wrap: nowrap;
+    }
+}

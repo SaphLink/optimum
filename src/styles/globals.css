@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Broadway';
+  src: url('/fonts/Broadway-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url("/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Russo One';
+    src: url("/fonts/RussoOne-Regular.ttf") format("truetype");
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  @media screen and (max-width: 640px) {
+    html{
+      font-size: 12px;
+    }
+  }
+
+  body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+    font-family: 'Russo One', sans-serif;
+  }
