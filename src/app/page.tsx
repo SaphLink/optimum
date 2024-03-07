@@ -12,6 +12,7 @@ import BoxSection, { BoxSplitSection } from "@/components/layout/boxSection";
 import Section, { SectionDescription } from "@/components/layout/section";
 import { Brawler } from "next/dist/compiled/@next/font/dist/google";
 import Popup from "./popup";
+import adImage from "public/images/Optimum Summer Sale o2.png";
 
 //#region
 const FlowerContainer = styled.div`
@@ -341,106 +342,54 @@ export default function Home() {
         <BoxSplitSection>
           <Box>
             <div>
-              <Title>NEW YEAR, NEW ME</Title>
+              <Title>Hurry, Summer is Almost Here!</Title>
               <Title>UP TO 50% OFF SAVINGS!</Title>
-              <Description>JANUARY 1, 2024 - MARCH 3, 2024</Description>
+              <Description>ENDS APRIL 21st!</Description>
             </div>
             <br />
-            <Description>WOMEN'S SPECIALS</Description>
-
             <Line />
 
             <ServiceButton className="!mb-[1rem]">
-              <span className="price">$200 EACH</span>
+              <span className="price">$30 EACH</span>
               <span className="service-name text-left flex-1">
                 <div>
-                  <div>&bull;</div> LIP TREATMENT
+                  <div>&bull;</div> Lip or Chin Laser Hair Removal
                 </div>
-                <div>
-                  <div>&bull;</div> CHIN TREATMENT
-                </div>
-                <div>
-                  <div>&bull;</div> UNDERARMS TREATMENT
-                </div>
-                <div>
-                  <div>&bull;</div> BIKINI TREATMENT
-                </div>
-                <br />
+
                 <div className="text-[0.9rem]">
-                  (With a purchase package of 6)
+                  (When you buy a package of 6)
                 </div>
               </span>
-              <span className="old-price">$260 EACH</span>
+              <span className="old-price">$45 EACH</span>
             </ServiceButton>
 
-            <ServiceButton>
-              <span className="price">$332.50 EACH</span>
+            <ServiceButton className="!mb-[1rem]">
+              <span className="price">$45 EACH</span>
               <span className="service-name text-left flex-1">
                 <div>
-                  <div>&bull;</div> WOMAN'S FULL LEGS
+                  <div>&bull;</div> Underarm Laser Hair Removal
                 </div>
-                <div>
-                  <div>&bull;</div> WOMAN'S FULL BRAZILIAN
-                </div>
-                <br />
                 <div className="text-[0.9rem]">
-                  (With a purchase package of 6, and get one free treatment)
+                  (When you buy a package of 6)
                 </div>
               </span>
-              <span className="old-price">$380 EACH</span>
+              <span className="old-price">$75 EACH</span>
             </ServiceButton>
-            <br />
-            <Description>MEN'S SPECIALS</Description>
-
-            <Line />
-
-            <ServiceButton className="!mb-[1rem]">
-              <span className="price">$150 EACH</span>
-              <span className="service-name  flex-1">
+            <ServiceButton className="">
+              <span className="price">$45 EACH</span>
+              <span className="service-name text-left flex-1">
                 <div>
-                  <div>&bull;</div> MEN'S FULL BACK
+                  <div>&bull;</div> Bikini Laser Hair Removal
                 </div>
-                <br />
                 <div className="text-[0.9rem]">
-                  (With a purchase package of 6)
+                  (When you buy a package of 6)
                 </div>
               </span>
-              <span className="old-price">$176 EACH</span>
+              <span className="old-price">$75 EACH</span>
             </ServiceButton>
-            {/* <ServiceDescription>$217 per session instead of $300</ServiceDescription> */}
-            <ServiceButton className="!mb-[1rem]">
-              <span className="price">$200 EACH</span>
-              <span className="service-name  flex-1">
-                <div>
-                  <div>&bull;</div> MEN'S FULL BACK + SHOULDERS
-                </div>
-                <br />
-                <div className="text-[0.9rem]">
-                  (With a purchase package of 6)
-                </div>
-              </span>
-              <span className="old-price">$246 EACH</span>
-            </ServiceButton>
-            {/* <ServiceDescription>$98 per session instead of $130</ServiceDescription> */}
-            <ServiceButton className="!mb-[1rem]">
-              <span className="price">$250 EACH</span>
-              <span className="service-name  flex-1">
-                <div>
-                  <div>&bull;</div> MEN'S FULL NECK
-                </div>
-                <div>
-                  <div>&bull;</div> MEN'S FULL CHEST + ABS
-                </div>
-                <br />
-                <div className="text-[0.9rem]">
-                  (With a purchase package of 6)
-                </div>
-              </span>
-              <span className="old-price">$320 EACH</span>
-            </ServiceButton>
-            {/* <ServiceDescription>$165 per session instead of $185</ServiceDescription> */}
           </Box>
         </BoxSplitSection>
+
         <CustomCircle
           labels={[
             {
