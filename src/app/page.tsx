@@ -1,18 +1,18 @@
 "use client";
-import styled from "styled-components";
-import CustomCircle from "@/components/customCircle";
-import CustomButton from "@/components/button";
-import { SectionTitle } from "@/components/layout/section";
 import ReviewCard from "@/components/ReviewCard";
 import Slider from "@/components/Slider";
-import ImageBox from "@/components/imageBox";
+import CustomButton from "@/components/button";
+import CustomCircle from "@/components/customCircle";
 import Footer from "@/components/footer";
+import ImageBox from "@/components/imageBox";
 import Box from "@/components/layout/box";
 import BoxSection, { BoxSplitSection } from "@/components/layout/boxSection";
-import Section, { SectionDescription } from "@/components/layout/section";
-import { Brawler } from "next/dist/compiled/@next/font/dist/google";
+import Section, {
+  SectionDescription,
+  SectionTitle,
+} from "@/components/layout/section";
+import styled from "styled-components";
 import Popup from "./popup";
-import adImage from "public/images/Optimum Summer Sale o2.png";
 
 //#region
 
