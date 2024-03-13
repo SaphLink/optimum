@@ -15,29 +15,6 @@ import Popup from "./popup";
 import adImage from "public/images/Optimum Summer Sale o2.png";
 
 //#region
-const FlowerContainer = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  @media only screen and (max-width: 768px) {
-    right: 10px;
-    top: 20px;
-  }
-`;
-
-const Flower = styled.img`
-  position: absolute;
-  @media only screen and (max-width: 768px) {
-    height: 55%;
-    width: 55%;
-    top: 0;
-    right: 0;
-    bottom: 0;
-  }
-`;
 
 const Logo = styled.img`
   object-fit: contain;
@@ -97,7 +74,6 @@ const Title = styled.h2`
   justify-content: center;
   padding-top: 0.7rem;
   font-family: "Russo One", sans-serif;
-  margin: 0;
 `;
 
 const Description = styled.p`
@@ -342,7 +318,7 @@ export default function Home() {
         <BoxSplitSection>
           <Box>
             <div>
-              <Title>Hurry, Summer is Almost Here!</Title>
+              <Title className="mb-6">Hurry, Summer is Almost Here!</Title>
               <Title>UP TO 50% OFF SAVINGS!</Title>
               <Description>ENDS APRIL 21st!</Description>
             </div>
