@@ -1,11 +1,11 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
 const StyledBox = styled.div`
-z-index:1;
+  z-index: 1;
   background-color: #35281e;
   border-radius: 10px;
-  padding: 5rem 3rem;
+  padding: 3rem 3rem;
   max-width: 650px;
   justify-content: center;
   gap: 1rem;
@@ -16,21 +16,21 @@ z-index:1;
   }
 
   .hero & {
-    padding-top : 6rem !important;
+    padding-top: 6rem !important;
   }
 
-  & .title{
+  & .title {
     font-size: 5rem;
     color: white;
     letter-spacing: 0.1rem;
   }
 
-  & .title2{
+  & .title2 {
     font-size: 4rem;
     color: white;
     letter-spacing: 0.1rem;
   }
-  & .mini-title{
+  & .mini-title {
     font-size: 1.5rem;
     color: white;
     letter-spacing: 0.5rem;
@@ -38,24 +38,24 @@ z-index:1;
     font-family: Raleway, sans-serif;
   }
 
-  & .line{
+  & .line {
     width: 100%;
     height: 2px;
     background-color: white;
     margin: 1rem 0;
   }
 
-  & .custom-button{
-    margin-top:1rem;
+  & .custom-button {
+    margin-top: 1rem;
   }
 
-  & .desc{
+  & .desc {
     font-size: 1.2rem;
     font-weight: 200;
     font-family: Raleway, sans-serif;
     color: #fefffe;
     padding-top: 0.5rem;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
     @media only screen and (max-width: 768px) {
       padding: 1rem;
       text-align: center;
@@ -63,13 +63,12 @@ z-index:1;
   }
 `;
 
-
-const Box = (props:any) => {
+const Box = (props: any) => {
   return (
-    <StyledBox {...props} className={'box '+ props.className }>
-        {props.children}
+    <StyledBox {...props} className={"box " + props.className}>
+      {props.children}
     </StyledBox>
-  )
-}
+  );
+};
 
-export default Box
+export default Box;

@@ -346,47 +346,55 @@ export default function Home() {
               <Title>UP TO 50% OFF SAVINGS!</Title>
               <Description>ENDS APRIL 21st!</Description>
             </div>
-            <br />
+
             <Line />
+            <div className="flex flex-col gap-y-4">
+              <div className="flex flex-col items-center w-full p-1 border-2 bg-color[#fefffe] mb-1 text-[#35281e] bg-white rounded-2xl">
+                <div className="flex gap-x-4 text-2xl">
+                  <span className="price ">$30 EACH</span>
 
-            <ServiceButton className="!mb-[1rem]">
-              <span className="price">$30 EACH</span>
-              <span className="service-name text-left flex-1">
-                <div>
-                  <div>&bull;</div> Lip or Chin Laser Hair Removal
+                  <span className="old-price font-1.2rem text-red-500 line-through">
+                    $45 EACH
+                  </span>
                 </div>
+                <div className=" text-xl">Lip or Chin Laser Hair Removal</div>
 
                 <div className="text-[0.9rem]">
                   (When you buy a package of 6)
                 </div>
-              </span>
-              <span className="old-price">$45 EACH</span>
-            </ServiceButton>
+                {/* </span> */}
+              </div>
+              <div className="flex flex-col items-center w-full p-1 border-2 bg-color[#fefffe] mb-1 text-[#35281e] bg-white rounded-2xl">
+                <div className="flex gap-x-4 text-2xl">
+                  <span className="price ">$45 EACH</span>
 
-            <ServiceButton className="!mb-[1rem]">
-              <span className="price">$45 EACH</span>
-              <span className="service-name text-left flex-1">
-                <div>
-                  <div>&bull;</div> Underarm Laser Hair Removal
+                  <span className="old-price font-1.2rem text-red-500 line-through">
+                    $75 EACH
+                  </span>
                 </div>
+                <div className=" text-xl">Underarm Laser Hair Removal</div>
+
                 <div className="text-[0.9rem]">
                   (When you buy a package of 6)
                 </div>
-              </span>
-              <span className="old-price">$75 EACH</span>
-            </ServiceButton>
-            <ServiceButton className="">
-              <span className="price">$45 EACH</span>
-              <span className="service-name text-left flex-1">
-                <div>
-                  <div>&bull;</div> Bikini Laser Hair Removal
+                {/* </span> */}
+              </div>
+              <div className="flex flex-col items-center w-full p-1 border-2 bg-color[#fefffe] mb-1 text-[#35281e] bg-white rounded-2xl">
+                <div className="flex gap-x-4 text-2xl">
+                  <span className="price ">$45 EACH</span>
+
+                  <span className="old-price font-1.2rem text-red-500 line-through">
+                    $75 EACH
+                  </span>
                 </div>
+                <div className=" text-xl">Bikini Laser Hair Removal</div>
+
                 <div className="text-[0.9rem]">
                   (When you buy a package of 6)
                 </div>
-              </span>
-              <span className="old-price">$75 EACH</span>
-            </ServiceButton>
+                {/* </span> */}
+              </div>
+            </div>
           </Box>
         </BoxSplitSection>
 
