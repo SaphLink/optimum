@@ -26,7 +26,7 @@ const Popup = () => {
               } flex items-center justify-center`}
             >
               <div
-                className={`relative rounded-[2rem] bg-white border-[3px] border-[#35281e] md:min-w-[500px] max-w-[calc(100vw-32px)] duration-300 ${
+                className={`relative rounded-[2rem] bg-white border-[3px] border-[#35281e] md:min-w-[500px] w-[90%] sm:max-w-[75%] duration-300 ${
                   showPopupState
                     ? "translate-y-[0] opacity-1"
                     : "translate-y-[10px] opacity-0"
