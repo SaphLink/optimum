@@ -14,6 +14,8 @@ import Section, {
 import styled from "styled-components";
 import Popup from "./popup";
 
+//#region
+
 const Logo = styled.img`
   object-fit: contain;
   margin: 0 auto;
