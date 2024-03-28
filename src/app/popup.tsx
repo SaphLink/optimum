@@ -26,7 +26,7 @@ const Popup = () => {
               } flex items-center justify-center`}
             >
               <div
-                className={`relative rounded-[2rem] bg-white border-[3px] border-[#35281e] md:min-w-[500px] w-[90%] sm:max-w-[75%] duration-300 ${
+                className={`relative rounded-[2rem] bg-white border-[3px] border-[#35281e] md:min-w-[500px] w-[90%] md:max-w-[50%] duration-300 ${
                   showPopupState
                     ? "translate-y-[0] opacity-1"
                     : "translate-y-[10px] opacity-0"
@@ -58,7 +58,7 @@ const Popup = () => {
                     >
                       OPTIMUM LASER
                     </div>
-                    <div className="font-bold  text-[5rem] flex justify-center">
+                    <div className="flex justify-center text-nowrap font-bold  text-[5rem] sm:text-[3rem] lg:text-[5rem]  	">
                       15% OFF
                     </div>
                     <div className="mx-auto w-[80px] h-[2px] bg-[#35281e] mb-[1rem]"></div>
