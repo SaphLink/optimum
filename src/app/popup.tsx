@@ -1,4 +1,3 @@
-"use client";
 import { modal } from "@/components/modal";
 import React, { useEffect, useRef, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
@@ -17,7 +16,6 @@ const Popup = () => {
           setTimeout(() => {
             setShowPopup(show);
           }, 100);
-          // setShowPopup(show);
         }, [show]);
 
         return (
@@ -28,82 +26,63 @@ const Popup = () => {
               } flex items-center justify-center`}
             >
               <div
-                className={`relative rounded-[2rem] bg-white border-[3px] border-[#35281e] md:min-w-[500px] max-w-[calc(100vw-50px)]  duration-300 ${
-                  showPopupState ? "translate-y-[0] opacity-1" : "translate-y-[10px] opacity-0"
+                className={`relative rounded-[2rem] bg-white border-[3px] border-[#35281e] md:min-w-[500px] max-w-[calc(100vw-32px)] duration-300 ${
+                  showPopupState
+                    ? "translate-y-[0] opacity-1"
+                    : "translate-y-[10px] opacity-0"
                 }`}
+                style={{ padding: "20px" }}
               >
                 <div
-                  className="cursor-pointer absolute top-[0] translate-x-[50%] translate-y-[-50%] flex items-center justify-center right-[0]  h-[50px] w-[50px] bg-[#f5f6f6] border-[3px] border-[#5b4d42] rounded-[50%] z-[10]"
+                  className="absolute -top-4 -right-4 cursor-pointer h-12 w-12 flex items-center justify-center bg-[#f5f6f6] border-[3px] border-[#5b4d42] rounded-full z-[10]"
                   onClick={() => {
                     proceed();
                   }}
                 >
-                  <IoCloseSharp className="text-[2rem] text-[#c5ba9d]" />
+                  <IoCloseSharp className="text-3xl text-[#c5ba9d]" />
                 </div>
                 <div
-                  className="md:flex justify-between rounded-t-[2rem] text-[#35281e] bg-[#f8eedf]"
-                  style={{
-                    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 72%)",
-                    overflowX: "visible",
-                  }}
+                  className="p-4 mb-8 border-t-2 border-b-2 border-[#35281e] py-3 text-2xl px-8 font-bold"
+                  style={{ fontFamily: "Broadway" }}
                 >
-                  <div className="cursor-pointer absolute top-[0] translate-x-[50%] translate-y-[-50%] flex items-center justify-center right-[0]  h-[70px] w-[70px] bg-[#b4a794] rounded-[50%]"></div>
-                  <div className="p-[2rem] text-center">
-                    <div
-                      className="mb-[1rem] border-t-[2px] border-b-[2px] border-[#35281e] py-[0.7rem] text-[1.2rem] px-[3rem]"
-                      style={{
-                        fontFamily: "Broadway",
-                      }}
-                    >
-                      OPTIMUM LASER
-                    </div>
-                    <div className="font-bold h-[9rem] text-[5rem] flex justify-center items-center ">15% OFF</div>
-                    <div className="mx-auto w-[80px] h-[2px] bg-[#35281e] mb-[1rem]"></div>
-                    <div
-                      className="text-[1.2rem]"
-                      style={{
-                        fontWeight: 500,
-                        fontFamily: "Raleway",
-                      }}
-                    >
-                      FOR FIRST TIME CUSTOMERS
-                    </div>
-                  </div>
-                  <div className="md:pt-[3rem] md:max-w-[300px] flex justify-center md:justify-end items-end">
-                    <img alt="popup-image" className="translate-x-[1rem] max-h-[200px] md:max-h-none" src="../images/pop-up/Pop up.png" />
-                  </div>
+                  OPTIMUM LASER
+                </div>
+                <div className="flex justify-center items-center font-bold text-7xl mb-8">
+                  15% OFF
+                </div>
+                <div className="mx-auto w-24 h-2 bg-[#35281e] mb-4"></div>
+                <div className="text-2xl font-semibold text-center mb-8">
+                  FOR FIRST TIME CUSTOMERS
                 </div>
                 <form
                   action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
                   method="POST"
-                  className="flex flex-wrap justify-evenly items-center p-[2rem] gap-[1rem]"
-                  style={{
-                    fontFamily: "Raleway",
-                  }}
+                  className="flex flex-wrap justify-evenly items-center gap-4"
+                  style={{ fontFamily: "Raleway" }}
                 >
                   <input
-                    name='Coupon Submission'
+                    name="Coupon Submission"
                     className="hidden"
                     placeholder="code"
                   />
                   <input
                     name="name"
-                    className="px-[1rem] py-[0.5rem] max-w-[170px] border-[2px] border-[#35281e] rounded-[4px] mb-[0.5rem] "
+                    className="px-4 py-2 max-w-[200px] border-2 border-[#35281e] rounded-[4px] mb-4"
                     placeholder="YOUR NAME"
                   />
                   <input
                     name="email"
-                    className="px-[1rem] py-[0.5rem] max-w-[170px] border-[2px] border-[#35281e] rounded-[4px] mb-[0.5rem] "
+                    className="px-4 py-2 max-w-[200px] border-2 border-[#35281e] rounded-[4px] mb-4"
                     placeholder="YOUR EMAIL"
                   />
                   <input
-                      name="phone number"
-                      className="px-[1rem] py-[0.5rem] max-w-[170px] border-[2px] border-[#35281e] rounded-[4px] mb-[0.5rem] "
-                      placeholder="PHONE NUMBER"
+                    name="phone number"
+                    className="px-4 py-2 max-w-[200px] border-2 border-[#35281e] rounded-[4px] mb-4"
+                    placeholder="PHONE NUMBER"
                   />
                   <button
                     type="submit"
-                    className="cursor-pointer min-w-[161px] text-center px-[1rem] py-[0.5rem] max-w-[170px] border-[2px] border-[#35281e] mb-[0.5rem] text-[#35281e] bg-[#f8eedf] rounded-[4px] "
+                    className="cursor-pointer px-4 py-2 max-w-[200px] border-2 border-[#35281e] mb-4 text-[#35281e] bg-[#f8eedf] rounded-[4px]"
                   >
                     GET YOUR CODE!
                   </button>
