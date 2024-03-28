@@ -42,7 +42,7 @@ const Popup = () => {
                   <IoCloseSharp className="text-3xl text-[#c5ba9d]" />
                 </div>
                 <div
-                  className="p-4 mb-8 border-t-2 border-b-2 border-[#35281e] py-3 text-2xl px-8 font-bold"
+                  className="p-4 mb-8 border-t-2 border-b-2 text-center border-[#35281e] py-3 text-2xl px-8 font-bold"
                   style={{ fontFamily: "Broadway" }}
                 >
                   OPTIMUM LASER
@@ -50,14 +50,14 @@ const Popup = () => {
                 <div className="flex justify-center items-center font-bold text-7xl mb-8">
                   15% OFF
                 </div>
-                <div className="mx-auto w-24 h-2 bg-[#35281e] mb-4"></div>
+                {/* <div className="mx-auto w-24 h-2 bg-[#35281e] mb-4"></div> */}
                 <div className="text-2xl font-semibold text-center mb-8">
                   FOR FIRST TIME CUSTOMERS
                 </div>
                 <form
                   action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
                   method="POST"
-                  className="flex flex-wrap justify-evenly items-center gap-4"
+                  className="flex w-full  flex-col gap-x-3 items-center sm:flex-row "
                   style={{ fontFamily: "Raleway" }}
                 >
                   <input
@@ -67,22 +67,22 @@ const Popup = () => {
                   />
                   <input
                     name="name"
-                    className="px-4 py-2 max-w-[200px] border-2 border-[#35281e] rounded-[4px] mb-4"
+                    className="w-full px-4 py-2 sm:w-1/4 border-2 border-[#35281e] rounded-[4px] mb-4"
                     placeholder="YOUR NAME"
                   />
                   <input
                     name="email"
-                    className="px-4 py-2 max-w-[200px] border-2 border-[#35281e] rounded-[4px] mb-4"
+                    className="w-full px-4 py-2 sm:w-1/4 border-2 border-[#35281e] rounded-[4px] mb-4"
                     placeholder="YOUR EMAIL"
                   />
                   <input
                     name="phone number"
-                    className="px-4 py-2 max-w-[200px] border-2 border-[#35281e] rounded-[4px] mb-4"
+                    className="w-full px-4 py-2 sm:w-1/4 border-2 border-[#35281e] rounded-[4px] mb-4"
                     placeholder="PHONE NUMBER"
                   />
                   <button
                     type="submit"
-                    className="cursor-pointer px-4 py-2 max-w-[200px] border-2 border-[#35281e] mb-4 text-[#35281e] bg-[#f8eedf] rounded-[4px]"
+                    className="cursor-pointer w-full px-4 py-2 sm:w-1/4 border-2 border-[#35281e] mb-4 text-[#35281e] bg-[#f8eedf] rounded-[4px]"
                   >
                     GET YOUR CODE!
                   </button>
