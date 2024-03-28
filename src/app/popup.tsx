@@ -51,7 +51,7 @@ const Popup = () => {
                   <div className="cursor-pointer absolute top-[0] translate-x-[50%] translate-y-[-50%] flex items-center justify-center right-[0]  h-[70px] w-[70px] bg-[#b4a794] rounded-[50%]"></div>
                   <div className="p-[1rem] text-center">
                     <div
-                      className="border-t-[2px] border-b-[2px] border-[#35281e] py-[0.3rem] text-[1.2rem] px-[3rem]"
+                      className="border-t-[2px] border-b-[2px] border-[#35281e] py-[0.3rem] sm:py-[0.7rem] text-[1.2rem] px-[3rem]"
                       style={{
                         fontFamily: "Broadway",
                       }}
