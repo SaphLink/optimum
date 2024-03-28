@@ -31,7 +31,7 @@ const Popup = () => {
                     ? "translate-y-[0] opacity-1"
                     : "translate-y-[10px] opacity-0"
                 }`}
-                style={{ padding: "20px" }}
+                // style={{ padding: "20px" }}
               >
                 <div
                   className="cursor-pointer absolute top-[0] translate-x-[50%] translate-y-[-50%] flex items-center justify-center right-[0]  h-[50px] w-[50px] bg-[#f5f6f6] border-[3px] border-[#5b4d42] rounded-[50%] z-[10]"
@@ -83,7 +83,7 @@ const Popup = () => {
                 <form
                   action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
                   method="POST"
-                  className="flex w-full  flex-col gap-x-3 items-center sm:flex-row "
+                  className="flex w-full  flex-col gap-x-3 items-center sm:flex-row p-4"
                   style={{ fontFamily: "Raleway" }}
                 >
                   <input
