@@ -320,7 +320,7 @@ export default function Home() {
             <div>
               <Title className="mb-6">Hurry, Summer is Almost Here!</Title>
               <Title>UP TO 50% OFF SAVINGS!</Title>
-              <Description>ENDS APRIL 21st!</Description>
+              <Description>ENDS JUNE 1st!</Description>
             </div>
 
             <Line />
