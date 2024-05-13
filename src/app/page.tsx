@@ -519,8 +519,69 @@ export default function Home() {
           </CustomButton>
         </div>
       </Section>
-      <BoxSection className="!min-h-[700px] md:!min-h-[max(110vh,800px)]">
-        <BoxSplitSection>
+
+      <div className="container mx-auto h-screen bg-gradient-to-r from-[#faecdb] to-[#f9efdd]">
+      <div className="grid md:grid-cols-2 sm:grid-cols-2 p-10 place-items-center">
+      <div>
+          <Box>
+            <div>
+              <Title>CHAT WITH US</Title>
+            </div>
+            <form
+              action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
+              method="POST"
+            >
+              <Row className="mb-[1rem]">
+                <input
+                  name="name"
+                  type="text"
+                  placeholder="Name"
+                  style={inputStyle}
+                />
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="Email"
+                  style={inputStyle}
+                />
+              </Row>
+
+              <Row className="mb-[1rem]">
+                <input
+                  name="phone number"
+                  type="text"
+                  placeholder="Phone Number"
+                  style={inputStyle}
+                />
+                <input
+                  name="address"
+                  type="text"
+                  placeholder="Address"
+                  style={inputStyle}
+                />
+              </Row>
+
+              <textarea
+                name="message"
+                placeholder="Message"
+                style={textareaStyle}
+              ></textarea>
+
+              <CustomButton submit center type="primary">
+                SUBMIT
+              </CustomButton>
+            </form>
+          </Box>
+        </div>
+        <div>
+          <img src="../images/cropped-images/Homepage Group 3 Cropped.png"
+          alt="image" className="mt-20 md:mt-0"/>
+        </div>
+      </div>
+      </div>
+
+      {/* <BoxSection className="hidden !min-h-[700px] md:!min-h-[max(110vh,800px)]">
+        <BoxSplitSection className="w-1/2">
           <Box>
             <div>
               <Title>CHAT WITH US</Title>
@@ -571,12 +632,15 @@ export default function Home() {
             </form>
           </Box>
         </BoxSplitSection>
-        <BoxSplitSection></BoxSplitSection>
+        <BoxSplitSection>
+
+        </BoxSplitSection>
         <Img3
           src="../images/cropped-images/Homepage Group 3 Cropped.png"
           alt="image"
         />
-      </BoxSection>
+      </BoxSection> */}
+
       <Footer />
     </div>
   );
