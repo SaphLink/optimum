@@ -299,7 +299,7 @@ export default function Home() {
           />
         </ImagesContainer>
         <div className="w-fit mx-auto">
-          <CustomButton href="contact-us" type="secondary">
+          <CustomButton className="inline-block" href="contact-us" type="secondary">
             BOOK A FREE CONSULTATION
           </CustomButton>
         </div>
