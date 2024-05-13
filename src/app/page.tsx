@@ -521,8 +521,8 @@ export default function Home() {
       </Section>
 
       <div className="container mx-auto h-screen bg-gradient-to-r from-[#faecdb] to-[#f9efdd]">
-      <div className="grid md:grid-cols-2 sm:grid-cols-2 p-10 place-items-center">
-      <div>
+      <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+      <div className="md:py-10 py-0 mt-10">
           <Box>
             <div>
               <Title>CHAT WITH US</Title>
