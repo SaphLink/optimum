@@ -514,7 +514,7 @@ export default function Home() {
           </ReviewCard>
         </Slider>
         <div className="w-fit mx-auto">
-          <CustomButton href="contact-us" type="secondary">
+          <CustomButton className="inline-block" href="contact-us" type="secondary">
             BOOK A FREE CONSULTATION
           </CustomButton>
         </div>

@@ -44,7 +44,7 @@ const page = () => {
                         <div className="desc">Shaving, plucking, tweezing, waxing are all temporary fixes for unwanted hair. Over time
                             these temporary fixes increase painful ingrown hairs, further irritating the skin, NOT budget
                             friendly and costly. </div>
-                        <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+                        <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
                     </Box>
                 </BoxSplitSection>
                     <Img3 src="../images/cropped-images/Homepage Group 3 Cropped.png" alt="image" />
@@ -62,7 +62,7 @@ const page = () => {
                            2. Don&apos;t apply makeup, oils, lotions, antibiotics to the desired treatment area(s) <br/><br/>
                            3. Smile :)
                        </div>
-                       <CustomButton href="#consultation" type="tertiary">BOOK A FREE CONSULTATION</CustomButton>
+                       <CustomButton className="inline-block" href="#consultation" type="tertiary">BOOK A FREE CONSULTATION</CustomButton>
 
                    </CollapseSection>
                     <CollapseSection title="How many treatments will I need?">
@@ -82,7 +82,7 @@ const page = () => {
                         <div className="desc">Our team at Optimum Laser recommends to avoid direct sun exposure, intense physical activity, and harsh moisturizers at least for one day post treatment. Apply sunscreen to treatment areas. Redness or red bumps is normal after treatment that subsides within 2-3 hours of treatment you may apply hydrocortisone. </div>
                     </CollapseSection>
                 </div>
-                <CustomButton href="#consultation" type="secondary" center>
+                <CustomButton className="inline-block" href="#consultation" type="secondary" center>
                     BOOK A FREE CONSULTATION
                 </CustomButton>
             </Section>

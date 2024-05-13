@@ -292,7 +292,7 @@ const page = () => {
           </ReviewCard>
         </Slider>
         <div className="w-fit mx-auto">
-          <CustomButton href="#consultation" type="secondary">
+          <CustomButton className="inline-block" href="#consultation" type="secondary">
             BOOK A FREE CONSULTATION
           </CustomButton>
         </div>

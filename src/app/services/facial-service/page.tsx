@@ -58,7 +58,7 @@ const page = () => {
               <div className="mini-title">SERVICES</div>
               <div className="line"></div>
               <div className="desc">Facial services work by replenishing the skin's moisture and improving its overall health and appearance. It typically involves cleansing the skin, applying a hydrating mask with nourishing ingredients, and using serums to address specific skin concerns like dryness or fine lines. The specific techniques and products used are customized to the individual's skin type and needs. </div>
-              <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+              <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
             </Box>
           </BoxSplitSection>
           <Img src={'../images/facial-service/Facial.png'} alt="image"/>
@@ -101,7 +101,7 @@ const page = () => {
             />
           </ImagesContainer>
           <div className="w-fit mx-auto">
-            <CustomButton href="#consultation" type="secondary">BOOK A FREE CONSULTATION</CustomButton>
+            <CustomButton className="inline-block" href="#consultation" type="secondary">BOOK A FREE CONSULTATION</CustomButton>
           </div>
         </Section>
         <BoxSection>
@@ -119,7 +119,7 @@ const page = () => {
               <div className="desc">
               Facial services are a specialized skincare service designed to rejuvenate and moisturize the skin on the face, leaving it refreshed, radiant, and supple. This treatment is ideal for individuals seeking to combat dryness, fine lines, and the effects of environmental stressors on their skin.
               </div>
-              <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+              <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
             </Box>
           </BoxSplitSection>
         </BoxSection>

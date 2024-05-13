@@ -43,7 +43,7 @@ const page = () => {
             <div className="mini-title">REMOVAL</div>
             <div className="line"></div>
             <div className="desc">Unwanted pigmentation is a result of sun damage from incremental exposure to the sun over many years.</div>
-            <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
           </Box>
         </BoxSplitSection>
         <Img3 src="../images/cropped-images/Pigmentation Group 1 Cropped.png" alt="image" />
@@ -91,7 +91,7 @@ const page = () => {
             </div>
           </CollapseSection>
         </div>
-        <CustomButton href="#consultation" type="secondary" center>
+        <CustomButton className="inline-block" href="#consultation" type="secondary" center>
           BOOK A FREE CONSULTATION
         </CustomButton>
       </Section>
@@ -107,7 +107,7 @@ const page = () => {
               At Optimum Laser Hair Removal, our laser technicians use the Cynosure® Elite+TM laser to remove unwanted pigmentation, including sun
               spots. As your practitioner moves the Elite+ device gently over your skin, the laser pulses go directly into the unwanted pigment.
             </div>
-            <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
           </Box>
         </BoxSplitSection>
       </BoxSection>

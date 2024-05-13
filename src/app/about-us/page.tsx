@@ -42,7 +42,7 @@ const page = () => {
               is a medical spa that offers cutting-edge medical grade laser
               technology.
             </div>
-            <CustomButton href="#consultation" type="primary">
+            <CustomButton className="inline-block" href="#consultation" type="primary">
               BOOK A FREE CONSULTATION
             </CustomButton>
           </Box>
@@ -128,7 +128,7 @@ const page = () => {
               </span>{" "}
               today!
             </div>
-            <CustomButton href="#consultation" type={"secondary"}>
+            <CustomButton className="inline-block" href="#consultation" type={"secondary"}>
               BOOK A FREE CONSULTATION
             </CustomButton>
           </div>

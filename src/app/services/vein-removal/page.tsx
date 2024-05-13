@@ -41,7 +41,7 @@ const page = () => {
             <div className="mini-title">REMOVAL</div>
             <div className="line"></div>
             <div className="desc">Spider veins are a common problem in many people. as it is affects one in three women and one in five men</div>
-            <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
           </Box>
         </BoxSplitSection>
         <Img src="../images/cropped-images/Vein Removal Group 1 Cropped.png" alt="image" />
@@ -63,7 +63,7 @@ const page = () => {
               with no downtime. To find out more, contact a member of the experienced Optimum Laser
               Hair Removal team online or by phone now at 516-495-4908.
             </div>
-            <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
           </Box>
         </BoxSplitSection>
       </BoxSection>
