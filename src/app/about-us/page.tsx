@@ -12,6 +12,9 @@ import Box from "@/components/layout/box";
 import styled from "styled-components";
 import Input, { DoubleInput } from "@/components/Input";
 import Footer from "@/components/footer";
+// video thumbnail images
+
+
 
 const Img3 = styled.img`
   position: absolute;
@@ -157,21 +160,82 @@ const page = () => {
             customers
           </SectionDescription>
           <Slider itemWidth={400}>
-            <VideoCard videoSrc="/videos/VID_25160429_100420_556.mp4" />
-            <VideoCard videoSrc="/videos/VID-20230521-WA0028.mp4" />
-            <VideoCard videoSrc="/videos/20230711_165633.mp4" />
-            <VideoCard videoSrc="/videos/20230711_154308.mp4" />
-            <VideoCard videoSrc="/videos/20230711_154234.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101634.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101621.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101523.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101444.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101418.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101333.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101312.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101301.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101148.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101138.mp4" />
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/2.png" />
+              <VideoCard videoSrc="/videos/VID_25160429_100420_556.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/1.png" />
+              <VideoCard videoSrc="/videos/VID-20230521-WA0028.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/3.png" />
+              <VideoCard videoSrc="/videos/20230711_165633.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/4.png" />
+              <VideoCard videoSrc="/videos/20230711_154308.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/5.png" />
+              <VideoCard videoSrc="/videos/20230711_154234.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/6.png" />
+              <VideoCard videoSrc="/videos/20230709_101634.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/7.png" />
+              <VideoCard videoSrc="/videos/20230709_101621.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/8.png" />
+              <VideoCard videoSrc="/videos/20230709_101523.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/9.png" />
+              <VideoCard videoSrc="/videos/20230709_101444.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/10.png" />
+              <VideoCard videoSrc="/videos/20230709_101418.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/11.png" />
+              <VideoCard videoSrc="/videos/20230709_101333.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/12.png" />
+              <VideoCard videoSrc="/videos/20230709_101312.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/13.png" />
+              <VideoCard videoSrc="/videos/20230709_101301.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/14.png" />
+              <VideoCard videoSrc="/videos/20230709_101148.mp4" />
+            </div>
+
+            <div className="relative">
+              <img className="absolute h-full w-full" src="/images/thumbnail/15.png" />
+              <VideoCard videoSrc="/videos/20230709_101138.mp4" />
+            </div>
+
+
           </Slider>
         </div>
       </Section>
