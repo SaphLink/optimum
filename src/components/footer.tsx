@@ -34,7 +34,12 @@ export const SocialIcons = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
+  
+  @media only screen and (max-width: 768px) {
+    align-items: center;
+    gap: 2rem;
+  }
 `;
 
 const FooterRight = styled.div`
@@ -94,7 +99,8 @@ const Footer = () => (
     <FooterContainer>
         <FooterLeft className='!items-start mb-[2rem] md:mb-[0]'>
             <Logo src="/images/homepage/Optimum Laser Brown White.png" alt="White Logo" />
-            <Description>1180 Northern Blvd, Suite 201, Manhasset, NY 11030</Description>
+            {/* <Description className='text-center md:text-left' >1180 Northern Blvd, Suite 201, Manhasset, NY 11030</Description> */}
+            <p className='text-center md:text-left font-medium text-xl font-[Raleway]'>1180 Northern Blvd, Suite 201, Manhasset, NY 11030</p>
             <SocialIcons>
                 <a href="https://www.facebook.com/OptimumLaserInc/" target="_blank">
                     <FooterIcon>
@@ -160,10 +166,10 @@ const Footer = () => (
             <Section>
                 <h3 style={{ textDecoration: 'underline', fontWeight: 'bold', marginBottom: '1rem' }}>BUSINESS HOURS</h3>
                 <ul>
-                    <li>Monday: Close</li>
+                    <li>Monday: Closed</li>
                     <li>Tuesday to Thursday: 9:00 am - 6:00 pm</li>
                     <li>Friday: 9:00 am - 3:00 pm</li>
-                    <li>Saturday: Close</li>
+                    <li>Saturday: Closed</li>
                     <li>Sunday: 10:00 am - 5:00 pm</li>
                 </ul>
             </Section>

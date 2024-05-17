@@ -55,7 +55,7 @@ const page = () => {
           alt="image"
         />
       </BoxSection>
-      <Section>
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <div
           className={
             "justify-center items-stretch min-h-[400px] flex flex-wrap p-[2rem]"
@@ -150,8 +150,8 @@ const page = () => {
             </div>
           </div>
         </div>
-      </Section>
-      <Section bg2>
+      </div>
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-[#faecdb]">
         <div className={"pt-[3rem]"}>
           <SectionTitle>SEE SOME OF OUR WORK</SectionTitle>
           <SectionDescription>
@@ -238,8 +238,8 @@ const page = () => {
 
           </Slider>
         </div>
-      </Section>
-      <Section last id="consultation">
+      </div>
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white" id="consultation">
         <SectionTitle>SECURE YOUR FREE CONSULTATION NOW</SectionTitle>
         <SectionDescription>
           Please provide your contact information to help us schedule your free
@@ -270,7 +270,7 @@ const page = () => {
             BOOK NOW
           </CustomButton>
         </form>
-      </Section>
+      </div>
       <Footer />
     </div>
   );

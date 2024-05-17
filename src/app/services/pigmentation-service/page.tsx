@@ -39,8 +39,8 @@ const page = () => {
       <BoxSection hero>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title2">PIGMENTATION</div>
-            <div className="mini-title">REMOVAL</div>
+            <div className="text-[3.5rem] text-white text-center md:text-left">PIGMENTATION</div>
+            <div className="mini-title text-center md:text-left">REMOVAL</div>
             <div className="line"></div>
             <div className="desc">Unwanted pigmentation is a result of sun damage from incremental exposure to the sun over many years.</div>
             <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
@@ -53,7 +53,7 @@ const page = () => {
         Hair Removal in Manhasset, New York. The Cynosure Apogee Elite+TM laser offers the gentlest. fastest, and MOST effective sun spot removal
         option available. Use online booking or call the office at 516-495-4908 to schedule your appointment with us now!
       </FlowerSection>
-      <Section last>
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>FAQs</SectionTitle>
         <div className="flex flex-col justify-center items-center gap-[1rem] mb-[4rem]">
           <CollapseSection title="What is skin pigmentation removal?">
@@ -94,7 +94,7 @@ const page = () => {
         <CustomButton className="inline-block" href="#consultation" type="secondary" center>
           BOOK A FREE CONSULTATION
         </CustomButton>
-      </Section>
+      </div>
       <BoxSection hero>
         <Img2 src="../images/cropped-images/Pigmentation Group 2 Cropped.png" alt="image" />
         <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
@@ -111,7 +111,7 @@ const page = () => {
           </Box>
         </BoxSplitSection>
       </BoxSection>
-      <Section last id='consultation'>
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white" id='consultation'>
         <SectionTitle>SECURE YOUR FREE CONSULTATION NOW</SectionTitle>
         <SectionDescription>Please provide your contact information to help us schedule your free consultation</SectionDescription>
         <form action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`} method="POST">
@@ -154,7 +154,7 @@ const page = () => {
             </StyledIcons>
           </a>
         </div>
-      </Section>
+      </div>
       <Footer />
     </div>
   );

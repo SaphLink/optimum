@@ -38,8 +38,8 @@ const page = () => {
             <BoxSection hero>
                 <BoxSplitSection>
                     <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-                        <div className="title">LASER</div>
-                        <div className="mini-title">HAIR REMOVAL</div>
+                        <div className="title text-center md:text-left">LASER</div>
+                        <div className="mini-title text-center md:text-left">HAIR REMOVAL</div>
                         <div className="line"></div>
                         <div className="desc">Shaving, plucking, tweezing, waxing are all temporary fixes for unwanted hair. Over time
                             these temporary fixes increase painful ingrown hairs, further irritating the skin, NOT budget
@@ -53,7 +53,7 @@ const page = () => {
             <FlowerSection>
                 With our FDA approved Cynosure Apogee Elite + machine. the laser hair removal treatments performed by our certified laser technicians quickly and easily reduce unwanted hair on your body by targeting deep within the skin, providing longer-lasting and permanent results.
             </FlowerSection>
-            <Section last>
+            <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
                 <SectionTitle>FAQs</SectionTitle>
                 <div className="flex flex-col justify-center items-center gap-[1rem] mb-[4rem]">
                    <CollapseSection title="How to prepare for your laser treatment">
@@ -85,7 +85,7 @@ const page = () => {
                 <CustomButton className="inline-block" href="#consultation" type="secondary" center>
                     BOOK A FREE CONSULTATION
                 </CustomButton>
-            </Section>
+            </div>
             <FlowerSection>
                 The team at <span
                 style={{
@@ -102,7 +102,7 @@ const page = () => {
             >
                   Optimum Laser
                 </span> {" "} to provide safe, consistent, effective, and affordable treatments for ALL skin types! Common areas include underarms, bikini line, legs and face, as the possibilities are endless! The average time for treatments ranges from 5 minutes to one hour. Wave goodbye to ingrown hairs, razors and waxing and say hello to smooth flawless skin!            </FlowerSection>
-            <Section last id='consultation'>
+                <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white" id='consultation'>
                 <SectionTitle>
                     SECURE YOUR FREE CONSULTATION NOW
                 </SectionTitle>
@@ -149,7 +149,7 @@ const page = () => {
                         </StyledIcons>
                     </a>
                 </div>
-            </Section>
+            </div>
             <Footer />
         </>
     );

@@ -37,8 +37,8 @@ const page = () => {
       <BoxSection hero>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title">VEIN</div>
-            <div className="mini-title">REMOVAL</div>
+            <div className="title text-center md:text-left">VEIN</div>
+            <div className="mini-title text-center md:text-left">REMOVAL</div>
             <div className="line"></div>
             <div className="desc">Spider veins are a common problem in many people. as it is affects one in three women and one in five men</div>
             <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
@@ -55,8 +55,8 @@ const page = () => {
         <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title">HOW DOES</div>
-            <div className="mini-title">VEIN REMOVAL WORK?</div>
+            <div className="title text-center md:text-left">HOW DOES</div>
+            <div className="mini-title text-center md:text-left">VEIN REMOVAL WORK?</div>
             <div className="line"></div>
             <div className="desc">
               Laser vein removal with the advanced Cynosure® Elite+TM system gives you fast results

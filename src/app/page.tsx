@@ -239,7 +239,8 @@ export default function Home() {
           size={170}
         />
       </BoxSection>
-      <Section>
+      
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>SERVICES</SectionTitle>
         <SectionDescription>
           Benefit from our offerings to achieve the look of your dreams.
@@ -303,7 +304,7 @@ export default function Home() {
             BOOK A FREE CONSULTATION
           </CustomButton>
         </div>
-      </Section>
+      </div>
       <BoxSection
         style={{
           backgroundColor: "linear-gradient(to right, #faecdb, #f9efdd)",
@@ -397,7 +398,8 @@ export default function Home() {
           size={170}
         />
       </BoxSection>
-      <Section>
+
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>WHAT USERS THINK</SectionTitle>
         <SectionDescription>
           See what our customers have to say about their experience at our
@@ -518,11 +520,11 @@ export default function Home() {
             BOOK A FREE CONSULTATION
           </CustomButton>
         </div>
-      </Section>
+      </div>
 
-      <div className="container mx-auto h-screen bg-gradient-to-r from-[#faecdb] to-[#f9efdd]">
+      <div className="container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd]">
       <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
-      <div className="md:py-10 py-0 mt-10">
+      <div className="md:py-10 py-0">
           <Box>
             <div>
               <Title>CHAT WITH US</Title>
@@ -575,7 +577,7 @@ export default function Home() {
         </div>
         <div>
           <img src="../images/cropped-images/Homepage Group 3 Cropped.png"
-          alt="image" className="mt-20 md:mt-0"/>
+          alt="image"/>
         </div>
       </div>
       </div>

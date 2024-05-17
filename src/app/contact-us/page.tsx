@@ -175,7 +175,7 @@ const page = () => {
           size={170}
         />
       </BoxSection>
-      <Section last>
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>WHAT USERS THINK</SectionTitle>
         <SectionDescription>
           See what our customers have to say about their experience at our
@@ -296,7 +296,7 @@ const page = () => {
             BOOK A FREE CONSULTATION
           </CustomButton>
         </div>
-      </Section>
+      </div>
       <Footer />
     </>
   );
