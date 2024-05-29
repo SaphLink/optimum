@@ -33,7 +33,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className="z-[100] fixed w-full top-0 left-0"
+        className="z-[100] fixed w-full top-0 left-0 bg-slate-500"
         style={{
           boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
           borderBottomLeftRadius: 40,

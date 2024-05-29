@@ -33,7 +33,7 @@ const Img2 = styled.img`
 `;
 const page = () => {
   return (
-    <>
+    <div className="pt-[9rem]">
       <BoxSection hero>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
@@ -113,7 +113,7 @@ const page = () => {
       </Section>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

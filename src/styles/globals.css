@@ -41,3 +41,28 @@
     min-height: 100vh;
     font-family: 'Russo One', sans-serif;
   }
+
+  .facial-banner-div {
+    background: url('../../public/images/facial-service/Facial.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f9efdd;
+  }
+
+  .about-us-banner {
+    /* background: url('../../public/images/facial-service/Facial.png'); */
+    background: url('../../public/images/cropped-images/Homepage Group 3 Cropped.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f9efdd;
+  }
+
+  .laser-hair-removal {
+    background: url('../../public/images/cropped-images/Homepage Group 3 Cropped.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #f9efdd;
+  }

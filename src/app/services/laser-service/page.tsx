@@ -8,11 +8,11 @@ import FlowerSection from "@/components/layout/flowerSection";
 import Section, { SectionDescription, SectionTitle } from "@/components/layout/section";
 import React from "react";
 import ImageBox from "@/components/imageBox";
-import {StyledIcons} from "@/components/styledIcons";
-import {BiLogoFacebook} from "react-icons/bi";
-import {AiOutlineInstagram} from "react-icons/ai";
-import {FaPhoneAlt} from "react-icons/fa";
-import {GrMail} from "react-icons/gr";
+import { StyledIcons } from "@/components/styledIcons";
+import { BiLogoFacebook } from "react-icons/bi";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { FaPhoneAlt } from "react-icons/fa";
+import { GrMail } from "react-icons/gr";
 import CollapseSection from "@/components/layout/collapseSection";
 import styled from "styled-components";
 
@@ -35,7 +35,7 @@ const Img4 = styled.img`
 const page = () => {
     return (
         <>
-            <BoxSection hero>
+            {/* <BoxSection hero>
                 <BoxSplitSection>
                     <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
                         <div className="title text-center md:text-left">LASER</div>
@@ -47,8 +47,35 @@ const page = () => {
                         <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
                     </Box>
                 </BoxSplitSection>
-                    <Img3 src="../images/cropped-images/Homepage Group 3 Cropped.png" alt="image" />
-            </BoxSection>
+                <Img3 src="../images/cropped-images/Homepage Group 3 Cropped.png" alt="image" />
+            </BoxSection> */}
+
+
+
+            <div className="laser-hair-removal h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
+                <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+                    <div className="md:py-10 py-0">
+                        <Box>
+                            <div className="title text-center md:text-left">LASER</div>
+                            <div className="mini-title text-center md:text-left">HAIR REMOVAL</div>
+                            <div className="line"></div>
+                            <div className="desc">Shaving, plucking, tweezing, waxing are all temporary fixes for unwanted hair. Over time
+                            these temporary fixes increase painful ingrown hairs, further irritating the skin, NOT budget
+                            friendly and costly. </div>
+                            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+
+                        </Box>
+                    </div>
+                    <div>
+                        <img src="../images/cropped-images/Homepage Group 3 Cropped.png" className="visible md:invisible h-auto max-w-full"
+                            alt="image" />
+
+                    </div>
+                </div>
+            </div>
+
+
+
 
             <FlowerSection>
                 With our FDA approved Cynosure Apogee Elite + machine. the laser hair removal treatments performed by our certified laser technicians quickly and easily reduce unwanted hair on your body by targeting deep within the skin, providing longer-lasting and permanent results.
@@ -56,15 +83,15 @@ const page = () => {
             <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
                 <SectionTitle>FAQs</SectionTitle>
                 <div className="flex flex-col justify-center items-center gap-[1rem] mb-[4rem]">
-                   <CollapseSection title="How to prepare for your laser treatment">
-                       <div className="desc">1. Shave the night before. Say goodbye to waxing and plucking <br/>
-                           <br/>
-                           2. Don&apos;t apply makeup, oils, lotions, antibiotics to the desired treatment area(s) <br/><br/>
-                           3. Smile :)
-                       </div>
-                       <CustomButton className="inline-block" href="#consultation" type="tertiary">BOOK A FREE CONSULTATION</CustomButton>
+                    <CollapseSection title="How to prepare for your laser treatment">
+                        <div className="desc">1. Shave the night before. Say goodbye to waxing and plucking <br />
+                            <br />
+                            2. Don&apos;t apply makeup, oils, lotions, antibiotics to the desired treatment area(s) <br /><br />
+                            3. Smile :)
+                        </div>
+                        <CustomButton className="inline-block" href="#consultation" type="tertiary">BOOK A FREE CONSULTATION</CustomButton>
 
-                   </CollapseSection>
+                    </CollapseSection>
                     <CollapseSection title="How many treatments will I need?">
                         <div className="desc">Usually 6-8 treatments which are spaced 4-6 weeks apart. Varies due to the thickness of the hair and the location of the desired area.</div>
 
@@ -88,21 +115,21 @@ const page = () => {
             </div>
             <FlowerSection>
                 The team at <span
-                style={{
-                    fontFamily: "Broadway",
-                    fontSize: "1.3rem",
-                  }}
-            >
-                  Optimum Laser
+                    style={{
+                        fontFamily: "Broadway",
+                        fontSize: "1.3rem",
+                    }}
+                >
+                    Optimum Laser
                 </span>{" "} strives and takes pride in providing maximum results to our clients. Finding the right medical spa is difficult, and it is our promise at <span
-                style={{
-                    fontFamily: "Broadway",
-                    fontSize: "1.3rem",
-                }}
-            >
-                  Optimum Laser
+                    style={{
+                        fontFamily: "Broadway",
+                        fontSize: "1.3rem",
+                    }}
+                >
+                    Optimum Laser
                 </span> {" "} to provide safe, consistent, effective, and affordable treatments for ALL skin types! Common areas include underarms, bikini line, legs and face, as the possibilities are endless! The average time for treatments ranges from 5 minutes to one hour. Wave goodbye to ingrown hairs, razors and waxing and say hello to smooth flawless skin!            </FlowerSection>
-                <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white" id='consultation'>
+            <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white" id='consultation'>
                 <SectionTitle>
                     SECURE YOUR FREE CONSULTATION NOW
                 </SectionTitle>
@@ -110,42 +137,42 @@ const page = () => {
                     Please provide your contact information to help us schedule your free consultation
                 </SectionDescription>
                 <form action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`} method="POST" >
-                <div
-                    className="w-full mb-[4rem] flex flex-col gap-[1rem] justify-center items-center"
-                >
-                    <DoubleInput>
-                        <Input name='name' placeholder="Your Name" half />
-                        <Input name='email' placeholder="Email" half />
-                    </DoubleInput>
-                    <DoubleInput>
-                        <Input name='phone number' placeholder="Phone Number" half />
-                        <Input name='date and time' placeholder="Date and Time" half />
-                    </DoubleInput>
-                    <Input name='service' placeholder="Service" />
-                </div>
-                <CustomButton submit type="secondary" className="md:min-w-[500px] mb-[2rem]" center >
-                    BOOK NOW
-                </CustomButton>
+                    <div
+                        className="w-full mb-[4rem] flex flex-col gap-[1rem] justify-center items-center"
+                    >
+                        <DoubleInput>
+                            <Input name='name' placeholder="Your Name" half />
+                            <Input name='email' placeholder="Email" half />
+                        </DoubleInput>
+                        <DoubleInput>
+                            <Input name='phone number' placeholder="Phone Number" half />
+                            <Input name='date and time' placeholder="Date and Time" half />
+                        </DoubleInput>
+                        <Input name='service' placeholder="Service" />
+                    </div>
+                    <CustomButton submit type="secondary" className="md:min-w-[500px] mb-[2rem]" center >
+                        BOOK NOW
+                    </CustomButton>
                 </form>
                 <div className="flex justify-center items-center gap-4 mt-4">
                     <a href="https://www.facebook.com/OptimumLaserInc/" target="_blank">
                         <StyledIcons iconColor="black" borderColor="black">
-                            <BiLogoFacebook size={30}/>
+                            <BiLogoFacebook size={30} />
                         </StyledIcons>
                     </a>
                     <a href="https://www.instagram.com/optimum_laser/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
                         <StyledIcons iconColor="black" borderColor="black">
-                            <AiOutlineInstagram size={30}/>
+                            <AiOutlineInstagram size={30} />
                         </StyledIcons>
                     </a>
                     <a href="tel:516-495-4908">
                         <StyledIcons iconColor="black" borderColor="black">
-                            <FaPhoneAlt size={20}/>
+                            <FaPhoneAlt size={20} />
                         </StyledIcons>
                     </a>
                     <a href="mailto:optimumlaserhairremoval@gmail.com">
                         <StyledIcons iconColor="black" borderColor="black">
-                            <GrMail size={25}/>
+                            <GrMail size={25} />
                         </StyledIcons>
                     </a>
                 </div>

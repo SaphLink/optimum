@@ -239,7 +239,7 @@ export default function Home() {
           size={170}
         />
       </BoxSection>
-      
+
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>SERVICES</SectionTitle>
         <SectionDescription>
@@ -523,63 +523,63 @@ export default function Home() {
       </div>
 
       <div className="container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd]">
-      <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
-      <div className="md:py-10 py-0">
-          <Box>
-            <div>
-              <Title>CHAT WITH US</Title>
-            </div>
-            <form
-              action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
-              method="POST"
-            >
-              <Row className="mb-[1rem]">
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Name"
-                  style={inputStyle}
-                />
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                  style={inputStyle}
-                />
-              </Row>
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+          <div className="md:py-10 py-0">
+            <Box>
+              <div>
+                <Title>CHAT WITH US</Title>
+              </div>
+              <form
+                action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
+                method="POST"
+              >
+                <Row className="mb-[1rem]">
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Name"
+                    style={inputStyle}
+                  />
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    style={inputStyle}
+                  />
+                </Row>
 
-              <Row className="mb-[1rem]">
-                <input
-                  name="phone number"
-                  type="text"
-                  placeholder="Phone Number"
-                  style={inputStyle}
-                />
-                <input
-                  name="address"
-                  type="text"
-                  placeholder="Address"
-                  style={inputStyle}
-                />
-              </Row>
+                <Row className="mb-[1rem]">
+                  <input
+                    name="phone number"
+                    type="text"
+                    placeholder="Phone Number"
+                    style={inputStyle}
+                  />
+                  <input
+                    name="address"
+                    type="text"
+                    placeholder="Address"
+                    style={inputStyle}
+                  />
+                </Row>
 
-              <textarea
-                name="message"
-                placeholder="Message"
-                style={textareaStyle}
-              ></textarea>
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  style={textareaStyle}
+                ></textarea>
 
-              <CustomButton submit center type="primary">
-                SUBMIT
-              </CustomButton>
-            </form>
-          </Box>
+                <CustomButton submit center type="primary">
+                  SUBMIT
+                </CustomButton>
+              </form>
+            </Box>
+          </div>
+          <div>
+            <img src="../images/cropped-images/Homepage Group 3 Cropped.png"
+              alt="image" />
+          </div>
         </div>
-        <div>
-          <img src="../images/cropped-images/Homepage Group 3 Cropped.png"
-          alt="image"/>
-        </div>
-      </div>
       </div>
 
       {/* <BoxSection className="hidden !min-h-[700px] md:!min-h-[max(110vh,800px)]">

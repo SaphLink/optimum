@@ -28,7 +28,8 @@ const Img3 = styled.img`
 const page = () => {
   return (
     <div className="pt-[1rem]">
-      <BoxSection hero>
+
+      {/* <BoxSection hero>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
             <div className="title">ABOUT US</div>
@@ -54,7 +55,46 @@ const page = () => {
           src="../images/cropped-images/Homepage Group 3 Cropped.png"
           alt="image"
         />
-      </BoxSection>
+      </BoxSection> */}
+
+
+      <div className="about-us-banner h-[600px] mt-[9.4rem] md:mt-[9.5rem] sm:mt-[9.5rem] lg:mt-[9.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+          <div className="md:py-10 py-0">
+            <Box>
+              <div className="title text-center md:text-left">ABOUT US</div>
+              {/* <div className="mini-title text-center md:text-left">SERVICES</div> */}
+              <div className="line"></div>
+
+             <div className="desc">
+              <span
+                style={{
+                  fontFamily: "Broadway",
+                  fontSize: "1.3rem",
+                }}
+              >
+                Optimum Laser
+              </span>{" "}
+              is a medical spa that offers cutting-edge medical grade laser
+              technology.
+            </div>  
+            
+            <CustomButton className="inline-block" href="#consultation" type="primary">
+              BOOK A FREE CONSULTATION
+            </CustomButton>
+
+            </Box>
+          </div>
+          <div>
+            <img src="../images/cropped-images/Homepage Group 3 Cropped.png" className="visible md:invisible h-auto max-w-full"
+              alt="image" />
+
+          </div>
+        </div>
+      </div>
+
+
+
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <div
           className={

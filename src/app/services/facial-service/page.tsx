@@ -51,7 +51,7 @@ const Img = styled.img`
 const page = () => {
   return (
     <>
-      <BoxSection hero className="!min-h-[700px] md:!min-h-[max(110vh,800px)]">
+      {/* <BoxSection hero className="hidden !min-h-[700px] md:!min-h-[max(110vh,800px)]">
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
             <div className="title text-center md:text-left">FACIAL</div>
@@ -66,7 +66,32 @@ const page = () => {
           className="!hidden md:!flex"
         >
         </BoxSplitSection>
-      </BoxSection>
+      </BoxSection> */}
+
+
+
+      <div className="facial-banner-div h-[700px] mt-[9.4rem] md:mt-[9.5rem] sm:mt-[9.5rem] lg:mt-[9.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+          <div className="md:py-10 py-0">
+            <Box>
+              <div className="title text-center md:text-left">FACIAL</div>
+              <div className="mini-title text-center md:text-left">SERVICES</div>
+              <div className="line"></div>
+              <div className="desc">Facial services work by replenishing the skin's moisture and improving its overall health and appearance. It typically involves cleansing the skin, applying a hydrating mask with nourishing ingredients, and using serums to address specific skin concerns like dryness or fine lines. The specific techniques and products used are customized to the individual's skin type and needs. </div>
+              <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+
+            </Box>
+          </div>
+          <div>
+            <img src="../images/facial-service/Facial.png" className="visible md:invisible h-auto max-w-full"
+              alt="image" />
+
+          </div>
+        </div>
+      </div>
+
+
+
 
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <ImagesContainer>

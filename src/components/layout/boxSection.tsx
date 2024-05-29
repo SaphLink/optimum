@@ -26,7 +26,6 @@ export const BoxSplitSection = styled.div`
   max-width: calc(50% - 2rem);
   position:relative;
   display:flex;
-  padding-top: 3rem;
   align-items: center;
   justify-content:center;
   @media only screen and (max-width: 768px) {
@@ -50,7 +49,7 @@ export const BoxSplitSection = styled.div`
 const BoxSection = ({children,className,style,hero}:any) => {
   return (
     <StyledBox 
-      className={`${hero ? '!md:pt-[20rem] !pt-[10rem] hero' : ''} ${className || ''}`}
+      className={`${hero ? '!md:pt-[20rem] pt-[0rem] !md:pt-[10rem] hero' : ''} ${className || ''}`}
     style={{
         minHeight: `max(110vh, 800px)`,
         background: hero ? 'linear-gradient(to bottom, #ebe0ce, #f8efdd)' : 'linear-gradient(to right, #faecdb, #f9efdd)',
