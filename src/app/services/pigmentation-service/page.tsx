@@ -35,8 +35,9 @@ const Img2 = styled.img`
 `;
 const page = () => {
   return (
-    <div className="pt-[8rem]">
-      <BoxSection hero>
+    <div>
+
+      {/* <BoxSection hero>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
             <div className="text-[3.5rem] text-white text-center md:text-left">PIGMENTATION</div>
@@ -47,7 +48,29 @@ const page = () => {
           </Box>
         </BoxSplitSection>
         <Img3 src="../images/cropped-images/Pigmentation Group 1 Cropped.png" alt="image" />
-      </BoxSection>
+      </BoxSection> */}
+
+
+      <div className="relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+                <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+                    <div className="md:py-10 py-0 z-10">
+                        <Box>
+                            <div className="text-[3rem] text-white text-center md:text-left">PIGMENTATION</div>
+                            <div className="mini-title text-center md:text-left">REMOVAL</div>
+                            <div className="line"></div>
+                            <div className="desc">Unwanted pigmentation is a result of sun damage from incremental exposure to the sun over many years.</div>
+                            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+                        </Box>
+                    </div>
+                    <div>
+                        {/* <img src="../images/cropped-images/Pigmentation Group 1 Cropped.png" className="visible md:invisible h-auto max-w-full"
+                            alt="image" /> */}
+                            <Img3 src="../images/cropped-images/Pigmentation Group 1 Cropped.png" alt="image" />
+                    </div>
+                </div>
+            </div>
+
+
       <FlowerSection>
         You don't have to live with sun spots or other sun damage thanks to the modern state-of-the-art laser treatment available at Optimum Laser
         Hair Removal in Manhasset, New York. The Cynosure Apogee Elite+TM laser offers the gentlest. fastest, and MOST effective sun spot removal

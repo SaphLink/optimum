@@ -60,16 +60,14 @@ const page = () => {
                             <div className="mini-title text-center md:text-left">HAIR REMOVAL</div>
                             <div className="line"></div>
                             <div className="desc">Shaving, plucking, tweezing, waxing are all temporary fixes for unwanted hair. Over time
-                            these temporary fixes increase painful ingrown hairs, further irritating the skin, NOT budget
-                            friendly and costly. </div>
+                                these temporary fixes increase painful ingrown hairs, further irritating the skin, NOT budget
+                                friendly and costly. </div>
                             <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
-
                         </Box>
                     </div>
                     <div>
                         <img src="../images/cropped-images/Homepage Group 3 Cropped.png" className="visible md:invisible h-auto max-w-full"
                             alt="image" />
-
                     </div>
                 </div>
             </div>
