@@ -193,7 +193,7 @@ export default function Home() {
       }}
     >
       <Popup />
-      <BoxSection hero>
+      <BoxSection hero className="pt-[110px]">
         <BoxSplitSection>
           <Box>
             <Logo src="../images/homepage/Optimum Laser Brown White.png" />
