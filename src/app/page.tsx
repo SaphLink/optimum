@@ -193,9 +193,17 @@ export default function Home() {
       }}
     >
       <Popup />
-      <BoxSection hero>
-        <BoxSplitSection>
-          <Box>
+
+
+
+
+
+
+
+
+      {/* <BoxSection>
+        <BoxSplitSection className="pt-[200px]">
+          <Box className="pt-[200px]">
             <Logo src="../images/homepage/Optimum Laser Brown White.png" />
             <div className="line"></div>
             <div className="desc">
@@ -220,25 +228,67 @@ export default function Home() {
           src="../images/cropped-images/Homepage Group 1 Cropped.png"
           alt="image"
         />
-        <CustomCircle
-          labels={[
-            {
-              text: "BOOK",
-              style: {
-                fontSize: "16px",
-                fontWeight: "200",
-                letterSpacing: "3px",
-              },
-            },
-            { text: "FREE", style: { fontSize: "40px", fontWeight: "bold" } },
-            {
-              text: "CONSULTATION NOW!",
-              style: { fontSize: "12px", fontWeight: "200" },
-            },
-          ]}
-          size={170}
-        />
-      </BoxSection>
+
+     
+      </BoxSection> */}
+
+
+
+      <div className="relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+
+          <div className="md:py-10 py-0 z-10">
+            <Box>
+              <Logo src="../images/homepage/Optimum Laser Brown White.png" />
+
+              <div className="line"></div>
+              <div className="desc">
+                <span
+                  style={{
+                    fontFamily: "Broadway",
+                    fontSize: "1.3rem",
+                  }}
+                >
+                  Optimum Laser
+                </span>{" "}
+                is a medical spa that offers cutting-edge medical grade laser
+                technology.
+              </div>
+              <CustomButton href="/about-us" type="primary">
+                LEARN MORE
+              </CustomButton>
+            </Box>
+            <CustomCircle
+              labels={[
+                {
+                  text: "BOOK",
+                  style: {
+                    fontSize: "16px",
+                    fontWeight: "200",
+                    letterSpacing: "3px",
+                  },
+                },
+                { text: "FREE", style: { fontSize: "40px", fontWeight: "bold" } },
+                {
+                  text: "CONSULTATION NOW!",
+                  style: { fontSize: "12px", fontWeight: "200" },
+                },
+              ]}
+              size={170}
+            />
+
+          </div>
+          <div>
+            <Img
+              src="../images/cropped-images/Homepage Group 1 Cropped.png"
+              alt="image"
+            />
+          </div>
+
+        </div>
+      </div>
+
+
 
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>SERVICES</SectionTitle>

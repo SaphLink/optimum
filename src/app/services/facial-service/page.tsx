@@ -70,7 +70,7 @@ const page = () => {
 
 
 
-      <div className="facial-banner-div h-[700px] mt-[9.4rem] md:mt-[9.5rem] sm:mt-[9.5rem] lg:mt-[9.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
+      <div className="facial-banner-div relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
         <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
           <div className="md:py-10 py-0">
             <Box>
