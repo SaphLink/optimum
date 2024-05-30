@@ -95,13 +95,13 @@ const page = () => {
 
 
 
-      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
+      <div className="pt-[3rem] pb-[0rem] md:pb-[3rem] md:pt-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <div
           className={
-            "justify-center items-stretch min-h-[400px] flex flex-wrap p-[2rem]"
+            "justify-center items-stretch min-h-[400px] flex flex-wrap p-[0rem] md:p-[2rem]"
           }
         >
-          <div className={"flex-1 p-[2rem] "}>
+          <div className={"flex-1 p-[0rem] md:p-[2rem] "}>
             <div
               className={"mb-[3rem]"}
               style={{
@@ -175,7 +175,7 @@ const page = () => {
               BOOK A FREE CONSULTATION
             </CustomButton>
           </div>
-          <div className={"w-[40%] p-[2rem] flex justify-center items-start"}>
+          <div className={"w-[40%] pt-[2rem] flex justify-center items-start"}>
             <div
               className={
                 "w-full max-w-[500px] h-[40rem] min-w-[450px] rounded-[2rem]"
@@ -191,6 +191,7 @@ const page = () => {
           </div>
         </div>
       </div>
+
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-[#faecdb]">
         <div className={"pt-[3rem]"}>
           <SectionTitle>SEE SOME OF OUR WORK</SectionTitle>
