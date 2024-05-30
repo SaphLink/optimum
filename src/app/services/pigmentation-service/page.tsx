@@ -51,7 +51,7 @@ const page = () => {
       </BoxSection> */}
 
 
-      <div className="relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+      <div className="relative h-[585px] md:h-[700px] lg:h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
                 <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
                     <div className="md:py-10 py-0 z-10">
                         <Box>
@@ -159,7 +159,7 @@ const page = () => {
 
 
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white" id='consultation'>
-        <SectionTitle>SECURE YOUR FREE CONSULTATION NOW</SectionTitle>
+      <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">SECURE YOUR FREE CONSULTATION NOW</h2>
         <SectionDescription>Please provide your contact information to help us schedule your free consultation</SectionDescription>
         <form action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`} method="POST">
           <div

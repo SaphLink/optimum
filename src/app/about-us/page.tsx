@@ -280,7 +280,7 @@ const page = () => {
         </div>
       </div>
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white" id="consultation">
-        <SectionTitle>SECURE YOUR FREE CONSULTATION NOW</SectionTitle>
+        <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">SECURE YOUR FREE CONSULTATION NOW</h2>
         <SectionDescription>
           Please provide your contact information to help us schedule your free
           consultation

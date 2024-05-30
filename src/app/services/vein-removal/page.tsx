@@ -113,7 +113,7 @@ const page = () => {
       </BoxSection> */}
 
       <Section id='consultation' >
-        <SectionTitle>SECURE YOUR FREE CONSULTATION NOW</SectionTitle>
+      <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">SECURE YOUR FREE CONSULTATION NOW</h2>
         <SectionDescription>Please provide your contact information to help us schedule your free consultation</SectionDescription>
         <form action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`} method="POST">
           <div

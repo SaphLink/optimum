@@ -19,7 +19,7 @@ import Popup from "./popup";
 const Logo = styled.img`
   object-fit: contain;
   margin: 0 auto;
-  height: 150px;
+  height: 100px;
 `;
 
 const Img = styled.img`
@@ -234,7 +234,7 @@ export default function Home() {
 
 
 
-      <div className="relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+      <div className="relative h-screen mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
         <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
 
           <div className="md:py-10 py-0 z-10">
@@ -242,7 +242,7 @@ export default function Home() {
               <Logo src="../images/homepage/Optimum Laser Brown White.png" />
 
               <div className="line"></div>
-              <div className="desc">
+              <div className="desc text-center">
                 <span
                   style={{
                     fontFamily: "Broadway",
@@ -264,17 +264,17 @@ export default function Home() {
                   text: "BOOK",
                   style: {
                     fontSize: "16px",
-                    fontWeight: "200",
+                    fontWeight: "400",
                     letterSpacing: "3px",
                   },
                 },
                 { text: "FREE", style: { fontSize: "40px", fontWeight: "bold" } },
                 {
                   text: "CONSULTATION NOW!",
-                  style: { fontSize: "12px", fontWeight: "200" },
+                  style: { fontSize: "10px", fontWeight: "400" },
                 },
               ]}
-              size={170}
+              size={140}
             />
 
           </div>
@@ -450,7 +450,7 @@ export default function Home() {
       </BoxSection>
 
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
-        <SectionTitle>WHAT USERS THINK</SectionTitle>
+        <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-5 md:px-0 leading-tight ">WHAT USERS THINK</h2>
         <SectionDescription>
           See what our customers have to say about their experience at our
           medical spa
