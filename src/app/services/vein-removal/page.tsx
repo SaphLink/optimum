@@ -72,7 +72,7 @@ const page = () => {
       </FlowerSection>
 
 
-      <div className="relative h-[700px] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+      <div className="relative h-[700px] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center]">
         <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
           <div>
             <Img2 src="../images/cropped-images/Vein Removal Group 2 Cropped.png" className="h-auto max-w-full" alt="image" />
@@ -93,24 +93,6 @@ const page = () => {
 
         </div>
       </div>
-
-      {/* <BoxSection>
-        <Img2 style={{}} src="../images/cropped-images/Vein Removal Group 2 Cropped.png" alt="image" />
-        <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
-        <BoxSplitSection>
-          <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title text-center md:text-left">HOW DOES</div>
-            <div className="mini-title text-center md:text-left">VEIN REMOVAL WORK?</div>
-            <div className="line"></div>
-            <div className="desc">
-              Laser vein removal with the advanced Cynosure® Elite+TM system gives you fast results
-              with no downtime. To find out more, contact a member of the experienced Optimum Laser
-              Hair Removal team online or by phone now at 516-495-4908.
-            </div>
-            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
-          </Box>
-        </BoxSplitSection>
-      </BoxSection> */}
 
       <Section id='consultation' >
       <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">SECURE YOUR FREE CONSULTATION NOW</h2>
