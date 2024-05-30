@@ -258,7 +258,14 @@ export default function Home() {
                 LEARN MORE
               </CustomButton>
             </Box>
-            <CustomCircle
+
+              <div className="custom-circle flex flex-col items-center justify-center h-[170px] w-[170px]">
+                <p>Book</p>
+                <p>FREE</p>
+                <p>CONSULTATION NOW!</p>
+              </div>
+
+            {/* <CustomCircle
               labels={[
                 {
                   text: "BOOK",
@@ -275,7 +282,7 @@ export default function Home() {
                 },
               ]}
               size={140}
-            />
+            /> */}
 
           </div>
           <div>
