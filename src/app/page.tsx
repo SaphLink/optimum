@@ -259,12 +259,6 @@ export default function Home() {
               </CustomButton>
             </Box>
 
-              <div className="custom-circle flex flex-col items-center justify-center h-[170px] w-[170px]">
-                <p>Book</p>
-                <p>FREE</p>
-                <p>CONSULTATION NOW!</p>
-              </div>
-
             {/* <CustomCircle
               labels={[
                 {
@@ -286,6 +280,11 @@ export default function Home() {
 
           </div>
           <div>
+            <div className="custom-circle flex flex-col items-center justify-center h-[170px] w-[170px]">
+              <p>Book</p>
+              <p>FREE</p>
+              <p>CONSULTATION NOW!</p>
+            </div>
             <Img
               src="../images/cropped-images/Homepage Group 1 Cropped.png"
               alt="image"

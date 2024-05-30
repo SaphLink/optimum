@@ -77,6 +77,7 @@
     position: absolute;
     left: 50%;
     bottom: 20px;
+    z-index: 11;
   }
 
   .custom-circle p:nth-child(odd) {
