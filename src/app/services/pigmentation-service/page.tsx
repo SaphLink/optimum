@@ -32,6 +32,9 @@ const Img2 = styled.img`
   height: 100%;
   object-fit: contain;
   object-position: bottom;
+  @media only screen and (max-width: 768px) {
+    left: 30px;
+  }
 `;
 const page = () => {
   return (

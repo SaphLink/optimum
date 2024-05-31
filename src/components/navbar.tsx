@@ -139,7 +139,7 @@ export default function Navbar() {
                   }}
                 >
                   <ul
-                    className={`min-h-0 duration-200 flex flex-col justify-start items-center`}
+                    className={`min-h-0 duration-100 flex flex-col justify-start items-center`}
                     style={{
                       background: "linear-gradient(to right, rgb(251, 235, 213), rgb(247, 236, 222))",
                       fontFamily: "Raleway",
