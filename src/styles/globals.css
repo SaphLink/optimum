@@ -98,6 +98,13 @@
   @media only screen and (max-width: 768px) {
     .custom-circle {
       left: 30%;
-      bottom: 35%;
+      bottom: 40%;
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .custom-circle {
+      left: 52%;
+      bottom: 10%;
     }
   }

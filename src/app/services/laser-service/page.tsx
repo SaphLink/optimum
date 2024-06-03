@@ -35,23 +35,7 @@ const Img4 = styled.img`
 const page = () => {
     return (
         <>
-            {/* <BoxSection hero>
-                <BoxSplitSection>
-                    <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-                        <div className="title text-center md:text-left">LASER</div>
-                        <div className="mini-title text-center md:text-left">HAIR REMOVAL</div>
-                        <div className="line"></div>
-                        <div className="desc">Shaving, plucking, tweezing, waxing are all temporary fixes for unwanted hair. Over time
-                            these temporary fixes increase painful ingrown hairs, further irritating the skin, NOT budget
-                            friendly and costly. </div>
-                        <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
-                    </Box>
-                </BoxSplitSection>
-                <Img3 src="../images/cropped-images/Homepage Group 3 Cropped.png" alt="image" />
-            </BoxSection> */}
-
-
-
+ 
             <div className="laser-hair-removal relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
                 <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
                     <div className="md:py-10 py-0">

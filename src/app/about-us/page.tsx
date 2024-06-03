@@ -29,35 +29,6 @@ const page = () => {
   return (
     <div className="pt-[1rem]">
 
-      {/* <BoxSection hero>
-        <BoxSplitSection>
-          <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title">ABOUT US</div>
-            <div className="line"></div>
-            <div className="desc">
-              <span
-                style={{
-                  fontFamily: "Broadway",
-                  fontSize: "1.3rem",
-                }}
-              >
-                Optimum Laser
-              </span>{" "}
-              is a medical spa that offers cutting-edge medical grade laser
-              technology.
-            </div>
-            <CustomButton className="inline-block" href="#consultation" type="primary">
-              BOOK A FREE CONSULTATION
-            </CustomButton>
-          </Box>
-        </BoxSplitSection>
-        <Img3
-          src="../images/cropped-images/Homepage Group 3 Cropped.png"
-          alt="image"
-        />
-      </BoxSection> */}
-
-
       <div className="about-us-banner h-[600px] mt-[9.4rem] md:mt-[9.5rem] sm:mt-[9.5rem] lg:mt-[9.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
         <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
           <div className="md:py-10 py-0">
@@ -101,7 +72,7 @@ const page = () => {
             "justify-center items-stretch min-h-[400px] flex flex-wrap p-[0rem] md:p-[2rem]"
           }
         >
-          <div className={"flex-1 p-[0rem] md:p-[2rem] "}>
+          <div className={"flex-1 py-[2rem] md:p-[2rem] "}>
             <div
               className={"mb-[3rem]"}
               style={{
@@ -110,7 +81,7 @@ const page = () => {
                 fontWeight: 200,
               }}
             >
-              <div className={"mb-[3rem]"}>
+              <div className={"mb-[3rem] mt-[50px]"}>
                 Located in Manhasset, New York, the highly experienced{" "}
                 <span
                   style={{

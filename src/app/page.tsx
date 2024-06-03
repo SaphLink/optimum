@@ -25,7 +25,7 @@ const Logo = styled.img`
 const Img = styled.img`
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: -45px;
   height: 100%;
   object-fit: contain;
   object-position: bottom;
@@ -188,54 +188,14 @@ export default function Home() {
   return (
     <div
       style={{
-        backgroundImage: "linear-gradient(to bottom, #ebe0ce, #f8efdd)",
+        backgroundImage: "linear-gradient(to bottom, #faecdb, #f9efdd)",
         scrollbarWidth: "none",
       }}
     >
       <Popup />
 
-
-
-
-
-
-
-
-      {/* <BoxSection>
-        <BoxSplitSection className="pt-[200px]">
-          <Box className="pt-[200px]">
-            <Logo src="../images/homepage/Optimum Laser Brown White.png" />
-            <div className="line"></div>
-            <div className="desc">
-              <span
-                style={{
-                  fontFamily: "Broadway",
-                  fontSize: "1.3rem",
-                }}
-              >
-                Optimum Laser
-              </span>{" "}
-              is a medical spa that offers cutting-edge medical grade laser
-              technology.
-            </div>
-            <CustomButton href="/about-us" type="primary">
-              LEARN MORE
-            </CustomButton>
-          </Box>
-        </BoxSplitSection>
-        <Img
-          className="translate-x-[15%] !h-[calc(100%-150px)]"
-          src="../images/cropped-images/Homepage Group 1 Cropped.png"
-          alt="image"
-        />
-
-     
-      </BoxSection> */}
-
-
-
-      <div className="relative h-screen mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
-        <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+      <div className="w-full relative h-screen md:h-[700px] lg:h-[580px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 place-items-center">
 
           <div className="md:py-10 py-0 z-10">
             <Box>
