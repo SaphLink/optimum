@@ -42,6 +42,10 @@
     font-family: 'Russo One', sans-serif;
   }
 
+  .deskop-view {
+    display: block;
+  }
+
   .facial-banner-div {
     background: url('../../public/images/facial-service/Facial.png');
     background-position: center right;
@@ -95,11 +99,47 @@
     font-family: 'Raleway',sans-serif;
   }
 
-  @media only screen and (max-width: 768px) {
+  .custom-circle-mb {
+    background-color: #35281e;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .custom-circle-mb p:nth-child(odd) {
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    color: #fff;
+    font-family: 'Raleway',sans-serif;
+  }
+
+  .custom-circle-mb p:nth-child(even) {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    font-family: 'Raleway',sans-serif;
+  }
+
+  .mobile-view {
+    display: none;
+  }
+
+  @media only screen and (max-width: 767px) {
     .custom-circle {
       left: 30%;
       bottom: 40%;
     }
+
+    .deskop-view {
+      display: none;
+    }
+
+    .mobile-view {
+      display: block;
+    }
+
   }
 
   @media only screen and (min-width: 1400px) {

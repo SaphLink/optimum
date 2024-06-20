@@ -194,9 +194,69 @@ export default function Home() {
     >
       <Popup />
 
-      <div className="w-full relative h-screen md:h-[700px] lg:h-[580px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 place-items-center">
+      <div className="deskop-view">
+        <div className="w-full relative h-screen md:h-[700px] lg:h-[580px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 place-items-center">
+            <div className="md:py-10 py-0 z-10">
+              <Box>
+                <Logo src="../images/homepage/Optimum Laser Brown White.png" />
 
+                <div className="line"></div>
+                <div className="desc text-center">
+                  <span
+                    style={{
+                      fontFamily: "Broadway",
+                      fontSize: "1.3rem",
+                    }}
+                  >
+                    Optimum Laser
+                  </span>{" "}
+                  is a medical spa that offers cutting-edge medical grade laser
+                  technology.
+                </div>
+                <CustomButton href="/about-us" type="primary">
+                  LEARN MORE
+                </CustomButton>
+              </Box>
+
+              {/* <CustomCircle
+              labels={[
+                {
+                  text: "BOOK",
+                  style: {
+                    fontSize: "16px",
+                    fontWeight: "400",
+                    letterSpacing: "3px",
+                  },
+                },
+                { text: "FREE", style: { fontSize: "40px", fontWeight: "bold" } },
+                {
+                  text: "CONSULTATION NOW!",
+                  style: { fontSize: "10px", fontWeight: "400" },
+                },
+              ]}
+              size={140}
+            /> */}
+            </div>
+            <div>
+              <div className="custom-circle flex flex-col items-center justify-center h-[170px] w-[170px]">
+                <p>Book</p>
+                <p>FREE</p>
+                <p>CONSULTATION NOW!</p>
+              </div>
+              <Img
+                src="../images/cropped-images/Homepage Group 1 Cropped.png"
+                alt="image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+<div className="mobile-view">
+
+      <div className="w-full mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+        <div className="grid md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-3 place-items-center">
           <div className="md:py-10 py-0 z-10">
             <Box>
               <Logo src="../images/homepage/Optimum Laser Brown White.png" />
@@ -218,43 +278,23 @@ export default function Home() {
                 LEARN MORE
               </CustomButton>
             </Box>
-
-            {/* <CustomCircle
-              labels={[
-                {
-                  text: "BOOK",
-                  style: {
-                    fontSize: "16px",
-                    fontWeight: "400",
-                    letterSpacing: "3px",
-                  },
-                },
-                { text: "FREE", style: { fontSize: "40px", fontWeight: "bold" } },
-                {
-                  text: "CONSULTATION NOW!",
-                  style: { fontSize: "10px", fontWeight: "400" },
-                },
-              ]}
-              size={140}
-            /> */}
-
           </div>
-          <div>
-            <div className="custom-circle flex flex-col items-center justify-center h-[170px] w-[170px]">
+
+          <div className="lg:block md:block mt-[40px] mb-[15px]">
+            <div className="custom-circle-mb flex flex-col items-center justify-center h-[170px] w-[170px]">
               <p>Book</p>
               <p>FREE</p>
               <p>CONSULTATION NOW!</p>
             </div>
-            <Img
-              src="../images/cropped-images/Homepage Group 1 Cropped.png"
-              alt="image"
-            />
           </div>
 
+          <div className="p-0">
+            <img src="../images/cropped-images/home-banner.png" alt="image" />
+          </div>
         </div>
       </div>
 
-
+      </div>
 
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>SERVICES</SectionTitle>
@@ -316,7 +356,11 @@ export default function Home() {
           />
         </ImagesContainer>
         <div className="w-fit mx-auto">
-          <CustomButton className="inline-block" href="contact-us" type="secondary">
+          <CustomButton
+            className="inline-block"
+            href="contact-us"
+            type="secondary"
+          >
             BOOK A FREE CONSULTATION
           </CustomButton>
         </div>
@@ -416,7 +460,9 @@ export default function Home() {
       </BoxSection>
 
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
-        <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-5 md:px-0 leading-tight ">WHAT USERS THINK</h2>
+        <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-5 md:px-0 leading-tight ">
+          WHAT USERS THINK
+        </h2>
         <SectionDescription>
           See what our customers have to say about their experience at our
           medical spa
@@ -532,7 +578,11 @@ export default function Home() {
           </ReviewCard>
         </Slider>
         <div className="w-fit mx-auto">
-          <CustomButton className="inline-block" href="contact-us" type="secondary">
+          <CustomButton
+            className="inline-block"
+            href="contact-us"
+            type="secondary"
+          >
             BOOK A FREE CONSULTATION
           </CustomButton>
         </div>
@@ -592,8 +642,10 @@ export default function Home() {
             </Box>
           </div>
           <div>
-            <img src="../images/cropped-images/Homepage Group 3 Cropped.png"
-              alt="image" />
+            <img
+              src="../images/cropped-images/Homepage Group 3 Cropped.png"
+              alt="image"
+            />
           </div>
         </div>
       </div>

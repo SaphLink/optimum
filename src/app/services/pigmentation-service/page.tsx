@@ -123,7 +123,7 @@ const page = () => {
       </div>
 
       <BoxSection>
-        <Img2 src="../images/cropped-images/Pigmentation Group 2 Cropped.png" alt="image" />
+        <Img2 src="../images/cropped-images/pig.png" alt="image" />
         <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">

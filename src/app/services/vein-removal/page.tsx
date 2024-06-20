@@ -60,7 +60,7 @@ const page = () => {
             </Box>
           </div>
           <div>
-            <Img src="../images/cropped-images/Vein Removal Group 1 Cropped.png" className="h-auto max-w-full" alt="image" />
+            <Img src="../images/cropped-images/vein.png" className="h-auto max-w-full" alt="image" />
           </div>
         </div>
       </div>
