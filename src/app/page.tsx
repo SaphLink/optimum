@@ -365,6 +365,7 @@ export default function Home() {
           </CustomButton>
         </div>
       </div>
+
       <BoxSection
         style={{
           backgroundColor: "linear-gradient(to right, #faecdb, #f9efdd)",
@@ -377,62 +378,8 @@ export default function Home() {
         />
         <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
         <BoxSplitSection>
-          <Box>
-            <div>
-              <Title className="mb-6">Hurry, Summer is Almost Here!</Title>
-              <Title>UP TO 50% OFF SAVINGS!</Title>
-              <Description>ENDS JUNE 1st!</Description>
-            </div>
-
-            <Line />
-            <div className="flex flex-col gap-y-4">
-              <div className="flex flex-col items-center w-full p-1 border-2 bg-color[#fefffe] mb-1 text-[#35281e] bg-white rounded-2xl">
-                <div className="flex gap-x-4 text-2xl">
-                  <span className="price ">$30 EACH</span>
-
-                  <span className="old-price font-1.2rem text-red-500 line-through">
-                    $45 EACH
-                  </span>
-                </div>
-                <div className=" text-xl">Lip or Chin Laser Hair Removal</div>
-
-                <div className="text-[0.9rem]">
-                  (When you buy a package of 6)
-                </div>
-                {/* </span> */}
-              </div>
-              <div className="flex flex-col items-center w-full p-1 border-2 bg-color[#fefffe] mb-1 text-[#35281e] bg-white rounded-2xl">
-                <div className="flex gap-x-4 text-2xl">
-                  <span className="price ">$45 EACH</span>
-
-                  <span className="old-price font-1.2rem text-red-500 line-through">
-                    $75 EACH
-                  </span>
-                </div>
-                <div className=" text-xl">Underarm Laser Hair Removal</div>
-
-                <div className="text-[0.9rem]">
-                  (When you buy a package of 6)
-                </div>
-                {/* </span> */}
-              </div>
-              <div className="flex flex-col items-center w-full p-1 border-2 bg-color[#fefffe] mb-1 text-[#35281e] bg-white rounded-2xl">
-                <div className="flex gap-x-4 text-2xl">
-                  <span className="price ">$45 EACH</span>
-
-                  <span className="old-price font-1.2rem text-red-500 line-through">
-                    $75 EACH
-                  </span>
-                </div>
-                <div className=" text-xl">Bikini Laser Hair Removal</div>
-
-                <div className="text-[0.9rem]">
-                  (When you buy a package of 6)
-                </div>
-                {/* </span> */}
-              </div>
-            </div>
-          </Box>
+          <img src="../images/cropped-images/Summer-Sale-2.png" alt="optimum" className="rounded-md"/>
+        
         </BoxSplitSection>
 
         <CustomCircle

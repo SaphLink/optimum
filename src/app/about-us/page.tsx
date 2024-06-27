@@ -72,7 +72,7 @@ const page = () => {
             "justify-center items-stretch min-h-[400px] flex flex-wrap p-[0rem] md:p-[2rem]"
           }
         >
-          <div className={"flex-1 py-[2rem] md:p-[2rem] "}>
+          <div className={"flex-1 py-[2rem] md:p-[2rem] text-black font-light"}>
             <div
               className={"mb-[3rem]"}
               style={{
@@ -81,7 +81,7 @@ const page = () => {
                 fontWeight: 200,
               }}
             >
-              <div className={"mb-[3rem] mt-[50px]"}>
+              <div className={"mb-[3rem] mt-[50px] text-black font-light"}>
                 Located in Manhasset, New York, the highly experienced{" "}
                 <span
                   style={{
@@ -95,7 +95,7 @@ const page = () => {
                 ensuring the highest level of professionalism, cleanliness, and
                 patient satisfaction.
               </div>
-              <div className={"mb-[3rem]"}>
+              <div className={"mb-[3rem] text-black font-light"}>
                 <span
                   style={{
                     fontFamily: "Broadway",
@@ -111,7 +111,7 @@ const page = () => {
                 uses state-of-the-art FDA approved technology, such as the
                 Cynosure Apogee Elite+ TM laser
               </div>
-              <div className={"mb-[3rem]"}>
+              <div className={"mb-[3rem] text-black font-light"}>
                 Since 2009, the entire{" "}
                 <span
                   style={{
@@ -129,6 +129,7 @@ const page = () => {
                 types, located in Manhasset and surrounding areas, look and feel
                 fantastic.
               </div>
+              <div className="text-black font-light">
               Book an appointment online or call the office at 516-495-4908 to
               schedule a{" "}
               <span
@@ -141,6 +142,9 @@ const page = () => {
                 FREE CONSULTATION{" "}
               </span>{" "}
               today!
+              </div>
+             
+          
             </div>
             <CustomButton className="inline-block" href="#consultation" type={"secondary"}>
               BOOK A FREE CONSULTATION
