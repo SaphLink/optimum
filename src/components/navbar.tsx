@@ -156,15 +156,7 @@ export default function Navbar() {
                     >
                       Laser Hair Removal
                     </Link>
-                    <Link
-                      onClick={() => {
-                        setMenuOpen(false);
-                      }}
-                      className="w-full hover:bg-[rgba(0,0,0,0.02)] text-center py-[0.5rem] mb-[0.5rem] hover:unset duration-200"
-                      href="/services/facial-service"
-                    >
-                      Facial Services
-                    </Link>
+                  
 
                     <Link
                       onClick={() => {
@@ -183,6 +175,15 @@ export default function Navbar() {
                       href="/services/vein-removal"
                     >
                       Vein Removal
+                    </Link>
+                    <Link
+                      onClick={() => {
+                        setMenuOpen(false);
+                      }}
+                      className="w-full hover:bg-[rgba(0,0,0,0.02)] text-center py-[0.5rem] mb-[0.5rem] hover:unset duration-200"
+                      href="/services/facial-service"
+                    >
+                      Facial Services
                     </Link>
                   </ul>
                 </div>

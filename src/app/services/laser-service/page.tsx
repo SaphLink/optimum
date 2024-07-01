@@ -85,27 +85,35 @@ const page = () => {
       </FlowerSection>
 
       <div className="px-5 bg-[#35281e] p-[3rem] mt-[100px]">
-
         <div className="px-[30px] md:px-[200px]">
-        <div className="title text-center md:text-left text-white font-bold text-[2rem] md:text-[5rem] m-0 font-[Russo One] uppercase tracking-[0.2rem]">Electrolysis</div>
-        <div className="mini-title text-center md:text-left text-[1.5rem] font-semibold text-white font-[Raleway] uppercase tracking-[0.5rem]">Hair Removal</div>
-        <div className="line bg-white w-full h-1 mt-3 mb-3 font-[Raleway]"></div>
-        <p className="text-white font-light text-[1.2rem] font-[Raleway] text-center md:text-left">
-        Electrolysis hair removal permanently removes and destroys unwanted
-          hair follicles from the face or body by using an electrical current
-          using a sterile tiny needle. This method is safe for all skin types,
-          and highly effective for those with gray hairs, blonde hairs, thin
-          hair and peach fuzz. At Optimum Laser Inc in Manhasset NY, we use
-          state-of-the-art technology in addition to our 15-year expertise with
-          hair removal to provide maximum results to achieve your goal of being
-          hair-free. Our trained electrologist assesses clients thoroughly and
-          creates their unique treatment plan. Appointments are usually every
-          1-3 weeks at 15-minute intervals. Prices vary based on time intervals.
-          NO downtime! Contact us for more information on how you can start
-          electrolysis today!.
-        </p>
+          <div className="title text-center md:text-left text-white font-bold text-[2rem] md:text-[5rem] m-0 font-[Russo One] uppercase tracking-[0.2rem]">
+            Electrolysis
+          </div>
+          <div className="mini-title text-center md:text-left text-[1.5rem] font-semibold text-white font-[Raleway] uppercase tracking-[0.5rem]">
+            Hair Removal
+          </div>
+          <div className="line bg-white w-full h-1 mt-3 mb-3 font-[Raleway]"></div>
+          <p className="text-white font-light text-[1.2rem] font-[Raleway] text-center md:text-left">
+            Electrolysis hair removal permanently removes and destroys unwanted
+            hair follicles from the face or body by using an electrical current
+            using a sterile tiny needle. This method is safe for all skin types,
+            and highly effective for those with gray hairs, blonde hairs, thin
+            hair and peach fuzz.
+            <br/>
+            At Optimum Laser Inc in Manhasset NY, we use
+            state-of-the-art technology in addition to our 15-year expertise
+            with hair removal to provide maximum results to achieve your goal of
+            being hair-free.
+            <br/>
+            Our trained electrologist assesses clients
+            thoroughly and creates their unique treatment plan. Appointments are
+            usually every 1-3 weeks at 15-minute intervals. Prices vary based on
+            time intervals. Shaving is not need prior to your appointment. NO downtime! 
+            <br/>
+            Contact us for more information on how
+            you can start electrolysis today!.
+          </p>
         </div>
-     
       </div>
 
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
