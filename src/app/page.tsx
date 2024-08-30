@@ -209,7 +209,7 @@ export default function Home() {
                       fontSize: "1.3rem",
                     }}
                   >
-                    Optimum Laser
+                    Optimum Laser NY
                   </span>{" "}
                   is a medical spa that offers cutting-edge medical grade laser
                   technology.
@@ -269,7 +269,7 @@ export default function Home() {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser
+                  Optimum Laser NY
                 </span>{" "}
                 is a medical spa that offers cutting-edge medical grade laser
                 technology.
@@ -421,7 +421,7 @@ export default function Home() {
             name="debbie y"
             time="6 months ago"
           >
-            Optimum Laser is a professional pleasant company. I have started
+            Optimum Laser NY is a professional pleasant company. I have started
             treatments more than 10 years ago and now my doughters enjoy the
             warm and welcoming service that we get there. Never a problem,
             always welcoming and accommodating and clean ! Thank you for making
@@ -462,7 +462,7 @@ export default function Home() {
             name="Justin Gomez"
             time="1 year ago"
           >
-            Optimum Laser is great - Eti is very helpful and makes scheduling
+            Optimum Laser NY is great - Eti is very helpful and makes scheduling
             appointments stress-free. Daniela is an awesome tech - not only is
             she great at what she does, but she also has a fun personality that
             makes you feel comfortable. I’ve seen greatly noticeable results so
@@ -485,7 +485,7 @@ export default function Home() {
             time="2 years ago"
           >
             Absolutely LOVE this place!! Each experience has been great at
-            Optimum Laser. Very professional & Nicole does a fantastic job, she
+            Optimum Laser NY. Very professional & Nicole does a fantastic job, she
             makes you feel super comfortable and explain each part of the
             process as it happens. The place is very clean and the atmosphere is
             very pleasant. I highly recommend anyone who wants results and good
@@ -520,7 +520,7 @@ export default function Home() {
             I got amazing results for my laser hair removal. The prices are
             reasonable, the owner is the nicest person, and no matter who I get
             one I come for a treatment, they all do a great job. Honestly, laser
-            hair removal at optimum laser is some of the best money I’ve ever
+            hair removal at optimum laser NY is some of the best money I’ve ever
             spent. I highly recommend!
           </ReviewCard>
         </Slider>

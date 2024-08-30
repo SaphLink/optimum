@@ -67,7 +67,7 @@ const page = () => {
 
 
       <FlowerSection>
-        If the tiny veins on your face or legs make you self-conscious or unhappy, Optimum Laser
+        If the tiny veins on your face or legs make you self-conscious or unhappy, Optimum Laser NY
         Hair Removal in Manhasset, New York, has a state-of-the-art solution for you.
       </FlowerSection>
 
@@ -84,7 +84,7 @@ const page = () => {
               <div className="line"></div>
               <div className="desc">
                 Laser vein removal with the advanced Cynosure® Elite+TM system gives you fast results
-                with no downtime. To find out more, contact a member of the experienced Optimum Laser
+                with no downtime. To find out more, contact a member of the experienced Optimum Laser NY
                 Hair Removal team online or by phone now at 516-495-4908.
               </div>
               <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>

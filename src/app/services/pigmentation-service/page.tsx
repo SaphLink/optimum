@@ -75,7 +75,7 @@ const page = () => {
 
 
       <FlowerSection>
-        You don't have to live with sun spots or other sun damage thanks to the modern state-of-the-art laser treatment available at Optimum Laser
+        You don't have to live with sun spots or other sun damage thanks to the modern state-of-the-art laser treatment available at Optimum Laser NY
         Hair Removal in Manhasset, New York. The Cynosure Apogee Elite+TM laser offers the gentlest. fastest, and MOST effective sun spot removal
         option available. Use online booking or call the office at 516-495-4908 to schedule your appointment with us now!
       </FlowerSection>
@@ -101,7 +101,7 @@ const page = () => {
           <CollapseSection title="How does sun spot removal work?">
             <div className="desc">
               {" "}
-              At Optimum Laser Hair Removal, our laser technicians uses the Cynosure® EliteTM Laser to remove unwanted pigmentation. Including sun
+              At Optimum Laser NY Hair Removal, our laser technicians uses the Cynosure® EliteTM Laser to remove unwanted pigmentation. Including sun
               spots. As your practitioner moves the Elite+ device gently over your skin, the laser pulses go directly into the unwanted pigment.
               <br /> <br />
               The laser energy heats and shatters the pigment into many tiny pieces. The pigment grows lighter and disappears in the next few weeks as
@@ -131,7 +131,7 @@ const page = () => {
             <div className="mini-title text-center md:text-left">PIGMENTATION REMOVAL WORK?</div>
             <div className="line"></div>
             <div className="desc">
-              At Optimum Laser Hair Removal, our laser technicians use the Cynosure® Elite+TM laser to remove unwanted pigmentation, including sun
+              At Optimum Laser NY Hair Removal, our laser technicians use the Cynosure® Elite+TM laser to remove unwanted pigmentation, including sun
               spots. As your practitioner moves the Elite+ device gently over your skin, the laser pulses go directly into the unwanted pigment.
             </div>
             <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>

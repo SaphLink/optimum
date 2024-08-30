@@ -44,7 +44,7 @@ const page = () => {
                   fontSize: "1.3rem",
                 }}
               >
-                Optimum Laser
+                Optimum Laser NY
               </span>{" "}
               is a medical spa that offers cutting-edge medical grade laser
               technology.
@@ -89,7 +89,7 @@ const page = () => {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser Hair Removal
+                  Optimum Laser NY Hair Removal
                 </span>{" "}
                 team emphasizes effective and immediate results all while
                 ensuring the highest level of professionalism, cleanliness, and
@@ -102,7 +102,7 @@ const page = () => {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser Hair Removal
+                  Optimum Laser NY Hair Removal
                 </span>{" "}
                 offers face and body treatments including laser hair removal,
                 laser vein removal, pigmentation treatment, skin rejuvenation,
@@ -119,7 +119,7 @@ const page = () => {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser Hair Removal
+                  Optimum Laser NY Hair Removal
                 </span>{" "}
                 team has been dedicated to helping patients receive the utmost
                 results in the shortest time frames possible. Regardless of each

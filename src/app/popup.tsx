@@ -56,7 +56,7 @@ const Popup = () => {
                         fontFamily: "Broadway",
                       }}
                     >
-                      OPTIMUM LASER
+                      OPTIMUM LASER NY
                     </div>
                     <div className="flex justify-center text-nowrap font-bold  text-[5rem] sm:text-[3rem] lg:text-[5rem]  	">
                       15% OFF

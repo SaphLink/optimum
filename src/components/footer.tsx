@@ -100,7 +100,7 @@ const Footer = () => (
         <FooterLeft className='!items-start mb-[2rem] md:mb-[0]'>
             <Logo src="/images/homepage/Optimum Laser Brown White.png" alt="White Logo" />
             {/* <Description className='text-center md:text-left' >1180 Northern Blvd, Suite 201, Manhasset, NY 11030</Description> */}
-            <p className='text-center md:text-left font-medium text-xl font-[Raleway]'>1180 Northern Blvd, Suite 201, Manhasset, NY 11030</p>
+            <p className='text-center md:text-left font-medium text-xl font-[Raleway]'>1180 Northern Blvd, Suite 202, Manhasset, NY 11030</p>
             <SocialIcons>
                 <a href="https://www.facebook.com/OptimumLaserInc/" target="_blank">
                     <FooterIcon>

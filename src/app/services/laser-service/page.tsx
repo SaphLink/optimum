@@ -102,7 +102,7 @@ const page = () => {
             </p>
             <br/>
             <p className="text-white font-light text-[1.1rem] font-[Raleway] text-center md:text-left">
-            At Optimum Laser Inc in Manhasset NY, we use state-of-the-art
+            At Optimum Laser NY Inc in Manhasset NY, we use state-of-the-art
             technology in addition to our 15-year expertise with hair removal to
             provide maximum results to achieve your goal of being hair-free.
             </p>
@@ -170,7 +170,7 @@ const page = () => {
           </CollapseSection>
           <CollapseSection title="What is the after care post treatment?">
             <div className="desc">
-              Our team at Optimum Laser recommends to avoid direct sun exposure,
+              Our team at Optimum Laser NY recommends to avoid direct sun exposure,
               intense physical activity, and harsh moisturizers at least for one
               day post treatment. Apply sunscreen to treatment areas. Redness or
               red bumps is normal after treatment that subsides within 2-3 hours
@@ -195,7 +195,7 @@ const page = () => {
             fontSize: "1.3rem",
           }}
         >
-          Optimum Laser
+          Optimum Laser NY
         </span>{" "}
         strives and takes pride in providing maximum results to our clients.
         Finding the right medical spa is difficult, and it is our promise at{" "}
@@ -205,7 +205,7 @@ const page = () => {
             fontSize: "1.3rem",
           }}
         >
-          Optimum Laser
+          Optimum Laser NY
         </span>{" "}
         to provide safe, consistent, effective, and affordable treatments for
         ALL skin types! Common areas include underarms, bikini line, legs and
