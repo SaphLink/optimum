@@ -378,7 +378,7 @@ export default function Home() {
         />
         <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
         <BoxSplitSection>
-          <img src="../images/cropped-images/Summer-Sale-2.png" alt="optimum" className="rounded-md"/>
+          <img src="../images/cropped-images/new-sale.jpg" alt="optimum" className="rounded-md"/>
         
         </BoxSplitSection>
 
