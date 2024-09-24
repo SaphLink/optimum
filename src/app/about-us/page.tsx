@@ -13,8 +13,7 @@ import styled from "styled-components";
 import Input, { DoubleInput } from "@/components/Input";
 import Footer from "@/components/footer";
 // video thumbnail images
-
-
+import Head from "next/head";
 
 const Img3 = styled.img`
   position: absolute;
@@ -28,6 +27,20 @@ const Img3 = styled.img`
 const page = () => {
   return (
     <div className="pt-[1rem]">
+      <Head>
+        <title>About Us - Your Company Name</title>
+        <meta
+          name="description"
+          content="Learn more about our company and what we do."
+        />
+        <meta property="og:title" content="About Us - Your Company Name" />
+        <meta
+          property="og:description"
+          content="Learn more about our company and what we do."
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Head>
 
       <div className="about-us-banner h-[600px] mt-[9.4rem] md:mt-[9.5rem] sm:mt-[9.5rem] lg:mt-[9.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
         <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
@@ -37,34 +50,37 @@ const page = () => {
               {/* <div className="mini-title text-center md:text-left">SERVICES</div> */}
               <div className="line"></div>
 
-             <div className="desc">
-              <span
-                style={{
-                  fontFamily: "Broadway",
-                  fontSize: "1.3rem",
-                }}
-              >
-                Optimum Laser NY
-              </span>{" "}
-              is a medical spa that offers cutting-edge medical grade laser
-              technology.
-            </div>  
-            
-            <CustomButton className="inline-block" href="#consultation" type="primary">
-              BOOK A FREE CONSULTATION
-            </CustomButton>
+              <div className="desc">
+                <span
+                  style={{
+                    fontFamily: "Broadway",
+                    fontSize: "1.3rem",
+                  }}
+                >
+                  Optimum Laser NY
+                </span>{" "}
+                is a medical spa that offers cutting-edge medical grade laser
+                technology.
+              </div>
 
+              <CustomButton
+                className="inline-block"
+                href="#consultation"
+                type="primary"
+              >
+                BOOK A FREE CONSULTATION
+              </CustomButton>
             </Box>
           </div>
           <div>
-            <img src="../images/cropped-images/Homepage Group 3 Cropped.png" className="visible md:invisible h-auto max-w-full"
-              alt="image" />
-
+            <img
+              src="../images/cropped-images/Homepage Group 3 Cropped.png"
+              className="visible md:invisible h-auto max-w-full"
+              alt="image"
+            />
           </div>
         </div>
       </div>
-
-
 
       <div className="pt-[3rem] pb-[0rem] md:pb-[3rem] md:pt-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <div
@@ -130,23 +146,25 @@ const page = () => {
                 fantastic.
               </div>
               <div className="text-black font-light">
-              Book an appointment online or call the office at 516-495-4908 to
-              schedule a{" "}
-              <span
-                style={{
-                  fontFamily: "Raleway, serif",
-                  fontWeight: "500",
-                  fontSize: "1.2rem",
-                }}
-              >
-                FREE CONSULTATION{" "}
-              </span>{" "}
-              today!
+                Book an appointment online or call the office at 516-495-4908 to
+                schedule a{" "}
+                <span
+                  style={{
+                    fontFamily: "Raleway, serif",
+                    fontWeight: "500",
+                    fontSize: "1.2rem",
+                  }}
+                >
+                  FREE CONSULTATION{" "}
+                </span>{" "}
+                today!
               </div>
-             
-          
             </div>
-            <CustomButton className="inline-block" href="#consultation" type={"secondary"}>
+            <CustomButton
+              className="inline-block"
+              href="#consultation"
+              type={"secondary"}
+            >
               BOOK A FREE CONSULTATION
             </CustomButton>
           </div>
@@ -177,86 +195,134 @@ const page = () => {
           </SectionDescription>
           <Slider itemWidth={400}>
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/2.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/2.png"
+              />
               <VideoCard videoSrc="/videos/VID_25160429_100420_556.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/1.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/1.png"
+              />
               <VideoCard videoSrc="/videos/VID-20230521-WA0028.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/3.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/3.png"
+              />
               <VideoCard videoSrc="/videos/20230711_165633.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/4.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/4.png"
+              />
               <VideoCard videoSrc="/videos/20230711_154308.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/5.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/5.png"
+              />
               <VideoCard videoSrc="/videos/20230711_154234.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/6.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/6.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101634.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/7.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/7.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101621.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/8.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/8.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101523.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/9.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/9.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101444.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/10.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/10.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101418.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/11.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/11.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101333.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/12.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/12.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101312.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/13.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/13.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101301.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/14.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/14.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101148.mp4" />
             </div>
 
             <div className="relative">
-              <img className="absolute h-full w-full" src="/images/thumbnail/15.png" />
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/15.png"
+              />
               <VideoCard videoSrc="/videos/20230709_101138.mp4" />
             </div>
-
-
           </Slider>
         </div>
       </div>
-      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white" id="consultation">
-        <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">SECURE YOUR FREE CONSULTATION NOW</h2>
+      <div
+        className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white"
+        id="consultation"
+      >
+        <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">
+          SECURE YOUR FREE CONSULTATION NOW
+        </h2>
         <SectionDescription>
           Please provide your contact information to help us schedule your free
           consultation

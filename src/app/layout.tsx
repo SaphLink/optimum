@@ -46,7 +46,7 @@ export default function RootLayout({
   );
 }
 
-export const metadata = {
-  title: "Optimum Laser",
-  description: "Optimum Laser",
-};
+// export const metadata = {
+//   title: "Optimum Laser",
+//   description: "Optimum Laser",
+// };
