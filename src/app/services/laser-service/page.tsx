@@ -1,6 +1,7 @@
 "use client";
 import Input, { DoubleInput } from "@/components/Input";
 import CustomButton from "@/components/button";
+import { Helmet } from 'react-helmet';
 import Footer, { FooterIcon, SocialIcons } from "@/components/footer";
 import Box from "@/components/layout/box";
 import BoxSection, { BoxSplitSection } from "@/components/layout/boxSection";
@@ -38,6 +39,10 @@ const Img4 = styled.img`
 const page = () => {
   return (
     <>
+      <Helmet>
+        <title>Laser Hair Removan in New York - Optimum Laser</title>
+        <meta name="description" content="This is the description of my page" />
+      </Helmet>
       <div className="laser-hair-removal relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
         <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
           <div className="md:py-10 py-0">

@@ -47,6 +47,6 @@ export default function RootLayout({
 }
 
 export const metadata = {
-  title: "Optimum Laser",
+  title: "Laser Hair Removal in Manhasset - Optimum Laser",
   description: "Optimum Laser",
 };

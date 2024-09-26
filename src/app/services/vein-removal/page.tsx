@@ -3,6 +3,7 @@ import Input, { DoubleInput } from "@/components/Input";
 import CustomButton from "@/components/button";
 import Footer, { FooterIcon, SocialIcons } from "@/components/footer";
 import Box from "@/components/layout/box";
+import { Helmet } from 'react-helmet';
 import BoxSection, { BoxSplitSection } from "@/components/layout/boxSection";
 import FlowerSection from "@/components/layout/flowerSection";
 import Section, { SectionDescription, SectionTitle } from "@/components/layout/section";
@@ -47,7 +48,10 @@ const page = () => {
         <Img src="../images/cropped-images/Vein Removal Group 1 Cropped.png" alt="image" />
       </BoxSection> */}
 
-
+<Helmet>
+        <title>Laser Hair Removan in New York - Optimum Laser</title>
+        <meta name="description" content="This is the description of my page" />
+      </Helmet>
       <div className="relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
         <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
           <div className="md:py-10 py-0 z-10">

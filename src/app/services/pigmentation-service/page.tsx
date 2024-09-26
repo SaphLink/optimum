@@ -2,6 +2,7 @@
 import Slider from "@/components/Slider";
 import Section, { SectionDescription, SectionTitle } from "@/components/layout/section";
 import React from "react";
+import { Helmet } from 'react-helmet';
 import VideoCard from "@/components/videoCard";
 import CustomButton from "@/components/button";
 import BoxSection, { BoxSplitSection } from "@/components/layout/boxSection";
@@ -53,7 +54,10 @@ const page = () => {
         <Img3 src="../images/cropped-images/Pigmentation Group 1 Cropped.png" alt="image" />
       </BoxSection> */}
 
-
+<Helmet>
+        <title>Laser Hair Removan in New York - Optimum Laser</title>
+        <meta name="description" content="This is the description of my page" />
+      </Helmet>
       <div className="relative h-[585px] md:h-[700px] lg:h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
                 <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
                     <div className="md:py-10 py-0 z-10">
