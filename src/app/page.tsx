@@ -187,20 +187,6 @@ const ImagesContainer = styled.div`
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>About Us - Your Company Name</title>
-        <meta
-          name="description"
-          content="Learn more about our company and what we do."
-        />
-        <meta property="og:title" content="About Us - Your Company Name" />
-        <meta
-          property="og:description"
-          content="Learn more about our company and what we do."
-        />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-      </Head>
       <div
         style={{
           backgroundImage: "linear-gradient(to bottom, #faecdb, #f9efdd)",

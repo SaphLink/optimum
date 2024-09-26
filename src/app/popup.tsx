@@ -1,6 +1,8 @@
 import { modal } from "@/components/modal";
 import React, { useEffect, useRef, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
+import priceTable from "../../public/images/cropped-images/popup-deal.png";
+import Image from "next/image";
 
 const popupTimeout = 0;
 
@@ -58,8 +60,8 @@ const Popup = () => {
                     >
                       OPTIMUM LASER NY
                     </div>
-                    <div className="flex justify-center text-nowrap font-bold  text-[3rem] sm:text-[1rem] lg:text-[3rem]">
-                        15th Anniversary Sale!
+                    <div className="mt-4 flex justify-center text-nowrap font-bold text-[2rem] sm:text-[1rem] lg:text-[2rem]">
+                      15TH ANNIVERSARY SALE!
                     </div>
                     <div className="mx-auto w-[80px] h-[2px] bg-[#35281e] mb-[1rem]"></div>
                     <div
@@ -69,8 +71,31 @@ const Popup = () => {
                         fontFamily: "Raleway",
                       }}
                     >
-                      Buy 6 sessions and get 1 FREE!
+                      BUY 6 SESSIONS, GET 1 FREE!
                     </div>
+
+                    <div
+                      className="text-[0.6rem] mt-4"
+                      style={{
+                        fontWeight: 400,
+                        fontFamily: "Raleway",
+                      }}
+                    >
+                      OPTIMUM LASER NY USES THE LATEST
+                      <span className="px-1"
+                      style={{
+                        fontFamily: "Raleway",
+                        fontWeight: 760,
+                        fontSize: "0.8rem",
+                      }}
+                    >
+                      FDA APPROVED 
+                    </span>
+                     
+                      
+                      MEDICAL GRADE LASER
+                    </div>
+
                   </div>
                   <div className="md:pt-[3rem] md:max-w-[300px] flex justify-center md:justify-end items-end">
                     <img
@@ -110,7 +135,7 @@ const Popup = () => {
                     type="submit"
                     className="font-bold sm:text-sm cursor-pointer w-full px-4 py-2 sm:w-1/4 border-2 border-[#35281e] mb-4 text-[#35281e] bg-[#f8eedf] rounded-[4px]"
                   >
-                    GET YOUR CODE!
+                    GET THE DEAL!
                   </button>
                 </form>
               </div>
