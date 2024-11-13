@@ -49,7 +49,7 @@ const page = () => {
       </BoxSection> */}
 
 <Helmet>
-        <title>Laser Hair Removan in New York - Optimum Laser</title>
+        <title>Laser Hair Removal in New York - Optimum Laser</title>
         <meta name="description" content="This is the description of my page" />
       </Helmet>
       <div className="relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
