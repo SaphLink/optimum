@@ -106,8 +106,7 @@ const Popup = () => {
                   </div>
                 </div>
                 <form
-                  // action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
-                  action="https://formsubmit.co/usamasafdarkhan@gmail.com"
+                  action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
                   method="POST"
                   className="flex w-full  flex-col gap-x-3 items-center sm:flex-row p-4"
                   style={{ fontFamily: "Raleway" }}
