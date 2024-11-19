@@ -81,7 +81,7 @@ const Popup = () => {
                         fontFamily: "Raleway",
                       }}
                     >
-                      OPTIMUM LASERS NY USES THE LATEST
+                      OPTIMUM LASER NY USES THE LATEST
                       <span className="px-1"
                       style={{
                         fontFamily: "Raleway",

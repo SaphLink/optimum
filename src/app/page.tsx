@@ -213,7 +213,7 @@ export default function Home() {
                       Optimum Laser NY
                     </span>{" "}
                     is a medical spa that offers cutting-edge medical grade
-                    laser technology.
+                    lasers technology.
                   </div>
                   <CustomButton href="/about-us" type="primary">
                     LEARN MORE
