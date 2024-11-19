@@ -61,7 +61,7 @@ const Popup = () => {
                       OPTIMUM LASER NY
                     </div>
                     <div className="mt-4 flex justify-center text-nowrap font-bold text-[2rem] sm:text-[1rem] lg:text-[2rem]">
-                    Holiday Sale!
+                    OUR GIFT!
                     </div>
                     <div className="mx-auto w-[80px] h-[2px] bg-[#35281e] mb-[1rem]"></div>
                     <div
@@ -71,7 +71,7 @@ const Popup = () => {
                         fontFamily: "Raleway",
                       }}
                     >
-                      Unlock 10% OFF on your first treatment!
+                      Unlock 10% OFF on your first treatment!*
                     </div>
 
                     <div
@@ -81,7 +81,7 @@ const Popup = () => {
                         fontFamily: "Raleway",
                       }}
                     >
-                      OPTIMUM LASER NY USES THE LATEST
+                      OPTIMUM LASERS NY USES THE LATEST
                       <span className="px-1"
                       style={{
                         fontFamily: "Raleway",
