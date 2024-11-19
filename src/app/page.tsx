@@ -395,7 +395,7 @@ export default function Home() {
             />
           </BoxSplitSection>
 
-          <CustomCircle
+          {/* <CustomCircle
             labels={[
               {
                 text: "DISCOUNT",
@@ -416,7 +416,7 @@ export default function Home() {
               },
             ]}
             size={170}
-          />
+          /> */}
         </BoxSection>
 
         <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
