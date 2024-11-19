@@ -93,7 +93,7 @@ const Popup = () => {
                     </span>
                      
                       
-                      MEDICAL GRADE LASER
+                      MEDICAL GRADE LASERS
                     </div>
 
                   </div>
