@@ -77,7 +77,7 @@ const Popup = () => {
                     <div
                       className="text-[0.6rem] mt-4"
                       style={{
-                        fontWeight: 400,
+                        fontWeight: 600,
                         fontFamily: "Raleway",
                       }}
                     >
@@ -89,7 +89,7 @@ const Popup = () => {
                         fontSize: "0.8rem",
                       }}
                     >
-                      FDA APPROVED 
+                      FDA APPROVED
                     </span>
                      
                       
