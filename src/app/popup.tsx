@@ -44,64 +44,21 @@ const Popup = () => {
                   <IoCloseSharp className="text-[2rem] text-[#c5ba9d]" />
                 </div>
                 <div
-                  className="md:flex justify-between rounded-t-[2rem] text-[#35281e] bg-[#f8eedf]"
-                  style={{
-                    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 72%)",
-                    overflowX: "visible",
-                  }}
+                  className="md:flex justify-between rounded-t-[2rem] text-[#35281e] bg-[#f8eedf] md:items-center md:justify-center"
+                  // style={{
+                  //   clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 72%)",
+                  //   overflowX: "visible",
+                  // }}
                 >
-                  <div className="cursor-pointer absolute top-[0] translate-x-[50%] translate-y-[-50%] flex items-center justify-center right-[0]  h-[70px] w-[70px] bg-[#b4a794] rounded-[50%]"></div>
-                  <div className="p-[1rem] text-center">
-                    <div
-                      className="border-t-[2px] border-b-[2px] border-[#35281e] py-[0.3rem] sm:py-[0.7rem] text-[1.2rem] px-[3rem]"
-                      style={{
-                        fontFamily: "Broadway",
-                      }}
-                    >
-                      OPTIMUM LASER NY
-                    </div>
-                    <div className="mt-4 flex justify-center text-nowrap font-bold text-[2rem] sm:text-[1rem] lg:text-[2rem]">
-                    OUR GIFT!
-                    </div>
-                    <div className="mx-auto w-[80px] h-[2px] bg-[#35281e] mb-[1rem]"></div>
-                    <div
-                      className="text-[1.2rem]"
-                      style={{
-                        fontWeight: 500,
-                        fontFamily: "Raleway",
-                      }}
-                    >
-                      Unlock 10% OFF on your first treatment!*
-                    </div>
-
-                    <div
-                      className="text-[0.6rem] mt-4"
-                      style={{
-                        fontWeight: 600,
-                        fontFamily: "Raleway",
-                      }}
-                    >
-                      OPTIMUM LASER NY USES THE LATEST
-                      <span className="px-1"
-                      style={{
-                        fontFamily: "Raleway",
-                        fontWeight: 760,
-                        fontSize: "0.8rem",
-                      }}
-                    >
-                      FDA APPROVED
-                    </span>
-                     
-                      
-                      MEDICAL GRADE LASERS
-                    </div>
-
-                  </div>
-                  <div className="md:pt-[3rem] md:max-w-[300px] flex justify-center md:justify-end items-end">
+                  {/* <div className="cursor-pointer absolute top-[0] translate-x-[50%] translate-y-[-50%] flex items-center justify-center right-[0]  h-[70px] w-[70px] bg-[#b4a794] rounded-[50%]"></div> */}
+                  <div className="md:pt-[3rem] md:max-w-[600px] flex justify-center md:justify-end items-end">
                     <img
                       alt="popup-image"
-                      className="translate-x-[1rem] max-h-[200px] md:max-h-none"
-                      src="../images/pop-up/Pop up.png"
+                      className="translate-x-[1rem] max-h-[320px] md:max-h-none "
+                      src="../images/cropped-images/new-ad.jpeg"
+                      style={{
+                        marginLeft: "-16  px",
+                      }}
                     />
                   </div>
                 </div>
@@ -135,7 +92,7 @@ const Popup = () => {
                     type="submit"
                     className="font-bold sm:text-sm cursor-pointer w-full px-4 py-2 sm:w-1/4 border-2 border-[#35281e] mb-4 text-[#35281e] bg-[#f8eedf] rounded-[4px]"
                   >
-                    GET THE DEAL!
+                    Claim Deal Now!
                   </button>
                 </form>
               </div>
