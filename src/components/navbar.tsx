@@ -47,7 +47,7 @@ export default function Navbar() {
 							<img
 								className={`object-contain duration-300 ${
 									scrolled ? "h-[80px]" : "md:h-[120px] h-[100px]"
-								}  w-32 sm:w-48 md:w-60 lg:w-72`}
+								}  w-32 sm:w-48 md:w-52 lg:w-72`}
 								src="/images/homepage/Optimum Laser Brown Logo.png"
 								alt={"navbar logo"}
 							/>
@@ -80,7 +80,7 @@ export default function Navbar() {
 							<button
 								className={
 									styles.buttonStyles +
-									" relative  text-sm lg:text-base xl:text-xl"
+									" relative text-[0.6rem] lg:text-base xl:text-xl px-3 lg:px-6"
 								}
 							>
 								<img
@@ -97,7 +97,7 @@ export default function Navbar() {
 							<button
 								className={
 									styles.buttonStyles +
-									" relative hidden md:block text-sm lg:text-base xl:text-xl"
+									" relative hidden md:block text-[0.6rem] lg:text-base xl:text-xl md:px-4 lg:px-6 "
 								}
 							>
 								SET AN APPOINTMENT
