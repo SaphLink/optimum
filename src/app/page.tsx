@@ -196,55 +196,22 @@ export default function Home() {
         <Popup />
 
         <div className="deskop-view">
-          <div className="w-full relative h-screen md:h-[700px] lg:h-[580px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
-            <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 place-items-center">
-              <div className="md:py-10 py-0 z-10">
+          <div className="w-full relative h-screen md:h-[700px] lg:h-[580px] mt-[8.5rem] md:mt-[9rem] sm:mt-[9rem] lg:mt-[9rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 place-items-start gap-4">
+              <div className="md:py-10 py-4 z-10 -translate-x-8">
                 <Box>
                   <Logo src="../images/homepage/Optimum Laser Brown White.png" />
 
                   <div className="line"></div>
-                  <div className="desc text-center">
-                    <span
-                      style={{
-                        fontFamily: "Broadway",
-                        fontSize: "1.3rem",
-                      }}
-                    >
-                      Optimum Laser NY
-                    </span>{" "}
-                    is a medical spa that offers cutting-edge medical grade
-                    laser technology.
+                  <div className="desc text-center px-2 sm:px-4">
+                    For over 15 years, <strong style={{ fontWeight: 900 }}>Optimum Laser NY</strong> has proudly served Manhasset, Great Neck, Port Washington, Roslyn and surrounding Long Island, New York areas with safe, effective laser hair removal, pigmentation removal, spider vein removal treatments using FDA-approved Cynosure technology.<br /><br />We deliver <strong style={{ fontWeight: 900 }}>long-lasting results</strong> for men and women of all skin types, with personalized care from highly certified trusted professionals—all at <strong style={{ fontWeight: 900 }}>fair, flexible pricing</strong> to make your investment in yourself truly worth it.
                   </div>
                   <CustomButton href="/about-us" type="primary">
                     LEARN MORE
                   </CustomButton>
                 </Box>
-
-                {/* <CustomCircle
-              labels={[
-                {
-                  text: "BOOK",
-                  style: {
-                    fontSize: "16px",
-                    fontWeight: "400",
-                    letterSpacing: "3px",
-                  },
-                },
-                { text: "FREE", style: { fontSize: "40px", fontWeight: "bold" } },
-                {
-                  text: "CONSULTATION NOW!",
-                  style: { fontSize: "10px", fontWeight: "400" },
-                },
-              ]}
-              size={140}
-            /> */}
               </div>
               <div>
-                <div className="custom-circle flex flex-col items-center justify-center h-[170px] w-[170px]">
-                  <p>Book</p>
-                  <p>FREE</p>
-                  <p>CONSULTATION NOW!</p>
-                </div>
                 <Img
                   src="../images/cropped-images/Homepage Group 1 Cropped.png"
                   alt="image"
@@ -255,37 +222,20 @@ export default function Home() {
         </div>
 
         <div className="mobile-view">
-          <div className="w-full mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+          <div className="w-full mt-[8.5rem] md:mt-[9rem] sm:mt-[9rem] lg:mt-[9rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
             <div className="grid md:grid-cols-3 lg:grid-cols-3 sm:grid-cols-3 place-items-center">
-              <div className="md:py-10 py-0 z-10">
+              <div className="md:py-10 py-4 z-10">
                 <Box>
                   <Logo src="../images/homepage/Optimum Laser Brown White.png" />
 
                   <div className="line"></div>
-                  <div className="desc text-center">
-                    <span
-                      style={{
-                        fontFamily: "Broadway",
-                        fontSize: "1.3rem",
-                      }}
-                    >
-                      Optimum Laser NY
-                    </span>{" "}
-                    is a medical spa that offers cutting-edge medical grade
-                    laser technology.
+                  <div className="desc text-center px-2 sm:px-4">
+                    For over 15 years, <strong style={{ fontWeight: 900 }}>Optimum Laser NY</strong> has proudly served Manhasset, Great Neck, Port Washington, Roslyn and surrounding Long Island, New York areas with safe, effective laser hair removal, pigmentation removal, spider vein removal treatments using FDA-approved Cynosure technology.<br /><br />We deliver <strong style={{ fontWeight: 900 }}>long-lasting results</strong> for men and women of all skin types, with personalized care from highly certified trusted professionals—all at <strong style={{ fontWeight: 900 }}>fair, flexible pricing</strong> to make your investment in yourself truly worth it.
                   </div>
                   <CustomButton href="/about-us" type="primary">
                     LEARN MORE
                   </CustomButton>
                 </Box>
-              </div>
-
-              <div className="lg:block md:block mt-[40px] mb-[15px]">
-                <div className="custom-circle-mb flex flex-col items-center justify-center h-[170px] w-[170px]">
-                  <p>Book</p>
-                  <p>FREE</p>
-                  <p>CONSULTATION NOW!</p>
-                </div>
               </div>
 
               <div className="p-0">
@@ -299,9 +249,9 @@ export default function Home() {
         </div>
 
         <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
-          <SectionTitle>SERVICES</SectionTitle>
+          <SectionTitle>AESTHETIC TREATMENTS</SectionTitle>
           <SectionDescription>
-            Benefit from our offerings to achieve the look of your dreams.
+            Signature laser hair removal and skin rejuvenation treatments that combine<br /><strong>cutting-edge technology with a personal, client-focused experience</strong>.
           </SectionDescription>
           <ImagesContainer>
             <ImageBox
@@ -387,52 +337,32 @@ export default function Home() {
             alt="image"
           />
           <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
-          <BoxSplitSection>
-            <img
-              src="../images/cropped-images/new-ad.jpeg"
-              alt="optimum"
-              className="rounded-md"
-            />
-          </BoxSplitSection>
-
-          {/* <CustomCircle
-            labels={[
-              {
-                text: "DISCOUNT",
-                style: {
-                  fontSize: "16px",
-                  fontWeight: "200",
-                  letterSpacing: "3px",
-                },
-              },
-              { text: "15%", style: { fontSize: "50px", fontWeight: "600" } },
-              {
-                text: "FOR NEW CUSTOMERS",
-                style: {
-                  fontSize: "12px",
-                  fontWeight: "200",
-                  marginTop: "0.2rem",
-                },
-              },
-            ]}
-            size={170}
-          /> */}
         </BoxSection>
 
         <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
           <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-5 md:px-0 leading-tight ">
-            WHAT USERS THINK
+            PROVEN RESULTS,<br />TRUSTED BY OUR CLIENTS
           </h2>
           <SectionDescription>
-            See what our customers have to say about their experience at our
-            medical spa
+            With over 4.9 stars on Google, hear what our loyal clients say<br />about their experience with our aesthetic laser hair removal and skin rejuvenation services!
           </SectionDescription>
 
           <Slider>
             <ReviewCard
+              img="/images/testimonials/Ariella.jpeg"
+              name="Ariella Hajibay"
+            >
+              Best place on earth. Went to a ton of other places and finally see results here. Worth every dollar, don't look back trust me. Also the staff is so nice and friendly I love them.
+            </ReviewCard>
+            <ReviewCard
+              img="/images/testimonials/juliet.jpeg"
+              name="Juliet Hagobian"
+            >
+              The best there is! Orly and Pushp are so caring, kind, and welcoming. I always leave my sessions happy and satisfied with results
+            </ReviewCard>
+            <ReviewCard
               img="images/testimonials/debbie-y.png"
               name="debbie y"
-              time="6 months ago"
             >
               Optimum Laser NY is a professional pleasant company. I have
               started treatments more than 10 years ago and now my doughters
@@ -443,7 +373,6 @@ export default function Home() {
             <ReviewCard
               img="images/testimonials/zareen.png"
               name="Zareen Mistry"
-              time="2 months ago"
             >
               Daniela is amazing! I have had the best experience and even better
               results. Very clean, very professional from the front desk to the
@@ -454,7 +383,6 @@ export default function Home() {
             <ReviewCard
               img="images/testimonials/urfa.png"
               name="Urfa Ajmal"
-              time="5 months ago"
             >
               I have been getting laser hair removals and electrolysis for my
               face for months. This place is the best! I get my laser from
@@ -464,7 +392,6 @@ export default function Home() {
             <ReviewCard
               img="images/testimonials/marissa.png"
               name="Marissa"
-              time="5 months ago"
             >
               Been coming here for 10 years ! Pushp is the best!!! Dark hair and
               olive skin tone - never an issue. I come back once a year for
@@ -473,30 +400,27 @@ export default function Home() {
             <ReviewCard
               img="images/testimonials/justin.png"
               name="Justin Gomez"
-              time="1 year ago"
             >
               Optimum Laser NY is great - Eti is very helpful and makes
               scheduling appointments stress-free. Daniela is an awesome tech -
               not only is she great at what she does, but she also has a fun
-              personality that makes you feel comfortable. I’ve seen greatly
+              personality that makes you feel comfortable. I've seen greatly
               noticeable results so far, and look forward to seeing what future
               sessions will do for me!
             </ReviewCard>
             <ReviewCard
               img="images/testimonials/brendelyn.png"
               name="Brendelyn Lora"
-              time="1 year ago"
             >
               I had an amazing experience at this place! My sister in law
               recommended them and you can truly see a difference in just one
               session! I previously did laser through a Groupon and wasted
-              hundreds of dollars.. I’m so happy I finally came here. Eti & her
+              hundreds of dollars.. I'm so happy I finally came here. Eti & her
               staff are great, I highly recommend!!
             </ReviewCard>
             <ReviewCard
               img="images/testimonials/Mimmi.png"
               name="Mimmi Lindblad"
-              time="2 years ago"
             >
               Absolutely LOVE this place!! Each experience has been great at
               Optimum Laser NY. Very professional & Nicole does a fantastic job,
@@ -508,7 +432,6 @@ export default function Home() {
             <ReviewCard
               img="images/testimonials/caroline.png"
               name="Caroline Halimi"
-              time="5 months ago"
             >
               Ety and her team have been amazing! They are very nice, and
               professional and the place is always very clean. The treatment
@@ -518,7 +441,6 @@ export default function Home() {
             <ReviewCard
               img="images/testimonials/frances.png"
               name="Frances S"
-              time="2 years ago"
             >
               Excellent staff and totally worth it. They know the answers to any
               question I have regarding laser. Nicole the laser technician has
@@ -529,13 +451,12 @@ export default function Home() {
             <ReviewCard
               img="images/testimonials/kim.png"
               name="Kim Lazar"
-              time="3 years ago"
             >
               I got amazing results for my laser hair removal. The prices are
               reasonable, the owner is the nicest person, and no matter who I
               get one I come for a treatment, they all do a great job. Honestly,
               laser hair removal at optimum laser NY is some of the best money
-              I’ve ever spent. I highly recommend!
+              I've ever spent. I highly recommend!
             </ReviewCard>
           </Slider>
           <div className="w-fit mx-auto">
@@ -610,67 +531,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* <BoxSection className="hidden !min-h-[700px] md:!min-h-[max(110vh,800px)]">
-        <BoxSplitSection className="w-1/2">
-          <Box>
-            <div>
-              <Title>CHAT WITH US</Title>
-            </div>
-            <form
-              action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
-              method="POST"
-            >
-              <Row className="mb-[1rem]">
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Name"
-                  style={inputStyle}
-                />
-                <input
-                  name="email"
-                  type="email"
-                  placeholder="Email"
-                  style={inputStyle}
-                />
-              </Row>
-
-              <Row className="mb-[1rem]">
-                <input
-                  name="phone number"
-                  type="text"
-                  placeholder="Phone Number"
-                  style={inputStyle}
-                />
-                <input
-                  name="address"
-                  type="text"
-                  placeholder="Address"
-                  style={inputStyle}
-                />
-              </Row>
-
-              <textarea
-                name="message"
-                placeholder="Message"
-                style={textareaStyle}
-              ></textarea>
-
-              <CustomButton submit center type="primary">
-                SUBMIT
-              </CustomButton>
-            </form>
-          </Box>
-        </BoxSplitSection>
-        <BoxSplitSection>
-
-        </BoxSplitSection>
-        <Img3
-          src="../images/cropped-images/Homepage Group 3 Cropped.png"
-          alt="image"
-        />
-      </BoxSection> */}
 
         <Footer />
       </div>

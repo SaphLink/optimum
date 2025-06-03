@@ -107,7 +107,7 @@ const Footer = () => (
                         <BiLogoFacebook size={30} />
                     </FooterIcon>
                 </a>
-                <a href="https://www.instagram.com/optimum_laser/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+                <a href="https://www.instagram.com/optimum.laser/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
                     <FooterIcon>
                         <AiOutlineInstagram size={30} />
                     </FooterIcon>
@@ -168,6 +168,7 @@ const Footer = () => (
                 <ul>
                     <li>Monday: Closed</li>
                     <li>Tuesday: 9:00 am - 6:00 pm</li>
+                    <li>Wednesday: 9:00 am - 6:00 pm</li>
                     <li>Thursday: 9:00 am - 8:00 pm</li>
                     <li>Friday: 9:00 am - 3:00 pm</li>
                     <li>Saturday: Closed</li>

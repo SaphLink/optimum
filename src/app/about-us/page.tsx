@@ -43,24 +43,13 @@ const page = () => {
       </Head>
 
       <div className="about-us-banner h-[600px] mt-[9.4rem] md:mt-[9.5rem] sm:mt-[9.5rem] lg:mt-[9.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
-        <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
-          <div className="md:py-10 py-0">
-            <Box>
+        <div className="w-[95vw] max-w-[2000px] grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+          <div className="w-full relative">
+            <Box className="about-box">
               <div className="title text-center md:text-left">ABOUT US</div>
-              {/* <div className="mini-title text-center md:text-left">SERVICES</div> */}
               <div className="line"></div>
-
-              <div className="desc">
-                <span
-                  style={{
-                    fontFamily: "Broadway",
-                    fontSize: "1.3rem",
-                  }}
-                >
-                  Optimum Laser NY
-                </span>{" "}
-                is a medical spa that offers cutting-edge medical grade laser
-                technology.
+              <div className="desc text-center md:text-left px-2 sm:px-4">
+                For over 15 years, <strong style={{ fontWeight: 900 }}>Optimum Laser NY</strong> has proudly served Manhasset, Great Neck, Port Washington, Roslyn and surrounding Long Island, New York areas with safe, effective laser hair removal, pigmentation removal, spider vein removal treatments using FDA-approved Cynosure technology.<br /><br />We deliver <strong style={{ fontWeight: 900 }}>long-lasting results</strong> for men and women of all skin types, with personalized care from highly certified trusted professionals—all at <strong style={{ fontWeight: 900 }}>fair, flexible pricing</strong> to make your investment in yourself truly worth it.
               </div>
 
               <CustomButton

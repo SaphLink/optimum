@@ -15,40 +15,37 @@ const Popup = () => {
 				const [showPopupState, setShowPopup] = useState(false);
 
 				useEffect(() => {
-					const timer = setTimeout(() => {
-						setShowPopup(show);
-					}, 8000);
-					return () => clearTimeout(timer);
+					setShowPopup(show);
 				}, [show]);
 
 				return (
 					<div className="fixed inset-0 z-[500] flex items-center justify-center pointer-events-none p-4">
 						<div
-							className={`absolute inset-0 transition duration-300 ${
+							className={`absolute inset-0 ${
 								showPopupState
 									? "bg-[rgba(0,0,0,0.3)] backdrop-blur-[3px] pointer-events-auto"
-									: "pointer-events-none"
+									: "pointer-events-none opacity-0"
 							}`}
 							onClick={proceed}
 						></div>
 						<div
 							className={`relative ${
 								showPopupState
-									? "translate-y-0 opacity-100 pointer-events-auto"
-									: "translate-y-[10px] opacity-0 pointer-events-none"
+									? "pointer-events-auto"
+									: "pointer-events-none hidden"
 							}`}
 						>
-							<div
-								className="cursor-pointer absolute top-1 right-1 translate-x-[50%] translate-y-[-50%] flex items-center justify-center md:h-[50px] md:w-[50px] h-[30px] w-[30px] bg-[#f5f6f6] border-[3px] border-[#5b4d42] rounded-full z-20"
-								onClick={proceed}
+							<button
+								className="cursor-pointer absolute -top-4 -right-4 flex items-center justify-center h-[60px] w-[60px] bg-[#f5f6f6] border-[3px] border-[#5b4d42] rounded-full z-[999] hover:bg-[#5b4d42] hover:border-[#f5f6f6] group"
+								onClick={() => proceed()}
 							>
-								<IoCloseSharp className="md:text-[2rem] text-[1rem] text-[#c5ba9d]" />
-							</div>
+								<IoCloseSharp className="text-[2rem] text-[#5b4d42] group-hover:text-[#f5f6f6]" />
+							</button>
 							<div
-								className={`relative w-full max-w-[768px] rounded-[2rem] bg-white border-[3px] border-[#35281e] max-h-[80vh] overflow-auto overflow-x-hidden  transition-all duration-300 z-[10] ${
+								className={`relative w-full max-w-[768px] rounded-[2rem] bg-white border-[3px] border-[#35281e] max-h-[80vh] overflow-auto overflow-x-hidden z-[10] ${
 									showPopupState
-										? "translate-y-0 opacity-100 pointer-events-auto"
-										: "translate-y-[10px] opacity-0 pointer-events-none"
+										? ""
+										: "hidden"
 								}`}
 							>
 								<div className="flex flex-col-reverse sm:flex-row rounded-[2rem] text-[#35281e] bg-[#f8eedf]">
