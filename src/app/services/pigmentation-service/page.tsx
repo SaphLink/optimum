@@ -2,6 +2,7 @@
 import Slider from "@/components/Slider";
 import Section, { SectionDescription, SectionTitle } from "@/components/layout/section";
 import React from "react";
+import { Helmet } from 'react-helmet';
 import VideoCard from "@/components/videoCard";
 import CustomButton from "@/components/button";
 import BoxSection, { BoxSplitSection } from "@/components/layout/boxSection";
@@ -32,28 +33,57 @@ const Img2 = styled.img`
   height: 100%;
   object-fit: contain;
   object-position: bottom;
+  @media only screen and (max-width: 768px) {
+    left: 30px;
+  }
 `;
 const page = () => {
   return (
-    <div className="pt-[1rem]">
-      <BoxSection hero>
+    <div>
+
+      {/* <BoxSection hero>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title2">PIGMENTATION</div>
-            <div className="mini-title">REMOVAL</div>
+            <div className="text-[3.5rem] text-white text-center md:text-left">PIGMENTATION</div>
+            <div className="mini-title text-center md:text-left">REMOVAL</div>
             <div className="line"></div>
             <div className="desc">Unwanted pigmentation is a result of sun damage from incremental exposure to the sun over many years.</div>
-            <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
           </Box>
         </BoxSplitSection>
         <Img3 src="../images/cropped-images/Pigmentation Group 1 Cropped.png" alt="image" />
-      </BoxSection>
+      </BoxSection> */}
+
+<Helmet>
+        <title>Laser Hair Removal in New York - Optimum Laser</title>
+        <meta name="description" content="This is the description of my page" />
+      </Helmet>
+      <div className="relative h-[585px] md:h-[700px] lg:h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+                <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+                    <div className="md:py-10 py-0 z-10">
+                        <Box>
+                            <div className="text-[3rem] text-white text-center md:text-left">PIGMENTATION</div>
+                            <div className="mini-title text-center md:text-left">REMOVAL</div>
+                            <div className="line"></div>
+                            <div className="desc">Unwanted pigmentation is a result of sun damage from incremental exposure to the sun over many years.</div>
+                            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+                        </Box>
+                    </div>
+                    <div>
+                        {/* <img src="../images/cropped-images/Pigmentation Group 1 Cropped.png" className="visible md:invisible h-auto max-w-full"
+                            alt="image" /> */}
+                            <Img3 src="../images/cropped-images/Pigmentation Group 1 Cropped.png" alt="image" />
+                    </div>
+                </div>
+            </div>
+
+
       <FlowerSection>
-        You don't have to live with sun spots or other sun damage thanks to the modern state-of-the-art laser treatment available at Optimum Laser
+        You don't have to live with sun spots or other sun damage thanks to the modern state-of-the-art laser treatment available at Optimum Laser NY
         Hair Removal in Manhasset, New York. The Cynosure Apogee Elite+TM laser offers the gentlest. fastest, and MOST effective sun spot removal
         option available. Use online booking or call the office at 516-495-4908 to schedule your appointment with us now!
       </FlowerSection>
-      <Section last>
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>FAQs</SectionTitle>
         <div className="flex flex-col justify-center items-center gap-[1rem] mb-[4rem]">
           <CollapseSection title="What is skin pigmentation removal?">
@@ -75,7 +105,7 @@ const page = () => {
           <CollapseSection title="How does sun spot removal work?">
             <div className="desc">
               {" "}
-              At Optimum Laser Hair Removal, our laser technicians uses the Cynosure® EliteTM Laser to remove unwanted pigmentation. Including sun
+              At Optimum Laser NY Hair Removal, our laser technicians uses the Cynosure® EliteTM Laser to remove unwanted pigmentation. Including sun
               spots. As your practitioner moves the Elite+ device gently over your skin, the laser pulses go directly into the unwanted pigment.
               <br /> <br />
               The laser energy heats and shatters the pigment into many tiny pieces. The pigment grows lighter and disappears in the next few weeks as
@@ -91,28 +121,52 @@ const page = () => {
             </div>
           </CollapseSection>
         </div>
-        <CustomButton href="#consultation" type="secondary" center>
+        <CustomButton className="inline-block" href="#consultation" type="secondary" center>
           BOOK A FREE CONSULTATION
         </CustomButton>
-      </Section>
-      <BoxSection hero>
-        <Img2 src="../images/cropped-images/Pigmentation Group 2 Cropped.png" alt="image" />
+      </div>
+
+      <BoxSection>
+        <Img2 src="../images/cropped-images/pig.png" alt="image" />
         <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title">HOW DOES</div>
-            <div className="mini-title">PIGMENTATION REMOVAL WORK?</div>
+            <div className="title text-center md:text-left">HOW DOES</div>
+            <div className="mini-title text-center md:text-left">PIGMENTATION REMOVAL WORK?</div>
             <div className="line"></div>
             <div className="desc">
-              At Optimum Laser Hair Removal, our laser technicians use the Cynosure® Elite+TM laser to remove unwanted pigmentation, including sun
+              At Optimum Laser NY Hair Removal, our laser technicians use the Cynosure® Elite+TM laser to remove unwanted pigmentation, including sun
               spots. As your practitioner moves the Elite+ device gently over your skin, the laser pulses go directly into the unwanted pigment.
             </div>
-            <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
           </Box>
         </BoxSplitSection>
       </BoxSection>
-      <Section last id='consultation'>
-        <SectionTitle>SECURE YOUR FREE CONSULTATION NOW</SectionTitle>
+
+      
+      {/* <div className="h-[725px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+
+          <div>
+            <img src="../images/cropped-images/Pigmentation Group 2 Cropped.png" className="object-contain object-bottom h-full w-full" alt='alt' />
+          </div>
+          <div className="md:py-10 py-0">
+            <Box>
+              <div className="title text-center md:text-left">HOW DOES</div>
+              <div className="mini-title text-center md:text-left">PIGMENTATION REMOVAL WORK?</div>
+              <div className="line"></div>
+              <div className="desc">At Optimum Laser Hair Removal, our laser technicians use the Cynosure® Elite+TM laser to remove unwanted pigmentation, including sun spots. As your practitioner moves the Elite+ device gently over your skin, the laser pulses go directly into the unwanted pigment.</div>
+              <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            </Box>
+          </div>
+        </div>
+      </div> */}
+
+
+
+
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white" id='consultation'>
+      <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">SECURE YOUR FREE CONSULTATION NOW</h2>
         <SectionDescription>Please provide your contact information to help us schedule your free consultation</SectionDescription>
         <form action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`} method="POST">
           <div
@@ -154,7 +208,7 @@ const page = () => {
             </StyledIcons>
           </a>
         </div>
-      </Section>
+      </div>
       <Footer />
     </div>
   );

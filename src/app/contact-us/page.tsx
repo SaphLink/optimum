@@ -51,7 +51,7 @@ const Img = styled.img`
   object-position: bottom;
 `;
 
-//
+////
 
 const Row = styled.div`
   display: flex;
@@ -69,7 +69,7 @@ const page = () => {
       <Section hero id="consultation">
         <SectionTitle>CONTACT US</SectionTitle>
         <SectionDescription>
-          The Optimum Laser Hair Removal Team is available for all your
+          The Optimum Laser NY Hair Removal Team is available for all your
           questions, concerns and scheduling. Please contact us at your earliest
           convenience during our business hours! We will get back to you as soon
           as possible.
@@ -142,7 +142,7 @@ const page = () => {
                   fontSize: "1.3rem",
                 }}
               >
-                Optimum Laser
+                Optimum Laser NY
               </span>{" "}
               is a medical spa that offers cutting-edge medical grade laser
               technology.
@@ -175,7 +175,7 @@ const page = () => {
           size={170}
         />
       </BoxSection>
-      <Section last>
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>WHAT USERS THINK</SectionTitle>
         <SectionDescription>
           See what our customers have to say about their experience at our
@@ -188,7 +188,7 @@ const page = () => {
             name="debbie y"
             time="6 months ago"
           >
-            Optimum Laser is a professional pleasant company. I have started
+            Optimum Laser NY is a professional pleasant company. I have started
             treatments more than 10 years ago and now my doughters enjoy the
             warm and welcoming service that we get there. Never a problem,
             always welcoming and accommodating and clean ! Thank you for making
@@ -229,7 +229,7 @@ const page = () => {
             name="Justin Gomez"
             time="1 year ago"
           >
-            Optimum Laser is great - Eti is very helpful and makes scheduling
+            Optimum Laser NY is great - Eti is very helpful and makes scheduling
             appointments stress-free. Daniela is an awesome tech - not only is
             she great at what she does, but she also has a fun personality that
             makes you feel comfortable. I’ve seen greatly noticeable results so
@@ -252,7 +252,7 @@ const page = () => {
             time="2 years ago"
           >
             Absolutely LOVE this place!! Each experience has been great at
-            Optimum Laser. Very professional & Nicole does a fantastic job, she
+            Optimum Laser NY. Very professional & Nicole does a fantastic job, she
             makes you feel super comfortable and explain each part of the
             process as it happens. The place is very clean and the atmosphere is
             very pleasant. I highly recommend anyone who wants results and good
@@ -292,11 +292,11 @@ const page = () => {
           </ReviewCard>
         </Slider>
         <div className="w-fit mx-auto">
-          <CustomButton href="#consultation" type="secondary">
+          <CustomButton className="inline-block" href="#consultation" type="secondary">
             BOOK A FREE CONSULTATION
           </CustomButton>
         </div>
-      </Section>
+      </div>
       <Footer />
     </>
   );

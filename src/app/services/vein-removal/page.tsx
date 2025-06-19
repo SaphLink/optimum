@@ -3,6 +3,7 @@ import Input, { DoubleInput } from "@/components/Input";
 import CustomButton from "@/components/button";
 import Footer, { FooterIcon, SocialIcons } from "@/components/footer";
 import Box from "@/components/layout/box";
+import { Helmet } from 'react-helmet';
 import BoxSection, { BoxSplitSection } from "@/components/layout/boxSection";
 import FlowerSection from "@/components/layout/flowerSection";
 import Section, { SectionDescription, SectionTitle } from "@/components/layout/section";
@@ -34,45 +35,75 @@ const Img2 = styled.img`
 const page = () => {
   return (
     <>
-      <BoxSection hero>
+      {/* <BoxSection hero>
         <BoxSplitSection>
           <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title">VEIN</div>
-            <div className="mini-title">REMOVAL</div>
+            <div className="title text-center md:text-left">VEIN</div>
+            <div className="mini-title text-center md:text-left">REMOVAL</div>
             <div className="line"></div>
             <div className="desc">Spider veins are a common problem in many people. as it is affects one in three women and one in five men</div>
-            <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
           </Box>
         </BoxSplitSection>
         <Img src="../images/cropped-images/Vein Removal Group 1 Cropped.png" alt="image" />
-      </BoxSection>
+      </BoxSection> */}
+
+<Helmet>
+        <title>Laser Hair Removal in New York - Optimum Laser</title>
+        <meta name="description" content="This is the description of my page" />
+      </Helmet>
+      <div className="relative h-[700px] mt-[9.4rem] md:mt-[10.8rem] sm:mt-[10.5rem] lg:mt-[10.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+          <div className="md:py-10 py-0 z-10">
+            <Box>
+              <div className="text-[3rem] text-white text-center md:text-left">VEIN</div>
+              <div className="mini-title text-center md:text-left">REMOVAL</div>
+              <div className="line"></div>
+              <div className="desc">Spider veins are a common problem in many people. as it is affects one in three women and one in five men.</div>
+              <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            </Box>
+          </div>
+          <div>
+            <Img src="../images/cropped-images/vein.png" className="h-auto max-w-full" alt="image" />
+          </div>
+        </div>
+      </div>
+
+
       <FlowerSection>
-        If the tiny veins on your face or legs make you self-conscious or unhappy, Optimum Laser
+        If the tiny veins on your face or legs make you self-conscious or unhappy, Optimum Laser NY
         Hair Removal in Manhasset, New York, has a state-of-the-art solution for you.
       </FlowerSection>
-      <BoxSection>
-        <Img2 style={{}} src="../images/cropped-images/Vein Removal Group 2 Cropped.png" alt="image" />
-        <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
-        <BoxSplitSection>
-          <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title">HOW DOES</div>
-            <div className="mini-title">VEIN REMOVAL WORK?</div>
-            <div className="line"></div>
-            <div className="desc">
-              Laser vein removal with the advanced Cynosure® Elite+TM system gives you fast results
-              with no downtime. To find out more, contact a member of the experienced Optimum Laser
-              Hair Removal team online or by phone now at 516-495-4908.
-            </div>
-            <CustomButton href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
-          </Box>
-        </BoxSplitSection>
-      </BoxSection>
+
+
+      <div className="relative h-[700px] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center]">
+        <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+          <div>
+            <Img2 src="../images/cropped-images/Vein Removal Group 2 Cropped.png" className="h-auto max-w-full" alt="image" />
+          </div>
+          <div className="md:py-10 py-0 z-10">
+            <Box>
+              <div className="title text-center md:text-left">HOW DOES</div>
+              <div className="mini-title text-center md:text-left">VEIN REMOVAL WORK?</div>
+              <div className="line"></div>
+              <div className="desc">
+                Laser vein removal with the advanced Cynosure® Elite+TM system gives you fast results
+                with no downtime. To find out more, contact a member of the experienced Optimum Laser NY
+                Hair Removal team online or by phone now at 516-495-4908.
+              </div>
+              <CustomButton className="inline-block" href="#consultation" type="primary">BOOK A FREE CONSULTATION</CustomButton>
+            </Box>
+          </div>
+
+        </div>
+      </div>
+
       <Section id='consultation' >
-        <SectionTitle>SECURE YOUR FREE CONSULTATION NOW</SectionTitle>
+      <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">SECURE YOUR FREE CONSULTATION NOW</h2>
         <SectionDescription>Please provide your contact information to help us schedule your free consultation</SectionDescription>
         <form action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`} method="POST">
           <div
-              className="w-full mb-[4rem] flex flex-col gap-[1rem] justify-center items-center"
+            className="w-full mb-[4rem] flex flex-col gap-[1rem] justify-center items-center"
           >
             <DoubleInput>
               <Input name='name' placeholder="Your Name" half />

@@ -12,6 +12,8 @@ import Box from "@/components/layout/box";
 import styled from "styled-components";
 import Input, { DoubleInput } from "@/components/Input";
 import Footer from "@/components/footer";
+// video thumbnail images
+import Head from "next/head";
 
 const Img3 = styled.img`
   position: absolute;
@@ -25,40 +27,57 @@ const Img3 = styled.img`
 const page = () => {
   return (
     <div className="pt-[1rem]">
-      <BoxSection hero>
-        <BoxSplitSection>
-          <Box className="!pt-[2rem] !pb-[3rem] !translate-y-0">
-            <div className="title">ABOUT US</div>
-            <div className="line"></div>
-            <div className="desc">
-              <span
-                style={{
-                  fontFamily: "Broadway",
-                  fontSize: "1.3rem",
-                }}
-              >
-                Optimum Laser
-              </span>{" "}
-              is a medical spa that offers cutting-edge medical grade laser
-              technology.
-            </div>
-            <CustomButton href="#consultation" type="primary">
-              BOOK A FREE CONSULTATION
-            </CustomButton>
-          </Box>
-        </BoxSplitSection>
-        <Img3
-          src="../images/cropped-images/Homepage Group 3 Cropped.png"
-          alt="image"
+      <Head>
+        <title>About Us - Your Company Name</title>
+        <meta
+          name="description"
+          content="Learn more about our company and what we do."
         />
-      </BoxSection>
-      <Section>
+        <meta property="og:title" content="About Us - Your Company Name" />
+        <meta
+          property="og:description"
+          content="Learn more about our company and what we do."
+        />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Head>
+
+      <div className="about-us-banner h-[600px] mt-[9.4rem] md:mt-[9.5rem] sm:mt-[9.5rem] lg:mt-[9.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
+        <div className="w-[95vw] max-w-[2000px] grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+          <div className="w-full relative">
+            <Box className="about-box">
+              <div className="title text-center md:text-left">ABOUT US</div>
+              <div className="line"></div>
+              <div className="desc text-center md:text-left px-2 sm:px-4">
+                For over 15 years, <strong style={{ fontWeight: 900 }}>Optimum Laser NY</strong> has proudly served Manhasset, Great Neck, Port Washington, Roslyn and surrounding Long Island, New York areas with safe, effective laser hair removal, pigmentation removal, spider vein removal treatments using FDA-approved Cynosure technology.<br /><br />We deliver <strong style={{ fontWeight: 900 }}>long-lasting results</strong> for men and women of all skin types, with personalized care from highly certified trusted professionals—all at <strong style={{ fontWeight: 900 }}>fair, flexible pricing</strong> to make your investment in yourself truly worth it.
+              </div>
+
+              <CustomButton
+                className="inline-block"
+                href="#consultation"
+                type="primary"
+              >
+                BOOK A FREE CONSULTATION
+              </CustomButton>
+            </Box>
+          </div>
+          <div>
+            <img
+              src="../images/cropped-images/Homepage Group 3 Cropped.png"
+              className="visible md:invisible h-auto max-w-full"
+              alt="image"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="pt-[3rem] pb-[0rem] md:pb-[3rem] md:pt-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <div
           className={
-            "justify-center items-stretch min-h-[400px] flex flex-wrap p-[2rem]"
+            "justify-center items-stretch min-h-[400px] flex flex-wrap p-[0rem] md:p-[2rem]"
           }
         >
-          <div className={"flex-1 p-[2rem] "}>
+          <div className={"flex-1 py-[2rem] md:p-[2rem] text-black font-light"}>
             <div
               className={"mb-[3rem]"}
               style={{
@@ -67,7 +86,7 @@ const page = () => {
                 fontWeight: 200,
               }}
             >
-              <div className={"mb-[3rem]"}>
+              <div className={"mb-[3rem] mt-[50px] text-black font-light"}>
                 Located in Manhasset, New York, the highly experienced{" "}
                 <span
                   style={{
@@ -75,20 +94,20 @@ const page = () => {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser Hair Removal
+                  Optimum Laser NY Hair Removal
                 </span>{" "}
                 team emphasizes effective and immediate results all while
                 ensuring the highest level of professionalism, cleanliness, and
                 patient satisfaction.
               </div>
-              <div className={"mb-[3rem]"}>
+              <div className={"mb-[3rem] text-black font-light"}>
                 <span
                   style={{
                     fontFamily: "Broadway",
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser Hair Removal
+                  Optimum Laser NY Hair Removal
                 </span>{" "}
                 offers face and body treatments including laser hair removal,
                 laser vein removal, pigmentation treatment, skin rejuvenation,
@@ -97,7 +116,7 @@ const page = () => {
                 uses state-of-the-art FDA approved technology, such as the
                 Cynosure Apogee Elite+ TM laser
               </div>
-              <div className={"mb-[3rem]"}>
+              <div className={"mb-[3rem] text-black font-light"}>
                 Since 2009, the entire{" "}
                 <span
                   style={{
@@ -105,7 +124,7 @@ const page = () => {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser Hair Removal
+                  Optimum Laser NY Hair Removal
                 </span>{" "}
                 team has been dedicated to helping patients receive the utmost
                 results in the shortest time frames possible. Regardless of each
@@ -115,24 +134,30 @@ const page = () => {
                 types, located in Manhasset and surrounding areas, look and feel
                 fantastic.
               </div>
-              Book an appointment online or call the office at 516-495-4908 to
-              schedule a{" "}
-              <span
-                style={{
-                  fontFamily: "Raleway, serif",
-                  fontWeight: "500",
-                  fontSize: "1.2rem",
-                }}
-              >
-                FREE CONSULTATION{" "}
-              </span>{" "}
-              today!
+              <div className="text-black font-light">
+                Book an appointment online or call the office at 516-495-4908 to
+                schedule a{" "}
+                <span
+                  style={{
+                    fontFamily: "Raleway, serif",
+                    fontWeight: "500",
+                    fontSize: "1.2rem",
+                  }}
+                >
+                  FREE CONSULTATION{" "}
+                </span>{" "}
+                today!
+              </div>
             </div>
-            <CustomButton href="#consultation" type={"secondary"}>
+            <CustomButton
+              className="inline-block"
+              href="#consultation"
+              type={"secondary"}
+            >
               BOOK A FREE CONSULTATION
             </CustomButton>
           </div>
-          <div className={"w-[40%] p-[2rem] flex justify-center items-start"}>
+          <div className={"w-[40%] pt-[2rem] flex justify-center items-start"}>
             <div
               className={
                 "w-full max-w-[500px] h-[40rem] min-w-[450px] rounded-[2rem]"
@@ -147,8 +172,9 @@ const page = () => {
             </div>
           </div>
         </div>
-      </Section>
-      <Section bg2>
+      </div>
+
+      <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-[#faecdb]">
         <div className={"pt-[3rem]"}>
           <SectionTitle>SEE SOME OF OUR WORK</SectionTitle>
           <SectionDescription>
@@ -157,26 +183,135 @@ const page = () => {
             customers
           </SectionDescription>
           <Slider itemWidth={400}>
-            <VideoCard videoSrc="/videos/VID_25160429_100420_556.mp4" />
-            <VideoCard videoSrc="/videos/VID-20230521-WA0028.mp4" />
-            <VideoCard videoSrc="/videos/20230711_165633.mp4" />
-            <VideoCard videoSrc="/videos/20230711_154308.mp4" />
-            <VideoCard videoSrc="/videos/20230711_154234.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101634.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101621.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101523.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101444.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101418.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101333.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101312.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101301.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101148.mp4" />
-            <VideoCard videoSrc="/videos/20230709_101138.mp4" />
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/2.png"
+              />
+              <VideoCard videoSrc="/videos/VID_25160429_100420_556.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/1.png"
+              />
+              <VideoCard videoSrc="/videos/VID-20230521-WA0028.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/3.png"
+              />
+              <VideoCard videoSrc="/videos/20230711_165633.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/4.png"
+              />
+              <VideoCard videoSrc="/videos/20230711_154308.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/5.png"
+              />
+              <VideoCard videoSrc="/videos/20230711_154234.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/6.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101634.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/7.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101621.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/8.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101523.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/9.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101444.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/10.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101418.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/11.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101333.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/12.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101312.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/13.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101301.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/14.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101148.mp4" />
+            </div>
+
+            <div className="relative">
+              <img
+                className="absolute h-full w-full"
+                src="/images/thumbnail/15.png"
+              />
+              <VideoCard videoSrc="/videos/20230709_101138.mp4" />
+            </div>
           </Slider>
         </div>
-      </Section>
-      <Section last id="consultation">
-        <SectionTitle>SECURE YOUR FREE CONSULTATION NOW</SectionTitle>
+      </div>
+      <div
+        className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white"
+        id="consultation"
+      >
+        <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">
+          SECURE YOUR FREE CONSULTATION NOW
+        </h2>
         <SectionDescription>
           Please provide your contact information to help us schedule your free
           consultation
@@ -206,7 +341,7 @@ const page = () => {
             BOOK NOW
           </CustomButton>
         </form>
-      </Section>
+      </div>
       <Footer />
     </div>
   );

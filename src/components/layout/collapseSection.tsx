@@ -7,7 +7,7 @@ const CollapseSection = ({ children,title }: any) => {
 
   return (
     <div
-     className="max-w-[1000px] w-full mx-auto mb-[2rem]"
+     className="max-w-[1000px] w-full mx-auto mb-[0.5rem]"
     >
       <div
       className="w-full py-[1rem] px-[2rem] bg-[#f9eedc] rounded-[10px] text-[1.3rem] flex justify-between items-center cursor-pointer font-bold"

@@ -19,6 +19,7 @@
     "react": "^18",
     "react-confirm": "^0.3.0-7",
     "react-dom": "^18",
+    "react-helmet": "^6.1.0",
     "react-icons": "^4.11.0",
     "styled-components": "^6.0.8",
     "ts-node": "^10.9.1"
@@ -28,6 +29,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-helmet": "^6.1.11",
     "autoprefixer": "^10",
     "eslint": "^8",
     "eslint-config-next": "13.5.4",
@@ -37,5 +39,6 @@
   },
   "resolutions": {
     "styled-components": "^5"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

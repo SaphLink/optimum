@@ -50,7 +50,7 @@ export const BoxSplitSection = styled.div`
 const BoxSection = ({children,className,style,hero}:any) => {
   return (
     <StyledBox 
-      className={`${hero ? '!md:pt-[20rem] !pt-[10rem] hero' : ''} ${className || ''}`}
+      className={`${hero ? '!md:pt-[20rem] !pt-[6rem] hero' : ''} ${className || ''}`}
     style={{
         minHeight: `max(110vh, 800px)`,
         background: hero ? 'linear-gradient(to bottom, #ebe0ce, #f8efdd)' : 'linear-gradient(to right, #faecdb, #f9efdd)',
