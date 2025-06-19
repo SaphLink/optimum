@@ -27,6 +27,7 @@
 
 .myLink:hover, .myPhone:hover {
     transform: translateY(-3px);
+    font-weight: 900;
 }
 
 .myLink::after , .myPhone::after {

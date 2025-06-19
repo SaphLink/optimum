@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 //@ts-nocheck
 import Navbar from "@/components/navbar";
 import "@/styles/globals.css";

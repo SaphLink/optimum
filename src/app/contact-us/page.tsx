@@ -1,3 +1,4 @@
+// 6.19.25
 "use client";
 import Input, { DoubleInput } from "@/components/Input";
 import CustomButton from "@/components/button";
@@ -130,51 +131,6 @@ const page = () => {
         </div>
       </Section>
 
-      <BoxSection>
-        <BoxSplitSection>
-          <Box>
-            <Logo src="../images/homepage/Optimum Laser Brown White.png" />
-            <div className="line"></div>
-            <div className="desc">
-              <span
-                style={{
-                  fontFamily: "Broadway",
-                  fontSize: "1.3rem",
-                }}
-              >
-                Optimum Laser NY
-              </span>{" "}
-              is a medical spa that offers cutting-edge medical grade laser
-              technology.
-            </div>
-            <CustomButton href="/about-us" type="primary">
-              LEARN MORE
-            </CustomButton>
-          </Box>
-        </BoxSplitSection>
-        <Img
-          src="../images/cropped-images/Homepage Group 1 Cropped.png"
-          alt="image"
-        />
-        <CustomCircle
-          labels={[
-            {
-              text: "BOOK",
-              style: {
-                fontSize: "16px",
-                fontWeight: "200",
-                letterSpacing: "3px",
-              },
-            },
-            { text: "FREE", style: { fontSize: "40px", fontWeight: "bold" } },
-            {
-              text: "CONSULTATION NOW!",
-              style: { fontSize: "12px", fontWeight: "200" },
-            },
-          ]}
-          size={170}
-        />
-      </BoxSection>
       <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
         <SectionTitle>WHAT USERS THINK</SectionTitle>
         <SectionDescription>
@@ -232,7 +188,7 @@ const page = () => {
             Optimum Laser NY is great - Eti is very helpful and makes scheduling
             appointments stress-free. Daniela is an awesome tech - not only is
             she great at what she does, but she also has a fun personality that
-            makes you feel comfortable. I’ve seen greatly noticeable results so
+            makes you feel comfortable. I've seen greatly noticeable results so
             far, and look forward to seeing what future sessions will do for me!
           </ReviewCard>
           <ReviewCard
@@ -243,7 +199,7 @@ const page = () => {
             I had an amazing experience at this place! My sister in law
             recommended them and you can truly see a difference in just one
             session! I previously did laser through a Groupon and wasted
-            hundreds of dollars.. I’m so happy I finally came here. Eti & her
+            hundreds of dollars.. I'm so happy I finally came here. Eti & her
             staff are great, I highly recommend!!
           </ReviewCard>
           <ReviewCard
@@ -287,7 +243,7 @@ const page = () => {
             I got amazing results for my laser hair removal. The prices are
             reasonable, the owner is the nicest person, and no matter who I get
             one I come for a treatment, they all do a great job. Honestly, laser
-            hair removal at optimum laser is some of the best money I’ve ever
+            hair removal at optimum laser is some of the best money I've ever
             spent. I highly recommend!
           </ReviewCard>
         </Slider>

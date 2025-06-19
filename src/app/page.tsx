@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-dynamic';
 import ReviewCard from "@/components/ReviewCard";
 import Slider from "@/components/Slider";
 import CustomButton from "@/components/button";

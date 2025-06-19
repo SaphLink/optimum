@@ -94,7 +94,7 @@ const page = () => {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser NY Hair Removal
+                  Optimum Laser NY
                 </span>{" "}
                 team emphasizes effective and immediate results all while
                 ensuring the highest level of professionalism, cleanliness, and
@@ -107,7 +107,7 @@ const page = () => {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser NY Hair Removal
+                  Optimum Laser NY
                 </span>{" "}
                 offers face and body treatments including laser hair removal,
                 laser vein removal, pigmentation treatment, skin rejuvenation,
@@ -124,7 +124,7 @@ const page = () => {
                     fontSize: "1.3rem",
                   }}
                 >
-                  Optimum Laser NY Hair Removal
+                  Optimum Laser NY
                 </span>{" "}
                 team has been dedicated to helping patients receive the utmost
                 results in the shortest time frames possible. Regardless of each
@@ -139,12 +139,11 @@ const page = () => {
                 schedule a{" "}
                 <span
                   style={{
-                    fontFamily: "Raleway, serif",
-                    fontWeight: "500",
-                    fontSize: "1.2rem",
+                    fontFamily: "Broadway",
+                    fontSize: "1.3rem",
                   }}
                 >
-                  FREE CONSULTATION{" "}
+                  FREE CONSULTATION
                 </span>{" "}
                 today!
               </div>

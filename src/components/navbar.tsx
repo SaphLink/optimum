@@ -32,17 +32,11 @@ export default function Navbar() {
 	});
 
 	const isActive = (path: string) => {
-		console.log('Current pathname:', pathname);
-		console.log('Checking path:', path);
 		if (path === '/') {
 			return pathname === path;
 		}
 		return pathname?.startsWith(path);
 	};
-
-	useEffect(() => {
-		console.log('Current pathname changed to:', pathname);
-	}, [pathname]);
 
 	return (
 		<>
@@ -57,7 +51,7 @@ export default function Navbar() {
 			>
 				<div className="w-[calc(100%-6rem)] mx-auto flex items-center justify-center relative">
 					<div className="flex justify-center items-center  flex-grow">
-						<Link href="/" className={"flex items-center"}>
+						<a href={"/"} className={"flex items-center"}>
 							<img
 								className={`object-contain duration-300 ${
 									scrolled ? "h-[80px]" : "md:h-[120px] h-[100px]"
@@ -65,7 +59,7 @@ export default function Navbar() {
 								src="/images/homepage/Optimum Laser Brown Logo.png"
 								alt={"navbar logo"}
 							/>
-						</Link>
+						</a>
 					</div>
 
 					<div
@@ -90,7 +84,7 @@ export default function Navbar() {
 					</div>
 
 					<div className="hidden md:block absolute right-0 ">
-						<Link href="/contact-us">
+						<a href="/contact-us">
 							<button
 								className={
 									styles.buttonStyles +
@@ -104,10 +98,10 @@ export default function Navbar() {
 								/>
 								CLICK FOR FREE CONSULTATION
 							</button>
-						</Link>
+						</a>
 					</div>
 					<div className="absolute left-0">
-						<Link href="/request">
+						<a href="/request">
 							<button
 								className={
 									styles.buttonStyles +
@@ -119,7 +113,7 @@ export default function Navbar() {
 							<div className="block md:hidden p-[1rem] rounded-full bg-[#35281e] duration-300 hover:bg-[#5a473d]">
 								<FaCalendarCheck className="text-[1.5rem] text-white" />
 							</div>
-						</Link>
+						</a>
 					</div>
 				</div>
 				<div
@@ -148,12 +142,9 @@ export default function Navbar() {
 							</a>
 						</li>
 						<li>
-							<Link 
-								href="/" 
-								className={`${styles.myLink} ${isActive('/') ? 'font-[900]' : ''}`}
-							>
+							<a href={"/"} className={`${styles.myLink} ${isActive('/') ? 'font-[900]' : ''}`}>
 								HOME
-							</Link>
+							</a>
 						</li>
 						<li className="relative">
 							<div
@@ -167,7 +158,7 @@ export default function Navbar() {
 								className={`cursor-pointer ${styles.myLink} ${isActive('/services') ? 'font-[900]' : ''}`}
 							>
 								<div className="flex items-center justify-center gap-[10px]">
-									AESTHETIC TREATMENTS{" "}
+									OUR SERVICES{" "}
 									<GoTriangleDown
 										size={20}
 										className={`inline-block ${
@@ -178,7 +169,9 @@ export default function Navbar() {
 								<div
 									className={`menu-dropdown grid ${
 										isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-									} md:absolute md:top-[100%] md:left-[50%] md:translate-x-[-50%] w-full md:min-w-[400px] z-[100] md:shadow-[0px_4px_32px_rgba(0,0,0,0.1)]  rounded-[10px]`}
+									} md:absolute md:top-[100%] md:left-[50%] md:translate-x-[-50%] w-full md:min-w-[400px] z-[100] md:shadow-[0px_4px_32px_rgba(0,0,0,0.1)]  rounded-[10px] md:${
+										isOpen ? "translate-y-[0px]" : "translate-y-[10px]"
+									}`}
 									style={{
 										gridTemplateRows: isOpen ? "1fr" : "0fr",
 										overflow: "hidden",
@@ -237,20 +230,14 @@ export default function Navbar() {
 							</div>
 						</li>
 						<li>
-							<Link 
-								href="/about-us" 
-								className={`${styles.myLink} ${isActive('/about-us') ? 'font-[900]' : ''}`}
-							>
+							<a href={"/about-us"} className={`${styles.myLink} ${isActive('/about-us') ? 'font-[900]' : ''}`}>
 								ABOUT US
-							</Link>
+							</a>
 						</li>
 						<li>
-							<Link 
-								href="/contact-us" 
-								className={`${styles.myLink} ${isActive('/contact-us') ? 'font-[900]' : ''}`}
-							>
+							<a href={"/contact-us"} className={`${styles.myLink} ${isActive('/contact-us') ? 'font-[900]' : ''}`}>
 								CONTACT US
-							</Link>
+							</a>
 						</li>
 					</ul>
 				</div>
