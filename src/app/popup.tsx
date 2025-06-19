@@ -2,7 +2,7 @@ import { modal } from "@/components/modal";
 import React, { useEffect, useRef, useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
 
-const popupTimeout = 0;
+const popupTimeout = 6000;
 
 const Popup = () => {
   const shown = useRef(false);
