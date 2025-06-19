@@ -101,7 +101,7 @@ export default function Navbar() {
 						</a>
 					</div>
 					<div className="absolute left-0">
-						<a href="/request">
+						<a href="/booking">
 							<button
 								className={
 									styles.buttonStyles +
