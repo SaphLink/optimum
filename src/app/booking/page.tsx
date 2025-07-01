@@ -36,6 +36,44 @@ const page = () => {
         }}
       >
       </script>
+      <script
+        type="text/javascript"
+        dangerouslySetInnerHTML={{
+          __html: `
+          // Cleanup function to remove booking widget when navigating away
+          function cleanupBookingWidget() {
+            const containers = document.querySelectorAll('#externalBookingPluginContainer, #externalBookingPlugin');
+            containers.forEach(container => {
+              if (container && container.parentNode) {
+                container.parentNode.removeChild(container);
+              }
+            });
+            
+            // Clean up global variables
+            delete window.daysmart_acc;
+            delete window.daysmart_iframe_width;
+            delete window.daysmart_iframe_height;
+            delete window.daysmart_website_root;
+            delete window.load_in_iframe;
+          }
+          
+          // Listen for navigation events
+          window.addEventListener('beforeunload', cleanupBookingWidget);
+          window.addEventListener('popstate', function() {
+            setTimeout(cleanupBookingWidget, 100);
+          });
+          
+          // Listen for clicks on navigation links
+          document.addEventListener('click', function(e) {
+            const target = e.target.closest('a');
+            if (target && target.href && !target.href.includes('/booking')) {
+              setTimeout(cleanupBookingWidget, 100);
+            }
+          });
+        `,
+        }}
+      >
+      </script>
     </>
   );
 };

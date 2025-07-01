@@ -337,7 +337,14 @@ export default function Home() {
             src="../images/cropped-images/Homepage Group 2 Cropped.png"
             alt="image"
           />
-          <BoxSplitSection className="!hidden md:!flex"></BoxSplitSection>
+          <div className="absolute top-1/2 right-8 transform -translate-y-1/2 hidden md:block">
+            <img
+              src="/images/optimum ad july25.jpg"
+              alt="Optimum Promotion July 25"
+              className="rounded-lg shadow-lg w-[540px] h-auto object-contain"
+              style={{ background: 'white', padding: '20px' }}
+            />
+          </div>
         </BoxSection>
 
         <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
