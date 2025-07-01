@@ -332,19 +332,29 @@ export default function Home() {
             backgroundColor: "linear-gradient(to right, #faecdb, #f9efdd)",
           }}
         >
+          <div>
+            <div className="block md:hidden w-full pt-4 pb-2">
+              <img
+                src="/images/optimum ad july25.jpg"
+                alt="Optimum Promotion July 25"
+                className="rounded-lg shadow-lg w-full h-auto object-contain mx-auto"
+                style={{ background: 'white' }}
+              />
+            </div>
+            <div className="hidden md:block absolute top-1/2 right-8 transform -translate-y-1/2">
+              <img
+                src="/images/optimum ad july25.jpg"
+                alt="Optimum Promotion July 25"
+                className="rounded-lg shadow-lg w-[540px] h-auto object-contain"
+                style={{ background: 'white', padding: '20px' }}
+              />
+            </div>
+          </div>
           <Img2
             className="translate-y-[7%]"
             src="../images/cropped-images/Homepage Group 2 Cropped.png"
             alt="image"
           />
-          <div className="absolute top-1/2 right-8 transform -translate-y-1/2 hidden md:block">
-            <img
-              src="/images/optimum ad july25.jpg"
-              alt="Optimum Promotion July 25"
-              className="rounded-lg shadow-lg w-[540px] h-auto object-contain"
-              style={{ background: 'white', padding: '20px' }}
-            />
-          </div>
         </BoxSection>
 
         <div className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white">
