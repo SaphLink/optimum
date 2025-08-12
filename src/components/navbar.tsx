@@ -50,11 +50,11 @@ export default function Navbar() {
 				}}
 			>
 				<div className="w-[calc(100%-6rem)] mx-auto flex items-center justify-center relative">
-					<div className="flex justify-center items-center  flex-grow">
+					<div className="flex justify-center items-center flex-grow">
 						<a href={"/"} className={"flex items-center"}>
 							<img
 								className={`object-contain duration-300 ${
-									scrolled ? "h-[80px]" : "md:h-[120px] h-[100px]"
+									scrolled ? "h-[80px]" : "md:h-[120px] h-[90px] sm:h-[90px]"
 								}  w-32 sm:w-48 md:w-52 lg:w-72`}
 								src="/images/homepage/Optimum Laser Brown Logo.png"
 								alt={"navbar logo"}
@@ -117,7 +117,7 @@ export default function Navbar() {
 					</div>
 				</div>
 				<div
-					className="w-full overflow-hidden md:overflow-visible mb-[1rem] grid md:flex"
+					className={`w-full overflow-hidden md:overflow-visible grid md:flex ${pathname === '/about-us' ? 'mb-0 md:mb-[1rem]' : 'mb-[1rem]'}`}
 					style={{
 						gridTemplateRows: menuOpen ? "1fr" : "0fr",
 						transition: "0.2s",

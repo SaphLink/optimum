@@ -10,7 +10,7 @@ export const SliderItem = ({children} : any) => {
     )
     }
 
-const Slider = ({children,itemWidth = 600} : any) => {
+const Slider = ({children,itemWidth = 600, compact = false, itemsPerSlideDesktop} : any) => {
     const [currentSlide, setCurrentSlide] = React.useState(0)
     const [childGroups, setChildGroups] = React.useState([] as any)
     const sliderInnerContainer = useRef<HTMLDivElement>()
@@ -32,7 +32,8 @@ const Slider = ({children,itemWidth = 600} : any) => {
             //get the width of the container
             const containerWidth = sliderOuterContainer.current.clientWidth
             //calculate how many children can fit in the container at once , it cant be less than 1
-            const childrenCanFit = Math.max(1,Math.floor(containerWidth / itemWidth))
+            const baseFit = Math.max(1,Math.floor(containerWidth / itemWidth))
+            const childrenCanFit = itemsPerSlideDesktop && containerWidth >= 1024 ? itemsPerSlideDesktop : baseFit
             // split the children into groups of childrenCanFit
             const childrenGroups = children.reduce((acc:any,child:any,index:number)=>{
                 const groupIndex = Math.floor(index / childrenCanFit)
@@ -58,11 +59,19 @@ const Slider = ({children,itemWidth = 600} : any) => {
 
         if(!sliderInnerContainer.current || !sliderOuterContainer.current) return
         sliderInnerContainer.current.style.transform = `translateX(-${currentSlide * sliderOuterContainer.current.clientWidth}px)`
-    },[currentSlide])
+        },[currentSlide])
 
-  return (
+    useEffect(() => {
+      if (childGroups.length <= 1) return;
+      const id = window.setInterval(() => {
+        setCurrentSlide(prev => (prev + 1) % childGroups.length);
+      }, 3000);
+      return () => window.clearInterval(id);
+    }, [childGroups.length]);
+ 
+   return (
     <div 
-     className='mb-[4rem] relative'
+     className={`${compact ? 'mb-[0.25rem]' : 'mb-[4rem]'} relative`}
     >
         <div
             onClick={()=>{
@@ -71,7 +80,7 @@ const Slider = ({children,itemWidth = 600} : any) => {
                 }
             
             }}
-            className='absolute z-[50] top-[50%] translate-y-[-50%] left-0 w-[40px] h-[40px] md:w-[50px] md:h-[50px] flex justify-center items-center bg-[rgba(0,0,0,0.1)] cursor-pointer rounded-[50%]'
+            className='absolute z-[999] pointer-events-auto top-[50%] translate-y-[-50%] left-4 md:left-6 w-[48px] h-[48px] md:w-[56px] md:h-[56px] flex justify-center items-center bg-[rgba(0,0,0,0.12)] hover:bg-[rgba(0,0,0,0.2)] cursor-pointer rounded-[50%]'
         >
             <FaChevronRight className='rotate-180' />
         </div>
@@ -81,7 +90,7 @@ const Slider = ({children,itemWidth = 600} : any) => {
                 setCurrentSlide(currentSlide + 1)
             }
         }}
-        className='absolute z-[50] top-[50%] translate-y-[-50%] right-0 w-[40px] h-[40px] md:w-[50px] md:h-[50px] flex justify-center items-center bg-[rgba(0,0,0,0.1)] cursor-pointer rounded-[50%]'
+        className='absolute z-[999] pointer-events-auto top-[50%] translate-y-[-50%] right-4 md:right-6 w-[48px] h-[48px] md:w-[56px] md:h-[56px] flex justify-center items-center bg-[rgba(0,0,0,0.12)] hover:bg-[rgba(0,0,0,0.2)] cursor-pointer rounded-[50%]'
         >
             <FaChevronRight />
         </div>
@@ -89,7 +98,7 @@ const Slider = ({children,itemWidth = 600} : any) => {
     <div
     // @ts-ignore
     ref={sliderOuterContainer}
-    className='overflow-hidden mx-auto'
+    className='overflow-hidden mx-auto relative z-[10]'
         // className='overflow-x-scroll'
     >
     <div
@@ -104,7 +113,7 @@ const Slider = ({children,itemWidth = 600} : any) => {
                 style={{
                     width: sliderOuterContainer.current ? sliderOuterContainer.current.clientWidth+'px' : '100%'
                 }}
-                className={`flex justify-center items-stretch gap-[1rem] p-[2rem] duration-300`}
+                className={`flex justify-center items-start gap-[1rem] p-[2rem] duration-300`}
                 >
                     {group.map((child : any, index : number)=>(
                         <div
@@ -120,7 +129,7 @@ const Slider = ({children,itemWidth = 600} : any) => {
     </div>
     </div>
     <div
-     className='flex justify-center items-center gap-[2px] mt-[2rem]'
+     className={`flex justify-center items-center gap-[2px] ${compact ? 'mt-[0.1rem]' : 'mt-[2rem]'}`}
     >
         {
             Array.from({length: childGroups.length}).map((_,index)=>(

@@ -17,6 +17,19 @@
     src: url("/fonts/RussoOne-Regular.ttf") format("truetype");
 }
 
+/* Pulse animation for map pin */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -62,12 +75,51 @@ body {
     background-color: #f9efdd;
 }
 
-.laser-hair-removal {
-    background: url('../../public/images/cropped-images/Homepage Group 3 Cropped.png');
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: contain;
+@media (max-width: 768px) {
+  .about-us-banner {
+    background: none;
     background-color: #f9efdd;
+  }
+}
+
+.laser-hair-removal {
+  background-color: #f9efdd;
+}
+
+.desktop-shift-left {
+  @media (min-width: 768px) {
+    transform: translateX(-2rem);
+  }
+}
+
+.consultation-text {
+  @media (min-width: 768px) {
+    white-space: nowrap;
+  }
+}
+
+.mobile-bullet-list {
+  @media (max-width: 768px) {
+    padding-left: 0.5rem !important;
+  }
+}
+
+.mobile-text-optimized {
+  @media (min-width: 768px) {
+    font-size: 1.5rem !important;
+  }
+}
+
+.bullet-list-container {
+  @media (min-width: 768px) {
+    font-size: 1.4rem !important;
+  }
+}
+
+.mobile-centered {
+  @media (min-width: 768px) {
+    align-items: flex-start !important;
+  }
 }
 
 .custom-circle {

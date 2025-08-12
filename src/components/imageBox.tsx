@@ -54,7 +54,7 @@ const ImageBox: React.FC<Props> = ({ image, href, title, description, style, img
   
   return (
     <Box style={style}
-      className={`${href ? 'duration-300 hover:scale-[1.03]' : ''}`}
+      className="duration-300 hover:scale-[1.03]"
     >
       <LinkWrapper className="w-full h-full" href={href || ""}>
         <Title>{title}</Title>

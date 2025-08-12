@@ -140,16 +140,16 @@ const Footer = () => (
                         Laser Hair Removal
                     </a>
                     </li>
-                    <li> <a href={"/services/facial-service"}>
-                        Facial Services
-                    </a>
-                    </li>
                     <li> <a href={"/services/pigmentation-service"}>
                         Pigmentation Removal
                     </a>
                     </li>
                     <li> <a href={"/services/vein-removal"}>
                         Vein Removal
+                    </a>
+                    </li>
+                    <li> <a href={"/services/facial-service"}>
+                        Facial Services
                     </a>
                     </li>
                     <li> <a href={"/about-us"}>

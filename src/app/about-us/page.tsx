@@ -4,6 +4,8 @@ import Section, {
   SectionDescription,
   SectionTitle,
 } from "@/components/layout/section";
+import FlowerSection from "@/components/layout/flowerSection";
+import ReviewCard from "@/components/ReviewCard";
 import React from "react";
 import VideoCard from "@/components/videoCard";
 import CustomButton from "@/components/button";
@@ -26,7 +28,7 @@ const Img3 = styled.img`
 
 const page = () => {
   return (
-    <div className="pt-[1rem]">
+    <div className="pt-0 md:pt-[1rem]">
       <Head>
         <title>About Us - Your Company Name</title>
         <meta
@@ -42,36 +44,41 @@ const page = () => {
         <meta name="robots" content="index, follow" />
       </Head>
 
-      <div className="about-us-banner h-[600px] mt-[9.4rem] md:mt-[9.5rem] sm:mt-[9.5rem] lg:mt-[9.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
-        <div className="w-[95vw] max-w-[2000px] grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
-          <div className="w-full relative">
-            <Box className="about-box">
-              <div className="title text-center md:text-left">ABOUT US</div>
+      <div className="about-us-banner h-[640px] md:h-[600px] mt-[8.5rem] md:mt-[8.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-center justify-center">
+                 <div className="w-[95vw] max-w-[2000px] h-full grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
+          <div className="w-full relative overflow-hidden">
+                         <Box className="about-box">
+              <div className="title text-center md:text-left leading-tight">ABOUT US</div>
               <div className="line"></div>
               <div className="desc text-center md:text-left px-2 sm:px-4">
-                For over 15 years, <strong style={{ fontWeight: 900 }}>Optimum Laser NY</strong> has proudly served Manhasset, Great Neck, Port Washington, Roslyn and surrounding Long Island, New York areas with safe, effective laser hair removal, pigmentation removal, spider vein removal treatments using FDA-approved Cynosure technology.<br /><br />We deliver <strong style={{ fontWeight: 900 }}>long-lasting results</strong> for men and women of all skin types, with personalized care from highly certified trusted professionals—all at <strong style={{ fontWeight: 900 }}>fair, flexible pricing</strong> to make your investment in yourself truly worth it.
+                <strong>
+                  For over 15 years, <strong>Optimum Laser NY</strong> has proudly served <strong>Manhasset, Great Neck, Port Washington, Roslyn</strong> and surrounding <strong>Long Island, New York</strong> areas with <strong>safe, effective laser hair removal, pigmentation removal, and spider vein removal</strong> treatments using <strong>FDA-approved Cynosure&nbsp;technology</strong>.
+                  <br /><br />
+                  We deliver <strong>long-lasting results</strong> for men and women of <strong>all skin types</strong>, with personalized care from <strong>highly certified trusted professionals</strong>—all at <strong>fair, flexible pricing</strong> to make your investment in yourself truly worth&nbsp;it.
+                </strong>
               </div>
 
               <CustomButton
-                className="inline-block"
+                className="inline-block mx-auto block"
                 href="#consultation"
                 type="primary"
+                center={true}
               >
                 BOOK A FREE CONSULTATION
               </CustomButton>
             </Box>
           </div>
-          <div>
+          <div className="w-full flex justify-center items-end md:block">
             <img
               src="../images/cropped-images/Homepage Group 3 Cropped.png"
-              className="visible md:invisible h-auto max-w-full"
+              className="visible md:invisible block h-auto w-[69%] md:w-auto object-contain"
               alt="image"
             />
           </div>
         </div>
       </div>
 
-      <div className="pt-[3rem] pb-[0rem] md:pb-[3rem] md:pt-[4rem] px-[1rem] md:px-[3rem] bg-white">
+      <div className="pt-[1rem] pb-[0rem] md:pb-[3rem] md:pt-[3rem] px-[1rem] md:px-[3rem] bg-white">
         <div
           className={
             "justify-center items-stretch min-h-[400px] flex flex-wrap p-[0rem] md:p-[2rem]"
@@ -82,81 +89,42 @@ const page = () => {
               className={"mb-[3rem]"}
               style={{
                 fontFamily: "Raleway, sans-serif",
-                fontSize: "1.2rem",
+                fontSize: "1.24rem",
                 fontWeight: 200,
+                lineHeight: 1.55,
               }}
             >
-              <div className={"mb-[3rem] mt-[50px] text-black font-light"}>
-                Located in Manhasset, New York, the highly experienced{" "}
-                <span
-                  style={{
-                    fontFamily: "Broadway",
-                    fontSize: "1.3rem",
-                  }}
-                >
-                  Optimum Laser NY
-                </span>{" "}
-                team emphasizes effective and immediate results all while
-                ensuring the highest level of professionalism, cleanliness, and
-                patient satisfaction.
+              <div className={"mb-[1rem] mt-[6px] text-black font-light"}>
+                <span className="font-bold">Since 2009,</span> our highly experienced and detail oriented caring team has helped men and women across <span className="font-bold">Manhasset and surrounding Long Island areas</span> look and feel their best with over <span className="font-bold">200K treatments</span> performed. We create <span className="font-bold">custom treatment plans</span> to fit your specific unique goals.
               </div>
-              <div className={"mb-[3rem] text-black font-light"}>
-                <span
-                  style={{
-                    fontFamily: "Broadway",
-                    fontSize: "1.3rem",
-                  }}
-                >
-                  Optimum Laser NY
-                </span>{" "}
-                offers face and body treatments including laser hair removal,
-                laser vein removal, pigmentation treatment, skin rejuvenation,
-                anti-aging facials, and acne treatment. All treatments are
-                executed to ensure maximum results in minimal time. Our team
-                uses state-of-the-art FDA approved technology, such as the
-                Cynosure Apogee Elite+ TM laser
+              <div className={"mb-[1.5rem] text-black font-light"}>
+                At <span className="font-bold">Optimum Laser NY Hair Removal</span>, we specialize in advanced laser and body treatments designed to deliver <span className="font-bold">maximum results in minimal time</span>. Our aesthetic services include:
               </div>
-              <div className={"mb-[3rem] text-black font-light"}>
-                Since 2009, the entire{" "}
-                <span
-                  style={{
-                    fontFamily: "Broadway",
-                    fontSize: "1.3rem",
-                  }}
-                >
-                  Optimum Laser NY
-                </span>{" "}
-                team has been dedicated to helping patients receive the utmost
-                results in the shortest time frames possible. Regardless of each
-                patient's aesthetic goals, our caring and detail-oriented team
-                will leverage a flexible approach to achieve the customer's
-                desires. The team is ready to help men and women of all skin
-                types, located in Manhasset and surrounding areas, look and feel
-                fantastic.
+              <ul className="list-disc pl-6 space-y-2 text-black font-light">
+                <li><span className="font-bold">Laser Hair Removal Treatments</span></li>
+                <li><span className="font-bold">Laser Vein Removal Treatments</span></li>
+                <li><span className="font-bold">Pigmentation Removal Treatments</span></li>
+                <li><span className="font-bold">Laser Skin Rejuvenation Treatments</span></li>
+                <li><span className="font-bold">Anti-Aging Facials Treatments</span></li>
+                <li><span className="font-bold">Acne Treatments</span></li>
+              </ul>
+              <div className={"mt-[1.5rem] mb-[3rem] text-black font-light"}>
+                Using state-of-the-art, <span className="font-bold">FDA-approved technology</span> like the <span className="font-bold">Cynosure Apogee Elite+™ laser</span>, we provide safe, effective aesthetic solutions for men and women of <span className="font-bold">all skin types and tones</span>.
               </div>
               <div className="text-black font-light">
-                Book an appointment online or call the office at 516-495-4908 to
-                schedule a{" "}
-                <span
-                  style={{
-                    fontFamily: "Broadway",
-                    fontSize: "1.3rem",
-                  }}
-                >
-                  FREE CONSULTATION
-                </span>{" "}
-                today!
+                <span className="font-bold">Call us at 516-495-4908 or book your FREE consultation online</span> today — and take the first step toward smooth, radiant, confident skin and investing in yourself!
               </div>
             </div>
             <CustomButton
-              className="inline-block"
+              className="inline-block mx-auto block"
               href="#consultation"
               type={"secondary"}
+              center={true}
             >
               BOOK A FREE CONSULTATION
             </CustomButton>
           </div>
-          <div className={"w-[40%] pt-[2rem] flex justify-center items-start"}>
+          <div className={"w-[40%] pt-[2rem] hidden md:flex justify-center items-start"}>
             <div
               className={
                 "w-full max-w-[500px] h-[40rem] min-w-[450px] rounded-[2rem]"
@@ -165,7 +133,7 @@ const page = () => {
               <img
                 className={"w-full h-full object-cover rounded-[2rem]"}
                 src={
-                  "../images/cropped-images/Optimum Laser Office Cropped.png"
+                  "/images/optimum office.jpg"
                 }
               />
             </div>
@@ -179,7 +147,7 @@ const page = () => {
           <SectionDescription>
             {" "}
             Take a look at some of our treatments we provide to our valued
-            customers
+            customers.
           </SectionDescription>
           <Slider itemWidth={400}>
             <div className="relative">
@@ -304,16 +272,80 @@ const page = () => {
           </Slider>
         </div>
       </div>
+
+      {/* Brown banner + testimonials */}
+      <FlowerSection showMap={true} hideSmallLeaf={true}>
+        <div className="text-[1.1rem] md:text-[1.5rem] leading-[1.4] text-center md:text-left px-2 md:px-0">
+          With <strong>4.9 stars, 290+ reviews on Google, and over 15 years</strong> of trusted experience in the Long Island, New York area, we're committed to <strong>proven results, safety, and client satisfaction</strong>. Experience the difference with a team that truly cares!
+        </div>
+        <br />
+        <br />
+        <div className="consultation-text text-[1.05rem] md:text-[1.4rem] leading-[1.4] text-center md:text-left px-2 md:px-0">
+          <strong>Book a free consultation</strong> with us to discuss a <strong>custom treatment plan</strong> tailored to your needs.
+        </div>
+      </FlowerSection>
+
+      {/* Compact Review Slider Section */}
+      <div className="pt-[1rem] pb-[0.1rem] md:pt-[1.5rem] md:pb-[0.1rem] px-[0.75rem] md:px-[2rem] bg-white">
+        <h3 className="text-[1.7rem] md:text-[3rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight mb-[0.75rem]">
+          PROVEN RESULTS, TRUSTED BY OUR CLIENTS
+        </h3>
+        <p className="text-center text-[#35281e] text-[1.05rem] md:text-[1.2rem] mb-[0.5rem] font-[Raleway]">
+          With over 4.9 stars on Google, hear what our loyal clients say about their experience with our services.
+        </p>
+
+        <Slider itemWidth={260} compact={true} itemsPerSlideDesktop={5}>
+          <ReviewCard img="/images/testimonials/Ariella.jpeg" name="Ariella Hajibay" compact={true}>
+            Best place on earth. Went to a ton of other places and finally see results here. Worth every dollar, don't look back trust me.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/juliet.jpeg" name="Juliet Hagobian" compact={true}>
+            The best there is! Orly and Pushp are so caring, kind, and welcoming. I always leave my sessions happy and satisfied with results.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/debbie-y.png" name="Debbie Y" compact={true}>
+            Optimum Laser NY is a professional pleasant company. I have started hair removal and am already seeing results in a short time.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/marissa.png" name="Marissa A" compact={true}>
+            Best laser hair removal place. The staff is extremely nice and professional and the results are amazing.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/kim.png" name="Kim M" compact={true}>
+            Wonderful and professional service! The office is clean and the staff are very knowledgeable. Highly recommend.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/brendelyn.png" name="Brendelyn C" compact={true}>
+            Amazing results and such a friendly team. Booking is easy and I’m so happy with my progress.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/cat.jpg" name="Cat S" compact={true}>
+            Orly is fantastic! She listens and adjusts treatments to your needs. I’ve recommended Optimum to all my friends.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/debbie-y.png" name="Debbie Y" compact={true}>
+            I feel comfortable and confident in every session. Results speak for themselves.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/frances.png" name="Frances S" compact={true}>
+            Excellent care and quick appointments. Results are consistent every time.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/justin.png" name="Justin R" compact={true}>
+            Highly professional team and effective treatments. Couldn’t be happier.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/mimmi.png" name="Mimmi P" compact={true}>
+            Clean office, kind staff, and great results. Five stars.
+          </ReviewCard>
+          <ReviewCard img="/images/testimonials/zareen.png" name="Zareen S" compact={true}>
+            Truly the best laser experience I’ve had. Efficient and comfortable.
+          </ReviewCard>
+        </Slider>
+            </div>
+
+      <div className="h-[0.5rem] md:h-[1rem]"></div>
+
       <div
         className="pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] bg-white"
         id="consultation"
       >
         <h2 className="text-[3rem] md:text-[5rem] font-[500] text-center text-[#35281e] px-2 md:px-0 leading-tight ">
-          SECURE YOUR FREE CONSULTATION NOW
+          SCHEDULE YOUR FREE CONSULTATION APPOINTMENT
         </h2>
         <SectionDescription>
           Please provide your contact information to help us schedule your free
-          consultation
+          consultation.
         </SectionDescription>
         <form
           action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}

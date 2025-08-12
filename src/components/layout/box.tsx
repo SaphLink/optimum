@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledBox = styled.div`
-  z-index: 1;
+  z-index: 20;
   background-color: #35281e;
   border-radius: 10px;
   padding: 1.75rem 3.5rem;
@@ -24,18 +24,11 @@ const StyledBox = styled.div`
   }
 
   &.about-box {
-    padding: 0.5rem 2.5rem 1.75rem 2.5rem;
-    width: 100%;  /* Changed from calc */
-    margin-left: 0;  /* Reset margin */
-    margin-top: -3rem;
+    padding: 1.75rem 3rem;
+    width: 100%;
+    max-width: 880px;
+    margin: 0; /* remove negative offset on desktop */
     position: relative;
-    
-    /* Container for content to maintain aspect ratio */
-    &::after {
-      content: '';
-      display: block;
-      padding-bottom: 2%;  /* Maintains some spacing */
-    }
 
     @media only screen and (max-width: 768px) {
       padding: 4rem 1.5rem 1.5rem 1.5rem;
@@ -45,32 +38,15 @@ const StyledBox = styled.div`
       border-radius: 0;
       margin: 0;
     }
-
-    /* High zoom adjustments */
-    @media screen and (min-width: 1200px) {
-      width: calc(100% + 2vw);
-      margin-left: -1vw;
-      max-width: 90%;
-      
-      .title {
-        font-size: 4rem;
-      }
-      
-      .desc {
-        font-size: 0.95rem;
-      }
-      
-      padding: 0.5rem 2rem 1.5rem 2rem;
-    }
   }
 
   & .title {
     font-size: clamp(3.5rem, 5vw, 5rem);  /* Responsive font size */
     color: white;
     letter-spacing: 0.1rem;
-    @media only screen and (max-width: 768px) {
-      font-size: 3.5rem;
-    }
+          @media only screen and (max-width: 768px) {
+        font-size: 3.6rem;
+      }
   }
 
   & .title2 {
@@ -80,9 +56,9 @@ const StyledBox = styled.div`
   }
   
   & .mini-title {
-    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
     color: white;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.45rem;
     font-weight: bold;
     font-family: Raleway, sans-serif;
   }
@@ -99,17 +75,42 @@ const StyledBox = styled.div`
   }
 
   & .desc {
-    font-size: clamp(0.9rem, 1vw, 1rem);
-    line-height: 1.4;
+    font-size: clamp(0.98rem, 1.18vw, 1.10rem);
+    line-height: 1.45;
     font-weight: 300;
     font-family: Raleway, sans-serif;
     color: #fefffe;
     padding-top: 0.25rem;
     margin-bottom: 0.5rem;
     @media only screen and (max-width: 768px) {
-      padding: 0.5rem;
+      padding: 0.5rem 0.75rem;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  }
+
+  &.laser-service-box {
+    max-width: 1400px;
+    width: 100%;
+    
+    @media only screen and (max-width: 768px) {
+      max-width: 100%;
+      padding: 1.5rem;
+      padding-bottom: 1.5rem;
+      
+      .title {
+        font-size: 2.5rem !important;
+        white-space: normal !important;
+        line-height: 1.2;
+        text-align: center;
+      }
+      
+      .mini-title {
+        font-size: 1.2rem !important;
+        text-align: center;
+        letter-spacing: 0.3rem;
+      }
     }
   }
 `;
