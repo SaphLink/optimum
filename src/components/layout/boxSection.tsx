@@ -1,6 +1,10 @@
 import styled from 'styled-components'
 
-const StyledBox = styled.div`
+const StyledBox = styled.div<{
+  allowOverflow?: boolean;
+  allowOverflowX?: boolean;
+  allowOverflowY?: boolean;
+}>`
     position:relative;
   width: 100%;
   max-width: 1900px;
@@ -10,7 +14,8 @@ const StyledBox = styled.div`
   flex-wrap: wrap;
   gap: 4rem;
   justify-content: justify-center;
-  overflow: hidden;
+  overflow-x: ${p => (p.allowOverflow || p.allowOverflowX ? 'visible' : 'hidden')};
+  overflow-y: ${p => (p.allowOverflow || p.allowOverflowY ? 'visible' : 'hidden')};
   padding-bottom: 200px;
     
   @media only screen and (max-width: 768px) {
@@ -47,10 +52,13 @@ export const BoxSplitSection = styled.div`
   }
 `
 
-const BoxSection = ({children,className,style,hero}:any) => {
+const BoxSection = ({children,className,style,hero, allowOverflow, allowOverflowX, allowOverflowY}:any) => {
   return (
     <StyledBox 
       className={`${hero ? '!md:pt-[20rem] !pt-[6rem] hero' : ''} ${className || ''}`}
+      allowOverflow={allowOverflow}
+      allowOverflowX={allowOverflowX}
+      allowOverflowY={allowOverflowY}
     style={{
         minHeight: `max(110vh, 800px)`,
         background: hero ? 'linear-gradient(to bottom, #ebe0ce, #f8efdd)' : 'linear-gradient(to right, #faecdb, #f9efdd)',

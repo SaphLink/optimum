@@ -49,20 +49,20 @@ const FlowerSection = ({children, showMap = false, hideSmallLeafMobile = false, 
 
   return (
     <div
-     className={containerClasses}
+     className={`flower-banner ${containerClasses}`}
         style={{
             fontFamily: 'Raleway',
             zIndex: 20
         }}
     > 
-        <img ref={largeRightLeafRef} src="/images/flowers/Large_pink_leaf.png" alt="pink leaf img" className={`absolute w-[170px] bottom-[-100px] md:bottom-[-150px] right-[-120px] rotate-[-10deg] object-contain z-[11] md:z-10 ${largeRightLeafDesktopWidth} ${largeRightLeafDesktopRight}`} style={{ opacity: hideLargeLeaf ? 0 : 1, transition: 'opacity 150ms ease' }}/>
-        <img src="/images/flowers/Medium_pink_leaf.png" alt="pink leaf img" className={`absolute ${shrinkLeftLeaf ? 'w-[120px] left-[-60px]' : 'w-[200px] left-[-100px]'} md:w-[300px] top-[-20px] md:top-[-50px] md:left-[-130px] rotate-[-20deg] object-contain z-[11] md:z-10`}/>
-        <img src="/images/flowers/small pink leaf.png" alt="pink leaf img" className={`absolute w-[50px] bottom-[-20px] md:bottom-[-50px] right-[70px] md:right-[150px] object-contain z-[11] md:z-10 ${smallRightLeafDesktopWidth} ${hideSmallLeaf ? 'hidden' : hideSmallLeafMobile ? 'hidden md:block' : ''}`}/>
+        <img ref={largeRightLeafRef} src="/images/flowers/Large_pink_leaf.png" alt="pink leaf img" className={`banner-leaf-large absolute w-[170px] bottom-[-100px] md:bottom-[-150px] right-[-120px] rotate-[-10deg] object-contain z-[11] md:z-10 ${largeRightLeafDesktopWidth} ${largeRightLeafDesktopRight}`} style={{ opacity: hideLargeLeaf ? 0 : 1, transition: 'opacity 150ms ease' }}/>
+        <img src="/images/flowers/Medium_pink_leaf.png" alt="pink leaf img" className={`banner-leaf-left absolute ${shrinkLeftLeaf ? 'w-[120px] left-[-60px]' : 'w-[200px] left-[-100px]'} md:w-[300px] top-[-20px] md:top-[-50px] md:left-[-130px] rotate-[-20deg] object-contain z-[11] md:z-10`}/>
+        <img src="/images/flowers/small pink leaf.png" alt="pink leaf img" className={`banner-leaf-small absolute w-[50px] bottom-[-20px] md:bottom-[-50px] right-[70px] md:right-[150px] object-contain z-[11] md:z-10 ${smallRightLeafDesktopWidth} ${hideSmallLeaf ? 'hidden' : hideSmallLeafMobile ? 'hidden md:block' : ''}`}/>
 
         {showMap ? (
-          <div className='flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full max-w-[1400px]'>
+          <div className='flower-row flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full max-w-[1400px]'>
             {/* Left cluster: stars/avatars stacked above Google logo on both mobile and desktop */}
-            <div className='flex-shrink-0 order-1 md:order-1'>
+            <div className='left-cluster flex-shrink-0 order-1 md:order-1'>
               {mobileSatisfaction ? (
                 <>
                   <div className="md:hidden flex flex-col items-center gap-3">
@@ -92,19 +92,19 @@ const FlowerSection = ({children, showMap = false, hideSmallLeafMobile = false, 
             </div>
 
             <div className='flex-1 w-full md:max-w-[min(90%,1000px)] order-2 md:order-3 text-center md:text-left'>
-              <div ref={contentRef} className="md:block break-words w-full">
+              <div ref={contentRef} className="flower-content md:block break-words w-full">
                 {children}
               </div>
             </div>
 
-            <div className='flex-shrink-0 order-3 md:order-2'>
+            <div className='map-card flex-shrink-0 order-3 md:order-2'>
               <MapWidget width="220px" height="180px" />
             </div>
           </div>
         ) : (
           <div className='w-full px-[20px] md:px-[200px]'>
             {/* Customer Satisfaction and Google Reviews Logo Group */}
-            <div className='flex flex-col md:flex-row items-center md:items-end justify-center md:justify-start mb-8 gap-8'>
+            <div className='flex flex-col md:flex-row items-center md:items-end justify-center md:justify-start mb-8 gap-8 satisfaction-row'>
               <div className="order-1 md:order-2">
                 <CustomerSatisfaction />
               </div>
@@ -114,7 +114,7 @@ const FlowerSection = ({children, showMap = false, hideSmallLeafMobile = false, 
                 className="w-[150px] md:w-[150px] h-auto object-contain order-2 md:order-1"
               />
             </div>
-            <div ref={contentRef} className="text-center md:text-left">
+            <div ref={contentRef} className="flower-content text-center md:text-left">
               {children}
             </div>
           </div>

@@ -12,6 +12,12 @@
     padding: 5px;
 }
 
+/* Ensure dropdown sits above hero and captures hover */
+.menu-dropdown {
+    position: relative;
+    z-index: 2000 !important;
+}
+
 .myPhone{
     font-family: "Russo One", sans-serif;
     font-size: 1.1rem;
@@ -62,6 +68,11 @@
     transition:0.3s;
 }
 
+/* Extra right padding to visually match left padding of the left CTA */
+.ctaRightPad {
+    padding-right: 3rem !important;
+}
+
 .buttonStyles:hover{
     background-color: #5a473d;
     color: #fefeff;
@@ -72,5 +83,145 @@
 @media (max-width: 1024px) {
     .navbarItems {
         flex-wrap: nowrap;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .myLink {
+        font-size: 0.9rem;
+        letter-spacing: 0.25rem;
+        padding: 4px;
+    }
+    .myPhone {
+        font-size: 1rem;
+        letter-spacing: 0.25rem;
+        padding: 4px;
+    }
+}
+
+/* iPad Mini width range */
+@media (min-width: 740px) and (max-width: 767px) {
+    .ctaRightMini {
+        right: 6px !important; /* avoid overhang; keep breathing room */
+    }
+    .ctaLeftMini {
+        left: 12px !important; /* move Set An Appointment to the right */
+    }
+    /* Stack CTA text for iPad Mini */
+    .ctaLine1, .ctaLine2 {
+        display: block;
+        line-height: 1.1;
+    }
+    .buttonStyles {
+        padding-left: 1.35rem !important;
+        padding-right: 1.35rem !important;
+        font-size: 1.08rem !important; /* bump mini CTA text size */
+        letter-spacing: 0.10rem !important; /* slightly tighter to fit */
+        text-align: center !important;
+        display: grid !important;
+        place-items: center !important;
+    }
+    .buttonStyles .ctaLine1,
+    .buttonStyles .ctaLine2 {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .ctaRightPad { padding-right: 1.4rem !important; }
+
+    /* Fix overlap/crowding at 749–767px: tighten navbar spacing */
+    .navbarItems { gap: 0.5rem !important; }
+    .myLink, .myPhone { letter-spacing: 0.18rem !important; font-size: 0.95rem !important; }
+    .buttonStyles { padding: 0.5rem 1.2rem !important; }
+    .ctaRightNudge { right: 0 !important; }
+    .ctaLeftNudge { left: 0 !important; }
+
+    /* Show only the calendar icon (mobile CTA) in this band */
+    .navbarItems { display: none !important; }
+    .buttonStyles, .myLink, .myPhone { display: none !important; }
+}
+
+/* Ensure two-line CTA for all iPads and similar widths */
+@media (max-width: 1024px) and (min-width: 740px) {
+    .ctaLine1, .ctaLine2 { display: block; line-height: 1.1; }
+    .buttonStyles { text-align: center !important; }
+}
+
+/* General tablet/desktop nudge */
+@media (min-width: 768px) {
+    .ctaRightNudge {
+        right: -16px !important;
+    }
+    .ctaLeftNudge {
+        left: 0 !important;
+    }
+}
+
+/* iPad Air portrait (~820px): stack CTA and slightly tighten */
+@media (min-width: 810px) and (max-width: 840px) {
+    .ctaLine1, .ctaLine2 {
+        display: block;
+        line-height: 1.1;
+    }
+    .buttonStyles {
+        padding: 0.55rem 1.8rem !important;
+        font-size: 1.06rem !important;
+        letter-spacing: 0.15rem !important;
+    }
+    .ctaLeftNudge { left: 12px !important; }
+    .ctaLeftButton { 
+        padding-left: 1.7rem !important; 
+        padding-right: 1.7rem !important; 
+        display: grid !important;
+        place-items: center !important;
+        text-align: center !important;
+    }
+    .ctaLeftLine1, .ctaLeftLine2 { display: block; line-height: 1.1; }
+}
+
+/* iPad Mini landscape (~1133px width) */
+@media (min-width: 1100px) and (max-width: 1160px) {
+    .ctaLine1, .ctaLine2 {
+        display: block;
+        line-height: 1.1;
+    }
+    .buttonStyles {
+        padding: 0.55rem 1.9rem !important;
+        font-size: 1.08rem !important;
+        letter-spacing: 0.16rem !important;
+    }
+    .ctaRightNudge {
+        right: 14px !important;
+    }
+}
+
+/* iPad Pro 11" portrait (~834px): make CTA a bit narrower and nudge right */
+@media (min-width: 830px) and (max-width: 860px) {
+    .buttonStyles {
+        padding: 0.55rem 1.85rem !important; /* keep box stable */
+        font-size: 1.18rem !important;   /* larger text on iPad Pro 11" */
+        letter-spacing: 0.16rem !important;
+    }
+    .ctaRightNudge {
+        right: 10px !important; /* create even right-side breathing room */
+    }
+}
+
+/* iPad Pro 12.9" portrait (1024px): similar tweak */
+@media (min-width: 1000px) and (max-width: 1035px) {
+    .buttonStyles {
+        padding: 0.6rem 1.95rem !important;
+        font-size: 1.22rem !important; /* larger text on iPad Pro 12.9" */
+        letter-spacing: 0.17rem !important;
+    }
+    .ctaRightNudge {
+        right: 12px !important;
+    }
+}
+
+/* Split CTA label into two lines on iPad Pro widths */
+@media (min-width: 830px) and (max-width: 860px), (min-width: 1000px) and (max-width: 1035px) {
+    .ctaLine1, .ctaLine2 {
+        display: block;
+        line-height: 1.1;
     }
 }

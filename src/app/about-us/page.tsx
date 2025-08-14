@@ -16,6 +16,12 @@ import Input, { DoubleInput } from "@/components/Input";
 import Footer from "@/components/footer";
 // video thumbnail images
 import Head from "next/head";
+import dynamic from "next/dynamic";
+
+// Lazy-load iPad-only banner client-side (reuse Contact page's component)
+const ContactBannerIpad = dynamic(() => import("@/components/ContactBannerIpad"), {
+  ssr: false,
+});
 
 const Img3 = styled.img`
   position: absolute;
@@ -68,23 +74,23 @@ const page = () => {
               </CustomButton>
             </Box>
           </div>
-          <div className="w-full flex justify-center items-end md:block">
+          <div className="w-full flex justify-center items-end md:block about-hero-right">
             <img
               src="../images/cropped-images/Homepage Group 3 Cropped.png"
-              className="visible md:invisible block h-auto w-[69%] md:w-auto object-contain"
+              className="about-hero-img visible md:invisible block h-auto w-[69%] md:w-auto object-contain"
               alt="image"
             />
           </div>
         </div>
       </div>
 
-      <div className="pt-[1rem] pb-[0rem] md:pb-[3rem] md:pt-[3rem] px-[1rem] md:px-[3rem] bg-white">
+      <div className="pt-[1rem] pb-[0rem] md:pb-[3rem] md:pt-[3rem] px-[1rem] md:px-[3rem] bg-white about-details-section">
         <div
           className={
-            "justify-center items-stretch min-h-[400px] flex flex-wrap p-[0rem] md:p-[2rem]"
+            "justify-center items-stretch min-h-[400px] flex flex-wrap p-[0rem] md:p-[2rem] about-details-row"
           }
         >
-          <div className={"flex-1 py-[2rem] md:p-[2rem] text-black font-light"}>
+          <div className={"flex-1 py-[2rem] md:p-[2rem] text-black font-light about-text-col"}>
             <div
               className={"mb-[3rem]"}
               style={{
@@ -124,10 +130,10 @@ const page = () => {
               BOOK A FREE CONSULTATION
             </CustomButton>
           </div>
-          <div className={"w-[40%] pt-[2rem] hidden md:flex justify-center items-start"}>
+          <div className={"w-[40%] pt-[2rem] hidden md:flex justify-center items-start about-image-col"}>
             <div
               className={
-                "w-full max-w-[500px] h-[40rem] min-w-[450px] rounded-[2rem]"
+                "w-full max-w-[500px] h-[40rem] min-w-[450px] rounded-[2rem] about-image-card"
               }
             >
               <img
@@ -135,6 +141,7 @@ const page = () => {
                 src={
                   "/images/optimum office.jpg"
                 }
+                alt="Optimum Laser NY office"
               />
             </div>
           </div>
@@ -154,6 +161,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/2.png"
+                alt="Treatment thumbnail 2"
               />
               <VideoCard videoSrc="/videos/VID_25160429_100420_556.mp4" />
             </div>
@@ -162,6 +170,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/1.png"
+                alt="Treatment thumbnail 1"
               />
               <VideoCard videoSrc="/videos/VID-20230521-WA0028.mp4" />
             </div>
@@ -170,6 +179,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/3.png"
+                alt="Treatment thumbnail 3"
               />
               <VideoCard videoSrc="/videos/20230711_165633.mp4" />
             </div>
@@ -178,6 +188,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/4.png"
+                alt="Treatment thumbnail 4"
               />
               <VideoCard videoSrc="/videos/20230711_154308.mp4" />
             </div>
@@ -186,6 +197,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/5.png"
+                alt="Treatment thumbnail 5"
               />
               <VideoCard videoSrc="/videos/20230711_154234.mp4" />
             </div>
@@ -194,6 +206,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/6.png"
+                alt="Treatment thumbnail 6"
               />
               <VideoCard videoSrc="/videos/20230709_101634.mp4" />
             </div>
@@ -202,6 +215,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/7.png"
+                alt="Treatment thumbnail 7"
               />
               <VideoCard videoSrc="/videos/20230709_101621.mp4" />
             </div>
@@ -210,6 +224,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/8.png"
+                alt="Treatment thumbnail 8"
               />
               <VideoCard videoSrc="/videos/20230709_101523.mp4" />
             </div>
@@ -218,6 +233,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/9.png"
+                alt="Treatment thumbnail 9"
               />
               <VideoCard videoSrc="/videos/20230709_101444.mp4" />
             </div>
@@ -226,6 +242,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/10.png"
+                alt="Treatment thumbnail 10"
               />
               <VideoCard videoSrc="/videos/20230709_101418.mp4" />
             </div>
@@ -234,6 +251,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/11.png"
+                alt="Treatment thumbnail 11"
               />
               <VideoCard videoSrc="/videos/20230709_101333.mp4" />
             </div>
@@ -242,14 +260,16 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/12.png"
+                alt="Treatment thumbnail 12"
               />
-              <VideoCard videoSrc="/videos/20230709_101312.mp4" />
+              <VideoCard videoSrc="/videos/20230711_101312.mp4" />
             </div>
 
             <div className="relative">
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/13.png"
+                alt="Treatment thumbnail 13"
               />
               <VideoCard videoSrc="/videos/20230709_101301.mp4" />
             </div>
@@ -258,6 +278,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/14.png"
+                alt="Treatment thumbnail 14"
               />
               <VideoCard videoSrc="/videos/20230709_101148.mp4" />
             </div>
@@ -266,6 +287,7 @@ const page = () => {
               <img
                 className="absolute h-full w-full"
                 src="/images/thumbnail/15.png"
+                alt="Treatment thumbnail 15"
               />
               <VideoCard videoSrc="/videos/20230709_101138.mp4" />
             </div>
@@ -274,16 +296,24 @@ const page = () => {
       </div>
 
       {/* Brown banner + testimonials */}
-      <FlowerSection showMap={true} hideSmallLeaf={true}>
-        <div className="text-[1.1rem] md:text-[1.5rem] leading-[1.4] text-center md:text-left px-2 md:px-0">
-          With <strong>4.9 stars, 290+ reviews on Google, and over 15 years</strong> of trusted experience in the Long Island, New York area, we're committed to <strong>proven results, safety, and client satisfaction</strong>. Experience the difference with a team that truly cares!
-        </div>
-        <br />
-        <br />
-        <div className="consultation-text text-[1.05rem] md:text-[1.4rem] leading-[1.4] text-center md:text-left px-2 md:px-0">
-          <strong>Book a free consultation</strong> with us to discuss a <strong>custom treatment plan</strong> tailored to your needs.
-        </div>
-      </FlowerSection>
+      {/* Desktop + mobile banner (hide on iPad widths) */}
+      <div className="block ipad:hidden">
+        <FlowerSection showMap={true} hideSmallLeaf={true} autoHideOverlappingLeaf={true}>
+          <div className="text-[1.1rem] md:text-[1.5rem] leading-[1.4] text-center md:text-left px-2 md:px-0">
+            With <strong>4.9 stars, 290+ reviews on Google, and over 15 years</strong> of trusted experience in the Long Island, New York area, we're committed to <strong>proven results, safety, and client satisfaction</strong>. Experience the difference with a team that truly cares!
+          </div>
+          <br />
+          <br />
+          <div className="consultation-text text-[1.05rem] md:text-[1.4rem] leading-[1.4] text-center md:text-left px-2 md:px-0">
+            <strong>Book a free consultation</strong> with us to discuss a <strong>custom treatment plan</strong> tailored to your needs.
+          </div>
+        </FlowerSection>
+      </div>
+
+      {/* iPad-only banner, same as Contact Us iPad rebuild */}
+      <div className="block md:hidden ipad:block">
+        <ContactBannerIpad />
+      </div>
 
       {/* Compact Review Slider Section */}
       <div className="pt-[1rem] pb-[0.1rem] md:pt-[1.5rem] md:pb-[0.1rem] px-[0.75rem] md:px-[2rem] bg-white">

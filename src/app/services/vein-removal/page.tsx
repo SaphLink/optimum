@@ -68,13 +68,13 @@ const page = () => {
             </Box>
           </div>
           <div>
-            <Img src="../images/cropped-images/vein.png" className="h-auto max-w-full" alt="image" />
+            <Img src="../images/cropped-images/vein.png" className="h-auto max-w-full vein-img-right" alt="image" />
           </div>
         </div>
       </div>
 
 
-      <FlowerSection showMap={true} hideSmallLeaf={true}>
+      <FlowerSection showMap={true} hideSmallLeaf={true} autoHideOverlappingLeaf={true}>
         <div style={{ fontSize: '1.5rem', lineHeight: '1.4' }}>
           With <strong>4.9 stars, 290+ reviews on Google, and over 15 years</strong> of trusted experience in the Long Island, New York area, we're committed to <strong>proven results, safety, and vein-free</strong> patients. Experience the difference with a team that truly cares! 
         </div>

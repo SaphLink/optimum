@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useCallback } from 'react'
 import {FaChevronRight} from 'react-icons/fa'
 
 export const SliderItem = ({children} : any) => {
@@ -16,25 +16,11 @@ const Slider = ({children,itemWidth = 600, compact = false, itemsPerSlideDesktop
     const sliderInnerContainer = useRef<HTMLDivElement>()
     const sliderOuterContainer = useRef<HTMLDivElement>()
 
-    useEffect(()=>{
-        setupSlider()
-
-        window.addEventListener('resize',setupSlider)
-
-        return ()=>{
-            window.removeEventListener('resize',setupSlider)
-        }
-        
-    },[])
-
-    const setupSlider = ()=>{
+    const setupSlider = useCallback(()=>{
         if(sliderOuterContainer.current && sliderInnerContainer.current){
-            //get the width of the container
             const containerWidth = sliderOuterContainer.current.clientWidth
-            //calculate how many children can fit in the container at once , it cant be less than 1
             const baseFit = Math.max(1,Math.floor(containerWidth / itemWidth))
             const childrenCanFit = itemsPerSlideDesktop && containerWidth >= 1024 ? itemsPerSlideDesktop : baseFit
-            // split the children into groups of childrenCanFit
             const childrenGroups = children.reduce((acc:any,child:any,index:number)=>{
                 const groupIndex = Math.floor(index / childrenCanFit)
                 if(!acc[groupIndex]){
@@ -45,15 +31,18 @@ const Slider = ({children,itemWidth = 600, compact = false, itemsPerSlideDesktop
             },[] as any)
 
             setChildGroups(childrenGroups)
-
-            // set width of inner container to be the number of groups * container width
             sliderInnerContainer.current.style.width = `${childrenGroups.length * containerWidth}px`
-
-            //reset the current slide to 0
             setCurrentSlide(0)
-
         }
-    }
+    }, [children, itemWidth, itemsPerSlideDesktop])
+
+    useEffect(()=>{
+        setupSlider()
+        window.addEventListener('resize',setupSlider)
+        return ()=>{
+            window.removeEventListener('resize',setupSlider)
+        }
+    },[setupSlider])
 
     useEffect(()=>{
 

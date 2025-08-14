@@ -23,7 +23,7 @@ const Box = styled.div`
     padding-bottom: 2rem;
   }
 `;
-const Image = styled.img<{ imgposition?: string }>`
+const Image = styled.img`
   position: absolute;
   object-fit: contain;
   bottom: 0;
@@ -59,7 +59,7 @@ const ImageBox: React.FC<Props> = ({ image, href, title, description, style, img
       <LinkWrapper className="w-full h-full" href={href || ""}>
         <Title>{title}</Title>
         <Description>{description}</Description>
-        <Image src={image} alt={title} imgposition={imgposition} />
+        <Image src={image} alt={title} />
       </LinkWrapper>
     </Box>
   );

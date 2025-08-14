@@ -4,13 +4,15 @@ import CustomButton from "@/components/button";
 import { Helmet } from 'react-helmet';
 import Footer, { FooterIcon, SocialIcons } from "@/components/footer";
 import Box from "@/components/layout/box";
+import LaserHeroTW from "@/components/LaserHeroTW";
 import BoxSection, { BoxSplitSection } from "@/components/layout/boxSection";
 import FlowerSection from "@/components/layout/flowerSection";
+const ContactBannerIpad = dynamic(() => import("@/components/ContactBannerIpad"), { ssr: false });
 import Section, {
   SectionDescription,
   SectionTitle,
 } from "@/components/layout/section";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import ImageBox from "@/components/imageBox";
 import { StyledIcons } from "@/components/styledIcons";
 import { BiLogoFacebook } from "react-icons/bi";
@@ -22,6 +24,7 @@ import CollapseSection from "@/components/layout/collapseSection";
 import Slider from "@/components/Slider";
 import ReviewCard from "@/components/ReviewCard";
 import styled from "styled-components";
+import dynamic from "next/dynamic";
 
 const Img3 = styled.img`
   position: absolute;
@@ -32,13 +35,43 @@ const Img3 = styled.img`
   object-position: center;
   z-index: 1;
 
+  /* iPad Air portrait: enlarge woman so head reaches top */
+  @media only screen and (min-width: 810px) and (max-width: 840px) {
+    height: 96% !important;
+    object-position: bottom right;
+  }
+
   @media only screen and (max-width: 768px) {
-    height: 345px;
-    width: 345px;
-    right: 2px;
+    height: 600px;
+    width: auto;
+    right: 0;
     bottom: 0;
     z-index: 1;
-    object-position: bottom;
+    object-position: bottom right;
+  }
+
+  /* iPhone SE portrait: slightly taller to close beige gap */
+  @media only screen and (max-width: 376px) and (orientation: portrait) {
+    height: 520px !important;
+    bottom: 0 !important;
+    transform: translateY(0) !important;
+    object-position: bottom right !important;
+  }
+
+  /* iPhone 12/13/14 (390px width) portrait: taller to close gap */
+  @media only screen and (width: 390px) and (max-height: 900px) and (orientation: portrait) {
+    height: 532px !important;
+    bottom: 0 !important;
+    transform: translateY(0) !important;
+    object-position: bottom right !important;
+  }
+
+  /* iPhone 11/Plus (~414px width) portrait: slightly taller */
+  @media only screen and (min-width: 401px) and (max-width: 430px) and (orientation: portrait) {
+    height: 548px !important;
+    bottom: 0 !important;
+    transform: translateY(0) !important;
+    object-position: bottom right !important;
   }
 `;
 const Img4 = styled.img`
@@ -50,28 +83,105 @@ const Img4 = styled.img`
   object-position: bottom;
 `;
 const page = () => {
+  const heroRef = useRef<HTMLDivElement | null>(null);
+  const imgRef = useRef<HTMLImageElement | null>(null);
+  useEffect(() => {
+    // Rely solely on CSS for mobile sizing/positioning to keep device-specific
+    // adjustments consistent (SE, 12/13/14, Pro Max). No JS overrides.
+  }, []);
+  // Narrow desktop detector to forcibly shrink the hero box so it fully fits in the beige area
+  const [shrinkBox, setShrinkBox] = React.useState(false)
+  React.useEffect(() => {
+    const onResize = () => {
+      if (typeof window === 'undefined') return
+      const w = window.innerWidth
+      const params = new URL(window.location.href).searchParams
+      const force = params.get('boxdebug') === '1'
+      setShrinkBox(force || (w >= 1201 && w <= 1279))
+      if (force) {
+        // eslint-disable-next-line no-console
+        console.log('[DEBUG] boxdebug=1 forcing hero box shrink; width=', w)
+      }
+    }
+    onResize()
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
+  // As a final step, set inline styles on the exact element after mount and on resize
+  React.useEffect(() => {
+    if (typeof window === 'undefined') return
+    const apply = () => {
+      const w = window.innerWidth
+      const inBand = w >= 1201 && w <= 1279
+      const el = document.querySelector('div.box.laser-service-box') as HTMLElement | null
+      if (!inBand || !el) return
+      // Make the box wider and much shorter (top stays fixed)
+      el.style.setProperty('transform', 'none', 'important')
+      el.style.setProperty('transform-origin', 'top left', 'important')
+      el.style.setProperty('max-width', '1040px', 'important')
+      el.style.setProperty('width', '1040px', 'important')
+      // Reduce overall height by ~7px: subtract from bottom padding
+      el.style.setProperty('padding', '0.6rem 1.0rem 0.156rem 1.0rem', 'important')
+      // Also gently reduce text inside to avoid overflow
+      const title = el.querySelector('.title') as HTMLElement | null
+      const descs = el.querySelectorAll('.desc') as NodeListOf<HTMLElement>
+      if (title) title.style.setProperty('font-size', '1.9rem', 'important')
+      descs.forEach(d => {
+        d.style.setProperty('font-size', '0.9rem', 'important')
+        d.style.setProperty('line-height', '1.32', 'important')
+        d.style.setProperty('margin', '0.15rem 0', 'important')
+      })
+    }
+    // initial and a few retries in case of hydration timing
+    apply()
+    const id = window.setInterval(apply, 250)
+    setTimeout(() => window.clearInterval(id), 2000)
+    window.addEventListener('resize', apply)
+    return () => window.removeEventListener('resize', apply)
+  }, [])
+
   return (
     <>
+      {/* Lazy-load iPad-only banner (same as Contact/About usage) */}
+      {/** @ts-ignore **/}
+      {null}
+      
       <Helmet>
         <title>Laser Hair Removal in New York - Optimum Laser</title>
         <meta name="description" content="This is the description of my page" />
       </Helmet>
-      <div className="laser-hair-removal relative h-[850px] mt-[9rem] md:mt-[6rem] sm:mt-[5.5rem] lg:mt-[5.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+      {/* Tailwind-based hero (disabled) */}
+      <div className="hidden">
+        <LaserHeroTW />
+      </div>
+
+      {/* Original hero (enabled for all) */}
+      <div ref={heroRef} className="block laser-hair-removal relative h-[850px] mt-[9rem] md:mt-[6rem] sm:mt-[5.5rem] lg:mt-[5.5rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
         <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center desktop-shift-left">
-          <div className="md:py-10 py-0">
-            <Box className="laser-service-box">
-              <div className="title text-center md:text-left" style={{ fontSize: 'calc(4rem * 0.7)', whiteSpace: 'nowrap' }}>SAFE, EFFECTIVE & LONG-LASTING</div>
+          <div className="md:py-10 py-0 laser-hero-left">
+            <Box
+              id="heroBox"
+              className="laser-service-box laser-hero-box md:translate-x-4 lg:translate-x-8 lg:mt-6"
+              style={shrinkBox ? {
+                transform: 'scale(0.78)',
+                transformOrigin: 'top left',
+                maxWidth: '600px',
+                outline: '2px dashed rgba(0,128,255,0.6)'
+              } : undefined}
+            >
+              <div className="title text-center md:text-left" style={{ fontSize: 'calc(4rem * 0.62)', lineHeight: 1.05, whiteSpace: 'nowrap' }}>SAFE, EFFECTIVE & LONG-LASTING</div>
               <div className="mini-title text-center md:text-left">
                 LASER HAIR REMOVAL
               </div>
               <div className="line"></div>
-              <div className="desc" style={{ fontSize: '1.3rem', lineHeight: '1.4' }}>
+              <div className="desc" style={{ fontSize: '1.15rem', lineHeight: 1.45 }}>
                 <strong>At <strong>Optimum Laser</strong> in Manhasset, Long Island NY we specialize in <strong>laser hair removal</strong> that's safe for men and women of <strong>all skin tones and types</strong> whether you have sensitive skin, thick or fine hair.</strong>
               </div>
-              <div className="desc" style={{ fontSize: '1.3rem', lineHeight: '1.4' }}>
+              <div className="desc" style={{ fontSize: '1.15rem', lineHeight: 1.45 }}>
                 <strong>Using advanced <strong>FDA-approved Cynosure technology</strong> that targets melanin utilizing Alexandrite (755nm) and Nd: YAG (1064nm) laser wavelengths, our laser hair removal treatments are <strong>safe, effective, quick, comfortable, and budget-friendly</strong> — delivering smooth, hair-free skin that lasts.</strong>
               </div>
-              <div className="desc" style={{ fontSize: '1.3rem', lineHeight: '1.4' }}>
+              <div className="desc" style={{ fontSize: '1.15rem', lineHeight: 1.45 }}>
                 <strong><strong>Forget</strong> the waxing, shaving and <strong>temporary solutions</strong> that will cost you more time and money in the long run.</strong>
               </div>
               <CustomButton
@@ -87,22 +197,48 @@ const page = () => {
             {/* Image positioned absolutely within the main container */}
           </div>
         </div>
-        <Img3
-          src="../images/cropped-images/Homepage Group 3 Cropped.png"
-          alt="image"
-        />
+        <Img3 ref={imgRef} className="laser-img" src="../images/cropped-images/Homepage Group 3 Cropped.png" alt="image" />
       </div>
 
-      <FlowerSection showMap={true} hideSmallLeaf={true}>
-        <div style={{ fontSize: '1.5rem', lineHeight: '1.4' }}>
-          With <strong>4.9 stars, 290+ reviews on Google, and over 15 years</strong> of trusted experience in the Long Island, New York area, we're committed to <strong>proven results, safety, and hair-free patients</strong>. Experience the difference with a team that truly cares! 
-        </div>
-        <br />
-        <br />
-        <div style={{ fontSize: '1.4rem', lineHeight: '1.4' }} className="consultation-text">
-          <strong>Book a free consultation</strong> with us to assess if you are a <strong>good candidate</strong> for laser hair removal.
-        </div>
-      </FlowerSection>
+      {/* Inline tablet overrides to ensure immediate effect on iPad Mini */}
+      <style>{`
+        @media (min-width: 740px) and (max-width: 820px) {
+          .laser-hero-box { max-width: 440px !important; padding: 0.55rem 0.9rem !important; border-radius: 12px !important; }
+          .laser-hero-box .title { font-size: 2rem !important; line-height: 1.05 !important; white-space: normal !important; }
+          .laser-hero-box .mini-title { font-size: 1rem !important; letter-spacing: 0.3rem !important; }
+          .laser-hero-box .desc { font-size: 0.9rem !important; line-height: 1.4 !important; }
+          .laser-hero-box .custom-button a { padding: 0.55rem 2.2rem !important; font-size: 1.1rem !important; }
+        }
+        /* iPad Air: force smaller woman image without touching the brown box */
+        @media (min-width: 810px) and (max-width: 840px) {
+          .laser-hair-removal .laser-img { height: 56% !important; transform: none !important; object-position: bottom right; }
+        }
+        /* Desktop narrow band (1201–1279px): make hero brown box smaller so it fits fully in beige area */
+        /* Remove debug outline if any remained */
+        @media (min-width: 1201px) and (max-width: 1279px) {
+          /* DEBUG: force the heroBox id to shrink with !important to defeat any styled overrides */
+          #heroBox { transform: scale(0.72) !important; transform-origin: top left !important; max-width: 560px !important; outline: 2px dashed rgba(255,0,0,0.5) !important; }
+        }
+      `}</style>
+
+      {/* Desktop + Mobile banner (hide on iPad widths) */}
+      <div className="block ipad:hidden">
+        <FlowerSection showMap={true} hideSmallLeaf={true} autoHideOverlappingLeaf={true}>
+          <div style={{ fontSize: '1.5rem', lineHeight: '1.4' }}>
+            With <strong>4.9 stars, 290+ reviews on Google, and over 15 years</strong> of trusted experience in the Long Island, New York area, we're committed to <strong>proven results, safety, and hair-free patients</strong>. Experience the difference with a team that truly cares!
+          </div>
+          <br />
+          <br />
+          <div style={{ fontSize: '1.4rem', lineHeight: '1.4' }} className="consultation-text">
+            <strong>Book a free consultation</strong> with us to assess if you are a <strong>good candidate</strong> for laser hair removal.
+          </div>
+        </FlowerSection>
+      </div>
+
+      {/* iPad-only banner */}
+      <div className="block md:hidden ipad:block">
+        <ContactBannerIpad />
+      </div>
 
       {/* Compact Review Slider Section */}
       <div className="pt-[1rem] pb-[0.1rem] md:pt-[1.5rem] md:pb-[0.1rem] px-[1rem] md:px-[2rem] bg-white">
@@ -201,24 +337,24 @@ const page = () => {
         </Slider>
       </div>
 
-      <div className="px-5 bg-[#35281e] p-[2rem] mt-[40px]">
-        <div className="px-[20px] md:px-[200px]">
-          <div className="title text-center md:text-left text-white font-bold text-[2rem] md:text-[5rem] m-0 font-[Russo One] uppercase tracking-[0.2rem]">
+      <div className="px-5 bg-[#35281e] p-[2rem] mt-[40px] electro-section">
+        <div className="px-[20px] md:px-[200px] electro-inner">
+          <div className="title text-center md:text-left text-white font-bold text-[2rem] md:text-[5rem] m-0 font-[Russo One] uppercase tracking-[0.2rem] electro-title">
             Electrolysis
           </div>
-          <div className="mini-title text-center md:text-left text-[1.5rem] font-semibold text-white font-[Raleway] uppercase tracking-[0.5rem]">
+          <div className="mini-title text-center md:text-left text-[1.5rem] font-semibold text-white font-[Raleway] uppercase tracking-[0.5rem] electro-subtitle">
             Hair Removal
           </div>
-          <div className="line bg-white w-full h-1 mt-3 mb-3 font-[Raleway]"></div>
-          <p className="text-white font-semibold text-[1.3rem] md:text-[1.1rem] font-[Raleway] text-center md:text-left leading-relaxed">
+          <div className="line bg-white w-full h-1 mt-3 mb-3 font-[Raleway] electro-line"></div>
+          <p className="text-white font-semibold text-[1.3rem] md:text-[1.1rem] font-[Raleway] text-center md:text-left leading-relaxed electro-paragraph">
             <span style={{ fontWeight: '800' }}>Our electrolysis sessions are typically scheduled every 1–3 weeks, depending on your hair growth cycle and treatment area.</span> Each session targets individual hair follicles for permanent results—perfect for small, precise areas or clients not eligible for laser hair removal.
           </p>
           <br/>
-          <p className="text-white font-semibold text-[1.3rem] md:text-[1.1rem] font-[Raleway] text-center md:text-left leading-relaxed">
+          <p className="text-white font-semibold text-[1.3rem] md:text-[1.1rem] font-[Raleway] text-center md:text-left leading-relaxed electro-paragraph">
             <span style={{ fontWeight: '800' }}>All treatments are performed by highly experienced licensed professionals using safe, FDA-approved technology.</span> We offer free, no-pressure consultations to walk you through the process and determine what's best for your skin.
           </p>
           <br/>
-          <p className="text-white font-semibold text-[1.3rem] md:text-[1.1rem] font-[Raleway] text-center md:text-left leading-relaxed">
+          <p className="text-white font-semibold text-[1.3rem] md:text-[1.1rem] font-[Raleway] text-center md:text-left leading-relaxed electro-paragraph">
             Electrolysis hair removal <span style={{ fontWeight: '800' }}>permanently removes and destroys unwanted hair follicles</span> from the face or body by <span style={{ fontWeight: '800' }}>using an electrical current using a sterile tiny needle.</span> This method is <span style={{ fontWeight: '800' }}>safe for all skin types,</span> and highly effective for those with gray hairs, blonde hairs, thin hair and peach fuzz.
           </p>
           <br/>

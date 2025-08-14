@@ -11,7 +11,7 @@ const CustomerSatisfaction = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center satisfaction-block">
       {/* Stars */}
       <div className="flex gap-1 mb-3">
         {[...Array(5)].map((_, i) => (

@@ -10,7 +10,7 @@ import styles from "@/styles/navbar.module.css";
 const FooterContainer = styled.div`
   background-color: #35281e;
   color: white;
-  padding: 10rem 4rem;
+  padding: 6rem 3rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -19,6 +19,12 @@ const FooterContainer = styled.div`
   @media only screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+  }
+
+  /* iPad Air width (~820px portrait) – ensure footer fits and doesn't cut off */
+  @media (min-width: 810px) and (max-width: 840px) {
+    padding: 5rem 2rem;
+    gap: 2rem;
   }
 `;
 
@@ -46,13 +52,32 @@ const FooterRight = styled.div`
   display: flex;
   flex-direction: row;
   align-items: start;
-  gap: 15rem;
+  gap: 8rem;
   flex:1;
   font-family: 'Raleway', sans-serif;
 
   @media only screen and (max-width: 768px) {
     align-items: start;
     gap: 2rem;
+  }
+
+  /* iPad Pro 11" – keep sections on one row but with tighter spacing */
+  @media (min-width: 830px) and (max-width: 860px) {
+    gap: 6rem;
+    flex-wrap: nowrap;
+  }
+
+  /* iPad Pro 12.9" – one row with comfortable spacing */
+  @media (min-width: 1000px) and (max-width: 1035px) {
+    gap: 7rem;
+    flex-wrap: nowrap;
+  }
+
+  /* iPad Air – allow wrapping so nothing is cut off */
+  @media (min-width: 810px) and (max-width: 840px) {
+    gap: 4rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
   }
 `;
 
@@ -70,6 +95,30 @@ const Section = styled.div`
       &:last-child {
         margin-bottom: 0;
       }
+    }
+  }
+
+  /* Prevent line-wrapping for business hours on iPad Air/Pro */
+  &.business-hours ul li {
+    white-space: nowrap;
+  }
+  @media (min-width: 810px) and (max-width: 840px) {
+    &.business-hours ul li {
+      white-space: nowrap;
+      font-size: 0.92rem;
+    }
+    flex-basis: auto;
+  }
+  @media (min-width: 830px) and (max-width: 860px) {
+    &.business-hours ul li {
+      white-space: nowrap;
+      font-size: 0.95rem;
+    }
+  }
+  @media (min-width: 1000px) and (max-width: 1035px) {
+    &.business-hours ul li {
+      white-space: nowrap;
+      font-size: 1rem;
     }
   }
 `;
@@ -163,7 +212,7 @@ const Footer = () => (
                 </ul>
             </Section>
 
-            <Section>
+            <Section className="business-hours">
                 <h3 style={{ textDecoration: 'underline', fontWeight: 'bold', marginBottom: '1rem' }}>BUSINESS HOURS</h3>
                 <ul>
                     <li>Monday: Closed</li>

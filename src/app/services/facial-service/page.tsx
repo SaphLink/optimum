@@ -162,7 +162,7 @@ const page = () => {
         </div>
       </div>
 
-      <FlowerSection showMap={true} hideSmallLeaf={true}>
+      <FlowerSection showMap={true} hideSmallLeaf={true} autoHideOverlappingLeaf={true}>
         <div style={{ fontSize: '1.5rem', lineHeight: '1.4' }}>
           With <strong>4.9 stars, 290+ reviews on Google, and over 15 years</strong> of trusted experience in the Long Island, New York area, we're committed to <strong>proven results, safety, and clear skin</strong>. Experience the difference with a team that truly cares!
         </div>

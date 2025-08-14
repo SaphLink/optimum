@@ -40,8 +40,12 @@ const StyledBox = styled.div`
     }
   }
 
+  @media only screen and (min-width: 740px) and (max-width: 1024px) {
+    padding: 1.25rem 2rem; /* lower overall box height on iPads */
+  }
+
   & .title {
-    font-size: clamp(3.5rem, 5vw, 5rem);  /* Responsive font size */
+    font-size: clamp(3rem, 4.6vw, 4.6rem);  /* Slightly reduced to avoid cutoffs on iPad */
     color: white;
     letter-spacing: 0.1rem;
           @media only screen and (max-width: 768px) {
@@ -93,6 +97,32 @@ const StyledBox = styled.div`
   &.laser-service-box {
     max-width: 1400px;
     width: 100%;
+    border-radius: 12px;
+    padding: 1.25rem 2rem; /* tighten desktop */
+    .line { margin: 0.45rem 0; }
+    .desc { font-size: 1.08rem; line-height: 1.5; }
+    .custom-button { margin-top: 0.35rem; }
+    
+    /* iPad Mini portrait range: tighten hero box size like About Us */
+    @media only screen and (min-width: 740px) and (max-width: 820px) {
+      max-width: 540px;
+      padding: 0.9rem 1.25rem;
+      border-radius: 12px;
+      .title {
+        font-size: 2.6rem !important;
+        line-height: 1.08 !important;
+        white-space: normal !important;
+        text-align: left;
+      }
+      .mini-title {
+        font-size: 1.25rem !important;
+        letter-spacing: 0.35rem !important;
+        text-align: left;
+      }
+      .line { margin: 0.45rem 0 !important; }
+      .desc { font-size: 0.98rem !important; line-height: 1.45 !important; }
+      .custom-button { margin-top: 0.35rem !important; }
+    }
     
     @media only screen and (max-width: 768px) {
       max-width: 100%;
@@ -111,6 +141,19 @@ const StyledBox = styled.div`
         text-align: center;
         letter-spacing: 0.3rem;
       }
+    }
+  }
+
+  /* Tailwind mobile override helper for narrow hero box widths */
+  &.tw-mobile-narrow {
+    @media only screen and (max-width: 768px) {
+      max-width: 82% !important;
+      width: 82% !important;
+      border-radius: 12px !important;
+      padding-left: 1.25rem !important;
+      padding-right: 1.25rem !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
   }
 `;

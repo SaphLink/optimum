@@ -20,6 +20,12 @@ import styled from "styled-components";
 import Slider from "@/components/Slider";
 import ReviewCard from "@/components/ReviewCard";
 import FlowerSection from "@/components/layout/flowerSection";
+import dynamic from "next/dynamic";
+
+// Lazy-load iPad-only banner client-side
+const ContactBannerIpad = dynamic(() => import("@/components/ContactBannerIpad"), {
+  ssr: false,
+});
 
 const textareaStyle = {
   maxWidth: "1000px",
@@ -82,12 +88,12 @@ const page = () => {
         >
           <div className="w-full mb-[4rem] flex flex-col gap-[1rem] justify-center items-center">
             <DoubleInput>
-              <Input name="name" placeHolder="Your Name" half />
-              <Input name="email" placeHolder="Email" half />
+              <Input name="name" placeholder="Your Name" half />
+              <Input name="email" placeholder="Email" half />
             </DoubleInput>
             <DoubleInput>
-              <Input name="phone number" placeHolder="Phone Number" half />
-              <Input name="date and time" placeHolder="Date and Time" half />
+              <Input name="phone number" placeholder="Phone Number" half />
+              <Input name="date and time" placeholder="Date and Time" half />
             </DoubleInput>
             <textarea
               name="message"
@@ -287,6 +293,8 @@ const page = () => {
         </div>
       </div>
 
+      {/* Desktop + Mobile banner (hide only on iPad widths) */}
+      <div className="block ipad:hidden">
       <FlowerSection showMap={true} hideSmallLeaf={true} compact={true} shrinkLeftLeaf={true} shrinkRightLeafDesktop={true} nudgeLargeRightLeafDesktop={true} autoHideOverlappingLeaf={true} mobileSatisfaction={true}>
         <div style={{ fontSize: '1.5rem', lineHeight: '1.4' }}>
           With <strong>4.9 stars, 290+ reviews on Google, and over 15 years</strong> of trusted experience in the Long Island, New York area, we're committed to <strong>proven results, safety, and happy patients</strong>. Experience the difference with a team that truly cares!
@@ -297,6 +305,12 @@ const page = () => {
           <strong>Book a free consultation</strong> with us to assess if you are a <strong>good candidate</strong> for treatment.
         </div>
       </FlowerSection>
+      </div>
+
+      {/* iPad-only banner */}
+      <div className="block md:hidden ipad:block">
+        <ContactBannerIpad />
+      </div>
 
       <Footer />
     </>

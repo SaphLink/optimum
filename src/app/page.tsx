@@ -31,6 +31,15 @@ const Img = styled.img`
   object-fit: contain;
   object-position: bottom;
 
+  @media only screen and (min-width: 740px) and (max-width: 1024px) {
+    right: -140px;
+  }
+
+  /* iPad Air portrait (~820px width) - push further right to meet screen edge */
+  @media only screen and (min-width: 810px) and (max-width: 840px) {
+    right: -200px;
+  }
+
   // @media only screen and (max-width: 768px) {
   //   height: 350px;
   //   width: 350px;
@@ -197,9 +206,9 @@ export default function Home() {
         <Popup />
 
         <div className="deskop-view">
-          <div className="w-full relative h-screen md:h-[700px] lg:h-[580px] mt-[8.5rem] md:mt-[9rem] sm:mt-[9rem] lg:mt-[9rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center">
+          <div className="w-full relative h-screen md:h-[700px] lg:h-[580px] mt-[8.5rem] md:mt-[9rem] sm:mt-[9rem] lg:mt-[9rem] container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd] flex items-baseline md:items-center justify-center tablet-hero" style={{overflow: 'hidden'}}>
             <div className="grid md:grid-cols-2 lg:grid-cols-2 sm:grid-cols-2 place-items-start gap-4">
-              <div className="md:py-10 py-4 z-10 -translate-x-8">
+              <div className="md:py-10 py-4 z-10 lg:-translate-x-8 tablet-hero-left">
                 <Box>
                   <Logo src="../images/homepage/Optimum Laser Brown White.png" />
 
@@ -214,6 +223,7 @@ export default function Home() {
               </div>
               <div>
                 <Img
+                  className="tablet-hero-img"
                   src="../images/cropped-images/Homepage Group 1 Cropped.png"
                   alt="image"
                 />
@@ -328,12 +338,14 @@ export default function Home() {
         </div>
 
         <BoxSection
+          className="md:pl-12 lg:pl-24 xl:pl-32 promo-section"
           style={{
             backgroundColor: "linear-gradient(to right, #faecdb, #f9efdd)",
+            paddingBottom: 0,
           }}
         >
           <div>
-            <div className="block md:hidden w-full pt-4 pb-2">
+            <div className="block md:hidden w-full pt-2 pb-0 mb-[-20px] mini-hide">
               <img
                 src="/images/optimum ad july25.jpg"
                 alt="Optimum Promotion July 25"
@@ -341,18 +353,18 @@ export default function Home() {
                 style={{ background: 'white' }}
               />
             </div>
-            <div className="hidden md:block absolute top-1/2 right-8 transform -translate-y-1/2">
+            <div className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 tablet-flyer mini-show">
               <img
                 src="/images/optimum ad july25.jpg"
                 alt="Optimum Promotion July 25"
-                className="rounded-lg shadow-lg w-[540px] h-auto object-contain"
+                className="rounded-lg shadow-lg md:w-full lg:w-[640px] xl:w-[780px] h-auto object-contain"
                 style={{ background: 'white', padding: '20px' }}
               />
             </div>
           </div>
           <Img2
-            className="translate-y-[7%]"
-            src="../images/cropped-images/Homepage Group 2 Cropped.png"
+            className="translate-y-[7%] md:-translate-x-16 md:scale-[0.9] lg:-translate-x-24 xl:-translate-x-32 tablet-woman"
+            src="/images/woman flowers (1).png"
             alt="image"
           />
         </BoxSection>
@@ -489,9 +501,9 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto bg-gradient-to-r from-[#faecdb] to-[#f9efdd]">
-          <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center">
-            <div className="md:py-10 py-0">
-              <Box>
+          <div className="grid md:grid-cols-2 sm:grid-cols-2 place-items-center chat-grid">
+            <div className="md:py-10 py-0 w-full">
+              <Box className="chat-center">
                 <div>
                   <Title>CHAT WITH US</Title>
                 </div>
@@ -541,7 +553,7 @@ export default function Home() {
                 </form>
               </Box>
             </div>
-            <div>
+            <div className="chat-hide-image">
               <img
                 src="../images/cropped-images/Homepage Group 3 Cropped.png"
                 alt="image"

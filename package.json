@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "ts-node --project tsconfig.server.json server.ts",
     "next:dev": "next dev",
-    "build": "next build",
-    "start": "node build/server.js",
+    "build": "next build && tsc -p tsconfig.server.json",
+    "start": "NODE_ENV=production node build/server.js",
     "lint": "next lint"
   },
   "dependencies": {
