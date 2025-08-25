@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production.environment]
+  NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = "AIzaSyAJTKir02V-ndvzIS_MnMlgK2LRUxhlV1Q"
+  NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID = "63619dca1605cd6db58e4ec3"
+  NEXT_PUBLIC_EMAIL = "optimumlaserhairremoval@gmail.com" 
