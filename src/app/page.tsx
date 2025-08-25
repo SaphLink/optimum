@@ -429,14 +429,14 @@ export default function Home() {
             backgroundColor: "linear-gradient(to right, #faecdb, #f9efdd)",
           }}
         >
-          <div className="container mx-auto md:pl-12 lg:pl-24 xl:pl-32 pt-6 flex overflow-hidden  md:flex-row">
+          <div className="container mx-auto md:pl-12 lg:pl-24 xl:pl-32 pt-6 flex flex-col md:flex-row items-center overflow-hidden">
             <Img2
-              className="translate-y-[3vw] w-[50%] h-auto"
+              className="translate-y-[3vw] h-auto w-full max-w-[360px] sm:max-w-[420px] md:w-[50%] md:max-w-none mx-auto object-contain"
               src="/images/woman flowers (1).png"
               alt="image"
             />
 
-            <div className="max-md:mx-auto w-[40%] h-auto">
+            <div className="max-md:mx-auto w-full md:w-[40%] h-auto mt-4 md:mt-0">
               <img
                 src="/images/optimum ad july25.jpg"
                 alt="Optimum Promotion July 25"
