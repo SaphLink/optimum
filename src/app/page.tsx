@@ -431,7 +431,7 @@ export default function Home() {
         >
           <div className="container mx-auto md:pl-12 lg:pl-24 xl:pl-32 pt-6 flex flex-col md:flex-row items-center overflow-hidden">
             <Img2
-              className="h-auto w-full max-w-[360px] sm:max-w-[420px] md:w-[50%] md:max-w-none mx-auto object-contain max-h-[60vh]"
+              className="h-auto w-auto max-w-[90vw] max-h-[55vh] sm:max-w-[420px] md:w-[50%] md:max-w-none mx-auto object-contain"
               src="/images/woman flowers (1).png"
               alt="image"
             />
