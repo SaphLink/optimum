@@ -43,17 +43,19 @@ const Img4 = styled.img`
   }
 
   @media only screen and (max-width: 768px) {
-    height: fit-content;
+    height: auto;
     width: auto;
     right: 0;
     bottom: 0;
     z-index: 1;
     object-position: bottom right;
+    display: block;
+    margin-bottom: -16px; /* close beige gap above brown section */
   }
 
   @media only screen and (max-width: 1024px) {
     position: relative !important;
-    object-position: top !important;
+    object-position: bottom right !important;
   }
 
   @media (min-width: 1024px) and (max-width: 1200px) {
@@ -167,7 +169,7 @@ const page = () => {
             </div>
             <div className="w-full ">
               <Img4
-                src="../images/cropped-images/Homepage Group 3 Cropped.png"
+                src="/images/cropped-images/Homepage Group 3 Cropped.png"
                 alt="image"
               />
             </div>
