@@ -426,12 +426,12 @@ export default function Home() {
         <div
           className=""
           style={{
-            backgroundColor: "linear-gradient(to right, #faecdb, #f9efdd)",
+            backgroundImage: "linear-gradient(to right, #faecdb, #f9efdd)",
           }}
         >
           <div className="container mx-auto md:pl-12 lg:pl-24 xl:pl-32 pt-6 flex flex-col md:flex-row items-center overflow-hidden">
             <Img2
-              className="translate-y-[3vw] h-auto w-full max-w-[360px] sm:max-w-[420px] md:w-[50%] md:max-w-none mx-auto object-contain"
+              className="h-auto w-full max-w-[360px] sm:max-w-[420px] md:w-[50%] md:max-w-none mx-auto object-contain max-h-[60vh]"
               src="/images/woman flowers (1).png"
               alt="image"
             />
