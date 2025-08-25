@@ -654,8 +654,8 @@ export default function Home() {
             </div>
             <div className=" !h-full">
               <img
-                className="h-full"
-                src="../images/cropped-images/Homepage Group 3 Cropped.png"
+                className="w-full h-auto object-contain"
+                src="/images/cropped-images/Homepage Group 3 Cropped.png"
                 alt="image"
               />
             </div>
