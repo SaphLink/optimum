@@ -52,13 +52,13 @@ const Img3 = styled.img`
     bottom: 0;
     z-index: 1;
     object-position: bottom right;
+    display: block;
+    margin-bottom: -16px; /* tighten beige gap above brown section */
   }
 
-  /* Keep the image anchored to the bottom on tablets/phones as well */
+  /* On tablets/phones, keep relative flow so the image remains visible and sized naturally */
   @media only screen and (max-width: 1024px) {
-    position: absolute !important;
-    bottom: 0 !important;
-    right: 0 !important;
+    position: relative !important;
     object-position: bottom right !important;
   }
 
@@ -457,7 +457,7 @@ const page = () => {
         </Slider>
       </div>
 
-      <div className="px-5 bg-[#35281e] p-[2rem] mt-[8px] md:mt-[40px] electro-section">
+      <div className="px-5 bg-[#35281e] p-[2rem] mt-[40px] electro-section">
         <div className="px-[20px] md:px-[40px] electro-inner container">
           <div className="title text-center md:text-left text-white font-bold text-[2rem] lg:text-[5rem] m-0 font-[Russo One] uppercase tracking-[0.2rem] electro-title">
             Electrolysis
