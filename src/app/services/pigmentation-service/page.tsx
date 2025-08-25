@@ -40,17 +40,19 @@ const Img3 = styled.img`
   }
 
   @media only screen and (max-width: 768px) {
-    height: fit-content;
+    height: auto;
     width: auto;
     right: 0;
     bottom: 0;
     z-index: 1;
     object-position: bottom right;
+    display: block;
+    margin-bottom: -16px; /* close beige gap */
   }
 
   @media only screen and (max-width: 1024px) {
     position: relative !important;
-    object-position: top !important;
+    object-position: bottom right !important;
   }
 
   @media (min-width: 1024px) and (max-width: 1200px) {
@@ -61,26 +63,23 @@ const Img3 = styled.img`
 
   /* iPhone SE portrait: slightly taller to close beige gap */
   @media only screen and (max-width: 376px) and (orientation: portrait) {
-    height: fit-content !important;
+    height: auto !important;
     bottom: 0 !important;
-    transform: translateY(0) !important;
-    // object-position: bottom right !important;
+    transform: none !important;
   }
 
   /* iPhone 12/13/14 (390px width) portrait: taller to close gap */
   @media only screen and (width: 390px) and (max-height: 900px) and (orientation: portrait) {
-    height: fit-content !important;
+    height: auto !important;
     bottom: 0 !important;
-    transform: translateY(0) !important;
-    // object-position: bottom right !important;
+    transform: none !important;
   }
 
   /* iPhone 11/Plus (~414px width) portrait: slightly taller */
   @media only screen and (min-width: 401px) and (max-width: 430px) and (orientation: portrait) {
-    height: fit-content !important;
+    height: auto !important;
     bottom: 0 !important;
-    transform: translateY(0) !important;
-    // object-position: bottom right !important;
+    transform: none !important;
   }
 `;
 const Img2 = styled.img`
@@ -174,7 +173,7 @@ const page = () => {
             </div>
             <div className="w-full">
               <Img3
-                src="../images/cropped-images/Pigmentation Group 1 Cropped.png"
+                src="/images/cropped-images/Pigmentation Group 1 Cropped.png"
                 alt="image"
               />
             </div>
