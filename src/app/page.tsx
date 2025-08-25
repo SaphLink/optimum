@@ -429,9 +429,9 @@ export default function Home() {
             backgroundImage: "linear-gradient(to right, #faecdb, #f9efdd)",
           }}
         >
-          <div className="container mx-auto md:pl-12 lg:pl-24 xl:pl-32 pt-6 flex flex-col md:flex-row items-center overflow-hidden">
+          <div className="container mx-auto md:pl-12 lg:pl-24 xl:pl-32 pt-6 flex flex-col md:flex-row items-center">
             <Img2
-              className="h-auto w-auto max-w-[90vw] max-h-[55vh] sm:max-w-[420px] md:w-[50%] md:max-w-none mx-auto object-contain"
+              className="bottom-woman h-auto w-auto max-w-[90vw] max-h-[55vh] sm:max-w-[420px] md:w-[50%] md:max-w-none mx-auto object-contain"
               src="/images/woman flowers (1).png"
               alt="image"
             />
@@ -446,6 +446,20 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Hard guard against mobile Safari stretching the bottom woman image */}
+        <style jsx global>{`
+          img.bottom-woman { 
+            width: auto !important; 
+            height: auto !important; 
+            max-width: 90vw !important; 
+            max-height: 55vh !important; 
+            object-fit: contain !important; 
+          }
+          @media (max-width: 480px) {
+            img.bottom-woman { max-width: 84vw !important; max-height: 48vh !important; }
+          }
+        `}</style>
 
         <div className="bg-white">
           <div className="container pt-[3rem] pb-[3rem] md:pt-[4rem] md:pb-[4rem] px-[1rem] md:px-[3rem] ">
