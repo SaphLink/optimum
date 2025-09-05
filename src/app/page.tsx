@@ -437,12 +437,14 @@ export default function Home() {
             />
 
             <div className="max-md:mx-auto w-full md:w-[40%] h-auto mt-4 md:mt-0">
-              <img
-                src="/images/optimum ad july25.jpg"
-                alt="Optimum Promotion July 25"
-                className="rounded-lg shadow-lg w-full h-auto object-contain max-h-[100vh]"
-                style={{ background: "white" }}
-              />
+              {false && (
+                <img
+                  src="/images/optimum ad july25.jpg"
+                  alt="Optimum Promotion July 25"
+                  className="rounded-lg shadow-lg w-full h-auto object-contain max-h-[100vh]"
+                  style={{ background: "white" }}
+                />
+              )}
             </div>
           </div>
         </div>

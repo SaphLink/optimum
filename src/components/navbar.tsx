@@ -111,7 +111,7 @@ export default function Navbar() {
                                     styles.ctaLeftButton
                                 }
                             >
-								<span className={styles.ctaLeftLine1}>SET AN</span>
+								<span className={styles.ctaLeftLine1}>SET AN</span>{' '}
 								<span className={styles.ctaLeftLine2}>APPOINTMENT</span>
 							</button>
 							<div className="block md:hidden p-[1rem] rounded-full bg-[#35281e] duration-300 hover:bg-[#5a473d]">
