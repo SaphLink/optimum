@@ -97,8 +97,8 @@ export default function Navbar() {
 									src="/icons/cursor.png"
 									className="absolute translate-x-[50%] translate-y-[50%] right-0 bottom-0 h-[2.5rem] w-[2.5rem]"
 								/>
-								<span className={styles.ctaLine1}>CLICK FOR FREE</span>
-								<span className={styles.ctaLine2}>CONSULTATION!</span>
+								<span className={styles.ctaLine1}>CLICK FOR FREE</span>{' '}
+								<span className={styles.ctaLine2}>CONSULTATION</span>
 							</button>
 						</a>
 					</div>
