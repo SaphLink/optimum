@@ -71,7 +71,7 @@ const Popup = () => {
 												className="w-[100px] h-[50px] md:w-[200px] md:h-[100px] object-contain"
 											/>
 											<h1 className="text-xl md:text-2xl lg:text-3xl my-2 md:my-4 text-center">
-												New Client Offer
+												New Client Offer!
 											</h1>
 											<h2 className="text-sm md:text-base lg:text-xl text-center pb-4">
 												$35 Underarm Laser Hair Removal
