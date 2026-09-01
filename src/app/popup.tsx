@@ -71,10 +71,10 @@ const Popup = () => {
 												className="w-[100px] h-[50px] md:w-[200px] md:h-[100px] object-contain"
 											/>
 											<h1 className="text-xl md:text-2xl lg:text-3xl my-2 md:my-4 text-center">
-												FREE Consultation
+												New Client Offer
 											</h1>
 											<h2 className="text-sm md:text-base lg:text-xl text-center pb-4">
-												+ 20% Off Your First Package!
+												$35 Underarm Laser / $99 Brazilian Laser!
 											</h2>
 											<form
 												action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
@@ -106,7 +106,7 @@ const Popup = () => {
 													type="submit"
 													className="font-bold text-sm cursor-pointer w-full md:px-4 px-2  py-2 border-2 border-[#35281e] text-[#35281e] bg-[#f8eedf] rounded-md hover:bg-[#35281e] hover:text-[#f8eedf] transition duration-300"
 												>
-													Get My Custom Quote!
+													Get My Discount!
 												</button>
 											</form>
 										</div>
