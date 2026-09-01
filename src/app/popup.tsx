@@ -74,7 +74,8 @@ const Popup = () => {
 												New Client Offer
 											</h1>
 											<h2 className="text-sm md:text-base lg:text-xl text-center pb-4">
-												$35 Underarm Laser / $99 Brazilian Laser!
+												$35 Underarm Laser 
+												$99 Brazilian Laser!
 											</h2>
 											<form
 												action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
