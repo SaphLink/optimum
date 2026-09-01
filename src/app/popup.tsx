@@ -73,7 +73,7 @@ const Popup = () => {
 											<h1 className="text-xl md:text-2xl lg:text-3xl my-2 md:my-4 text-center">
 												New Client Offer!
 											</h1>
-											<h2 className="text-xl md:text-2xl lg:text-3xl text-center pb-4">
+											<h2 className="text-sm md:text-base lg:text-xl text-center pb-4">
 												$35 Underarm Laser Hair Removal
 												$99 Brazilian Laser Hair Removal
 											</h2>
