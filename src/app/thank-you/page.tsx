@@ -7,6 +7,7 @@ import { useEffect } from "react";
 declare global {
   interface Window {
     dataLayer?: Array<Record<string, string>>;
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -27,12 +28,11 @@ export default function ThankYouPage() {
       event: "generate_lead",
       lead_form: leadForm,
       lead_type: "form_submission",
-              // @ts-ignore - gtag is configured sitewide in the root layout
-window.gtag?.("event", "conversion", {
+    });
+    window.gtag?.("event", "conversion", {
       send_to: "AW-397121812/YtWHCM2Vt-AcEJSyrr0B",
       value: 0,
       currency: "USD",
-    });
     });
   }, [leadForm]);
 
@@ -54,4 +54,3 @@ window.gtag?.("event", "conversion", {
     </main>
   );
 }
-
