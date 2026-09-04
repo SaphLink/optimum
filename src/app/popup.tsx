@@ -84,12 +84,12 @@ const Popup = () => {
 												style={{ fontFamily: "Raleway" }}
 											>
 												<input
-													
-													                        <input
-                          type="hidden"
-                          name="_next"
-                          value="https://optimumlaserhairremoval.com/thank-you?form=discount-popup"
-                        />name="Coupon Submission"
+													type="hidden"
+													name="_next"
+													value="https://optimumlaserhairremoval.com/thank-you?form=discount-popup"
+												/>
+												<input
+													name="Coupon Submission"
 													className="hidden"
 													placeholder="code"
 												/>
