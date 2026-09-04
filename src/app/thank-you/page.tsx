@@ -37,10 +37,10 @@ export default function ThankYouPage() {
   }, [leadForm]);
 
   return (
-    <main className="min-h-screen bg-[#f9eedc] px-6 py-24 text-[#35281e]">
-      <section className="mx-auto max-w-2xl rounded-3xl bg-white p-10 text-center shadow-lg">
-        <h1 className="mb-4 text-4xl font-semibold">Thank you!</h1>
-        <p className="mb-8 text-lg leading-relaxed">
+    <main className="min-h-screen bg-[#f9eedc] px-4 pb-12 pt-52 text-[#35281e] sm:px-6 sm:pt-56 md:pt-52">
+      <section className="mx-auto max-w-2xl rounded-3xl bg-white p-6 text-center shadow-lg sm:p-10">
+        <h1 className="mb-4 text-3xl font-semibold sm:text-4xl">Thank you!</h1>
+        <p className="mb-8 text-base leading-relaxed sm:text-lg">
           We received your request. A member of the Optimum Laser NY team will
           contact you shortly.
         </p>
