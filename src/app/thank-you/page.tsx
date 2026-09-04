@@ -27,6 +27,11 @@ export default function ThankYouPage() {
       event: "generate_lead",
       lead_form: leadForm,
       lead_type: "form_submission",
+          window.gtag?.("event", "conversion", {
+      send_to: "AW-397121812/YtWHCM2Vt-AcEJSyrr0B",
+      value: 0,
+      currency: "USD",
+    });
     });
   }, [leadForm]);
 
