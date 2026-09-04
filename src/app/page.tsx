@@ -612,6 +612,11 @@ export default function Home() {
                   action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
                   method="POST"
                 >
+                                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://optimumlaserhairremoval.com/thank-you?form=homepage"
+                  />
                   <Row className="mb-[1rem]">
                     <input
                       name="name"

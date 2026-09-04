@@ -98,6 +98,11 @@ const page = () => {
           action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
           method="POST"
         >
+                  <input
+            type="hidden"
+            name="_next"
+            value="https://optimumlaserhairremoval.com/thank-you?form=contact"
+          />
           <div className="w-full mb-[4rem] flex flex-col gap-[1rem] justify-center items-center">
             <DoubleInput>
               <Input name="name" placeholder="Your Name" half />
