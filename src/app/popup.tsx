@@ -62,7 +62,7 @@ const Popup = () => {
 
 								<div className="divide-y divide-[#eadbcd]">
 									{offers.map((offer) => (
-										<article className="grid grid-cols-[4rem_1fr] items-center gap-3 py-4 sm:grid-cols-[7rem_1fr] sm:gap-5" key={offer.price}>
+										<article className="grid min-w-0 text-lg font-medium leading-snug sm:text-2xl-[4rem_1fr] items-center gap-3 py-4 sm:grid-cols-[7rem_1fr] sm:gap-5" key={offer.price}>
 											<p className="font-serif text-5xl font-semibold sm:text-6xl">{offer.price}</p>
 											<p className="text-lg font-medium leading-snug sm:text-2xl">{offer.label}</p>
 										</article>
