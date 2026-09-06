@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-      <link rel="icon" href="/images/thumbnail/favicon.ico" sizes="any" />
+        <link rel="icon" href="/images/thumbnail/favicon.ico" sizes="any" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TG7MTK4H');`,
@@ -27,6 +27,11 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `gtag('config', 'AW-397121812/vA2dCNbkpOAcEJSyrr0B', { phone_conversion_number: '516-495-4908' });`,
+          }}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.addEventListener('submit', function(event) { var form = event.target; if (form && form.matches && form.matches('form[action*="formsubmit.co"]') && !form.querySelector('input[name="_captcha"]')) { var captcha = document.createElement('input'); captcha.type = 'hidden'; captcha.name = '_captcha'; captcha.value = 'false'; form.appendChild(captcha); } }, true);`,
           }}
         ></script>
         <script
