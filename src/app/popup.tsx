@@ -3,27 +3,34 @@ import Image from "next/image";
 import { IoCloseSharp } from "react-icons/io5";
 import React, { useEffect, useRef, useState } from "react";
 
+
 const popupTimeout = 6000;
+
 
 const offers = [
 	{ price: "$35", label: "Underarm Laser Hair Removal" },
 	{ price: "$99", label: "Brazilian Laser Hair Removal" },
 ];
 
+
 const Popup = () => {
 	const shown = useRef(false);
 
+
 	useEffect(() => {
 		if (shown.current) return;
+
 
 		shown.current = true;
 		setTimeout(async () => {
 			await modal(({ show, proceed }: any) => {
 				const [showPopupState, setShowPopup] = useState(false);
 
+
 				useEffect(() => {
 					setShowPopup(show);
 				}, [show]);
+
 
 				return (
 					<div className="fixed inset-0 z-[500] flex items-center justify-center p-3 sm:p-6">
@@ -46,6 +53,7 @@ const Popup = () => {
 								<IoCloseSharp className="text-3xl" />
 							</button>
 
+
 							<div className="p-5 sm:p-8 lg:p-12">
 								<Image
 									alt="Optimum Laser"
@@ -60,6 +68,7 @@ const Popup = () => {
 								</h1>
 								<div className="mx-auto my-4 h-px w-full max-w-sm bg-[#eadbcd]" />
 
+
 								<div className="divide-y divide-[#eadbcd]">
 									{offers.map((offer) => (
 										<article className="grid grid-cols-[4rem_1fr] items-center gap-3 py-4 sm:grid-cols-[7rem_1fr] sm:gap-5" key={offer.price}>
@@ -69,12 +78,14 @@ const Popup = () => {
 									))}
 								</div>
 
+
 								<p className="my-5 border-y border-[#eadbcd] py-4 text-center font-serif text-lg sm:text-xl">
 									Your personalized laser journey starts here.
 								</p>
 
+
 								<form
-									action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
+									action="/api/lead?form=discount-popup"
 									className="grid gap-3"
 									method="POST"
 								>
@@ -99,7 +110,9 @@ const Popup = () => {
 			}, popupTimeout);
 	}, []);
 
+
 	return null;
 };
+
 
 export default Popup;
