@@ -3,34 +3,49 @@ import Image from "next/image";
 import { IoCloseSharp } from "react-icons/io5";
 import React, { useEffect, useRef, useState } from "react";
 
-
 const popupTimeout = 6000;
-
 
 const offers = [
 	{ price: "$35", label: "Underarm Laser Hair Removal" },
 	{ price: "$99", label: "Brazilian Laser Hair Removal" },
 ];
 
-
 const Popup = () => {
 	const shown = useRef(false);
 
-
 	useEffect(() => {
 		if (shown.current) return;
-
 
 		shown.current = true;
 		setTimeout(async () => {
 			await modal(({ show, proceed }: any) => {
 				const [showPopupState, setShowPopup] = useState(false);
+				const [isSubmitting, setIsSubmitting] = useState(false);
+				const [submissionError, setSubmissionError] = useState("");
 
+				const submitLead = async (event: React.FormEvent<HTMLFormElement>) => {
+					event.preventDefault();
+					const form = event.currentTarget;
+					if (!form.reportValidity()) return;
+
+					setIsSubmitting(true);
+					setSubmissionError("");
+					try {
+						const response = await fetch("/api/lead?form=discount-popup", {
+							method: "POST",
+							body: new FormData(form),
+						});
+						if (!response.ok) throw new Error("Lead delivery failed");
+						window.location.assign("/thank-you?form=discount-popup");
+					} catch {
+						setSubmissionError("We could not send your request. Please call us at 516-495-4908.");
+						setIsSubmitting(false);
+					}
+				};
 
 				useEffect(() => {
 					setShowPopup(show);
 				}, [show]);
-
 
 				return (
 					<div className="fixed inset-0 z-[500] flex items-center justify-center p-3 sm:p-6">
@@ -53,21 +68,10 @@ const Popup = () => {
 								<IoCloseSharp className="text-3xl" />
 							</button>
 
-
 							<div className="p-5 sm:p-8 lg:p-12">
-								<Image
-									alt="Optimum Laser"
-									className="mx-auto h-auto w-40 object-contain sm:w-52"
-									height={120}
-									priority
-									src="/images/homepage/Optimum Laser Brown Logo.png"
-									width={260}
-								/>
-								<h1 className="mt-5 text-center text-xl font-semibold tracking-[0.32em] sm:text-2xl" id="new-client-special-title">
-									NEW CLIENT SPECIAL
-								</h1>
+								<Image alt="Optimum Laser" className="mx-auto h-auto w-40 object-contain sm:w-52" height={120} priority src="/images/homepage/Optimum Laser Brown Logo.png" width={260} />
+								<h1 className="mt-5 text-center text-xl font-semibold tracking-[0.32em] sm:text-2xl" id="new-client-special-title">NEW CLIENT SPECIAL</h1>
 								<div className="mx-auto my-4 h-px w-full max-w-sm bg-[#eadbcd]" />
-
 
 								<div className="divide-y divide-[#eadbcd]">
 									{offers.map((offer) => (
@@ -78,18 +82,9 @@ const Popup = () => {
 									))}
 								</div>
 
+								<p className="my-5 border-y border-[#eadbcd] py-4 text-center font-serif text-lg sm:text-xl">Your personalized laser journey starts here.</p>
 
-								<p className="my-5 border-y border-[#eadbcd] py-4 text-center font-serif text-lg sm:text-xl">
-									Your personalized laser journey starts here.
-								</p>
-
-
-								<form
-									action="/api/lead?form=discount-popup"
-									className="grid gap-3"
-									method="POST"
-								>
-									<input name="_next" type="hidden" value="https://optimumlaserhairremoval.com/thank-you?form=discount-popup" />
+								<form className="grid gap-3" onSubmit={submitLead}>
 									<input name="Coupon Submission" type="hidden" value="New Client Special" />
 									<label className="sr-only" htmlFor="popup-name">Name</label>
 									<input className="min-h-14 rounded-xl border border-[#e1c9b5] bg-white px-4 text-lg placeholder:text-[#9b765c] focus:outline-none focus:ring-4 focus:ring-[#d8b18c]/50" id="popup-name" name="name" placeholder="Name" required />
@@ -97,22 +92,21 @@ const Popup = () => {
 									<input className="min-h-14 rounded-xl border border-[#e1c9b5] bg-white px-4 text-lg placeholder:text-[#9b765c] focus:outline-none focus:ring-4 focus:ring-[#d8b18c]/50" id="popup-email" name="email" placeholder="Email" required type="email" />
 									<label className="sr-only" htmlFor="popup-phone">Phone</label>
 									<input className="min-h-14 rounded-xl border border-[#e1c9b5] bg-white px-4 text-lg placeholder:text-[#9b765c] focus:outline-none focus:ring-4 focus:ring-[#d8b18c]/50" id="popup-phone" name="phone number" placeholder="Phone" required type="tel" />
-									<button className="min-h-14 rounded-xl bg-[#ecd0ad] px-5 py-3 text-lg font-bold text-[#6e3e23] transition hover:bg-[#dfb98d] focus:outline-none focus:ring-4 focus:ring-[#6e3e23]/40" type="submit">
-										Claim My New Client Offer
+									<button className="min-h-14 rounded-xl bg-[#ecd0ad] px-5 py-3 text-lg font-bold text-[#6e3e23] transition hover:bg-[#dfb98d] focus:outline-none focus:ring-4 focus:ring-[#6e3e23]/40 disabled:cursor-wait disabled:opacity-70" disabled={isSubmitting} type="submit">
+										{isSubmitting ? "Sending..." : "Claim My New Client Offer"}
 									</button>
+									{submissionError && <p className="text-center text-sm font-medium text-red-700" role="alert">{submissionError}</p>}
 									<p className="text-center text-sm font-medium">Safe on all skin types. FDA-approved technology.</p>
 								</form>
 							</div>
 						</section>
 					</div>
 				);
-				});
-			}, popupTimeout);
+			});
+		}, popupTimeout);
 	}, []);
-
 
 	return null;
 };
-
 
 export default Popup;
