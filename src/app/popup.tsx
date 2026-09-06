@@ -1,129 +1,102 @@
 import { modal } from "@/components/modal";
-import React, { useEffect, useRef, useState } from "react";
-import { IoCloseSharp } from "react-icons/io5";
 import Image from "next/image";
+import { IoCloseSharp } from "react-icons/io5";
+import React, { useEffect, useRef, useState } from "react";
 
 const popupTimeout = 6000;
+
+const offers = [
+	{ price: "$35", label: "Underarm Laser Hair Removal" },
+	{ price: "$99", label: "Brazilian Laser Hair Removal" },
+];
 
 const Popup = () => {
 	const shown = useRef(false);
 
 	useEffect(() => {
-		if (!shown.current) {
-			shown.current = true;
-			console.log(`[Popup] Scheduling popup to show in ${popupTimeout / 1000} seconds`);
-			setTimeout(async () => {
-				console.log('[Popup] Showing popup now');
-				await modal(({ show, proceed }: any) => {
-					const [showPopupState, setShowPopup] = useState(false);
+		if (shown.current) return;
 
-					useEffect(() => {
-						setShowPopup(show);
-					}, [show]);
+		shown.current = true;
+		setTimeout(async () => {
+			await modal(({ show, proceed }: any) => {
+				const [showPopupState, setShowPopup] = useState(false);
 
-					return (
-						<div className="fixed inset-0 z-[500] flex items-center justify-center pointer-events-none p-4">
-							<div
-								className={`absolute inset-0 ${
-									showPopupState
-										? "bg-[rgba(0,0,0,0.3)] backdrop-blur-[3px] pointer-events-auto"
-										: "pointer-events-none opacity-0"
-								}`}
+				useEffect(() => {
+					setShowPopup(show);
+				}, [show]);
+
+				return (
+					<div className="fixed inset-0 z-[500] flex items-center justify-center p-3 sm:p-6">
+						<div
+							className={`absolute inset-0 ${showPopupState ? "bg-[#35281e]/45 backdrop-blur-[2px]" : "pointer-events-none opacity-0"}`}
+							onClick={proceed}
+						/>
+						<section
+							aria-labelledby="new-client-special-title"
+							aria-modal="true"
+							className={`relative max-h-[94vh] w-full max-w-2xl overflow-y-auto rounded-[2rem] border border-[#eadbcd] bg-[#fffdfb] text-[#6e3e23] shadow-2xl transition ${showPopupState ? "pointer-events-auto" : "pointer-events-none opacity-0"}`}
+							role="dialog"
+						>
+							<button
+								aria-label="Close new client offer"
+								className="absolute right-3 top-3 z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-[#eadbcd] bg-white text-[#6e3e23] focus:outline-none focus:ring-4 focus:ring-[#d8b18c]"
 								onClick={proceed}
-							></div>
-							<div
-								className={`relative ${
-									showPopupState
-										? "pointer-events-auto"
-										: "pointer-events-none hidden"
-								}`}
+								type="button"
 							>
-								<button
-									className="cursor-pointer absolute -top-4 -right-4 flex items-center justify-center h-[60px] w-[60px] bg-[#f5f6f6] border-[3px] border-[#5b4d42] rounded-full z-[999] hover:bg-[#5b4d42] hover:border-[#f5f6f6] group"
-									onClick={() => proceed()}
-								>
-									<IoCloseSharp className="text-[2rem] text-[#5b4d42] group-hover:text-[#f5f6f6]" />
-								</button>
-								<div
-									className={`relative w-full max-w-[768px] rounded-[2rem] bg-white border-[3px] border-[#35281e] max-h-[80vh] overflow-auto overflow-x-hidden z-[10] ${
-										showPopupState
-											? ""
-											: "hidden"
-									}`}
-								>
-									<div className="flex flex-col-reverse sm:flex-row rounded-[2rem] text-[#35281e] bg-[#f8eedf]">
-										<div className="w-full sm:w-1/2">
-											<Image
-												src="/images/cropped-images/new-ad3.jpg"
-												alt="popup"
-												width={500}
-												height={500}
-												className="w-full h-full object-cover rounded-t-[2rem] sm:rounded-t-none sm:rounded-l-[2rem]"
-											/>
-										</div>
+								<IoCloseSharp className="text-3xl" />
+							</button>
 
-										<div className="w-full sm:w-1/2 flex flex-col items-center justify-center p-4">
-											<Image
-												src="/images/homepage/Optimum Laser Brown Logo.png"
-												alt="logo"
-												width={200}
-												height={200}
-												className="w-[100px] h-[50px] md:w-[200px] md:h-[100px] object-contain"
-											/>
-											<h1 className="text-xl md:text-2xl lg:text-3xl my-2 md:my-4 text-center">
-												New Client Offer!
-											</h1>
-											<h2 className="text-sm md:text-base lg:text-xl text-center pb-4">
-												$35 Underarm Laser Hair Removal
-												$99 Brazilian Laser Hair Removal
-											</h2>
-											<form
-												action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
-												method="POST"
-												className="flex w-full flex-col gap-3 items-center"
-												style={{ fontFamily: "Raleway" }}
-											>
-												<input
-													type="hidden"
-													name="_next"
-													value="https://optimumlaserhairremoval.com/thank-you?form=discount-popup"
-												/>
-												<input
-													name="Coupon Submission"
-													className="hidden"
-													placeholder="code"
-												/>
-												<input
-													name="name"
-													className="w-full md:px-4 px-2 py-2 border-2 border-[#35281e] rounded-md"
-													placeholder="YOUR NAME"
-												/>
-												<input
-													name="email"
-													className="w-full  md:px-4 px-2  py-2 border-2 border-[#35281e] rounded-md"
-													placeholder="YOUR EMAIL"
-												/>
-												<input
-													name="phone number"
-													className="w-full  md:px-4 px-2  py-2 border-2 border-[#35281e] rounded-md"
-													placeholder="PHONE NUMBER"
-												/>
-												<button
-													type="submit"
-													className="font-bold text-sm cursor-pointer w-full md:px-4 px-2  py-2 border-2 border-[#35281e] text-[#35281e] bg-[#f8eedf] rounded-md hover:bg-[#35281e] hover:text-[#f8eedf] transition duration-300"
-												>
-													Get My Discount!
-												</button>
-											</form>
-										</div>
-									</div>
+							<div className="p-5 sm:p-8 lg:p-12">
+								<Image
+									alt="Optimum Laser"
+									className="mx-auto h-auto w-40 object-contain sm:w-52"
+									height={120}
+									priority
+									src="/images/homepage/Optimum Laser Brown Logo.png"
+									width={260}
+								/>
+								<h1 className="mt-5 text-center text-xl font-semibold tracking-[0.32em] sm:text-2xl" id="new-client-special-title">
+									NEW CLIENT SPECIAL
+								</h1>
+								<div className="mx-auto my-4 h-px w-full max-w-sm bg-[#eadbcd]" />
+
+								<div className="divide-y divide-[#eadbcd]">
+									{offers.map((offer) => (
+										<article className="grid grid-cols-[4rem_1fr] items-center gap-3 py-4 sm:grid-cols-[7rem_1fr] sm:gap-5" key={offer.price}>
+											<p className="font-serif text-5xl font-semibold sm:text-6xl">{offer.price}</p>
+											<p className="text-lg font-medium leading-snug sm:text-2xl">{offer.label}</p>
+										</article>
+									))}
 								</div>
+
+								<p className="my-5 border-y border-[#eadbcd] py-4 text-center font-serif text-lg sm:text-xl">
+									Your personalized laser journey starts here.
+								</p>
+
+								<form
+									action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_EMAIL}`}
+									className="grid gap-3"
+									method="POST"
+								>
+									<input name="_next" type="hidden" value="https://optimumlaserhairremoval.com/thank-you?form=discount-popup" />
+									<input name="Coupon Submission" type="hidden" value="New Client Special" />
+									<label className="sr-only" htmlFor="popup-name">Name</label>
+									<input className="min-h-14 rounded-xl border border-[#e1c9b5] bg-white px-4 text-lg placeholder:text-[#9b765c] focus:outline-none focus:ring-4 focus:ring-[#d8b18c]/50" id="popup-name" name="name" placeholder="Name" required />
+									<label className="sr-only" htmlFor="popup-email">Email</label>
+									<input className="min-h-14 rounded-xl border border-[#e1c9b5] bg-white px-4 text-lg placeholder:text-[#9b765c] focus:outline-none focus:ring-4 focus:ring-[#d8b18c]/50" id="popup-email" name="email" placeholder="Email" required type="email" />
+									<label className="sr-only" htmlFor="popup-phone">Phone</label>
+									<input className="min-h-14 rounded-xl border border-[#e1c9b5] bg-white px-4 text-lg placeholder:text-[#9b765c] focus:outline-none focus:ring-4 focus:ring-[#d8b18c]/50" id="popup-phone" name="phone number" placeholder="Phone" required type="tel" />
+									<button className="min-h-14 rounded-xl bg-[#ecd0ad] px-5 py-3 text-lg font-bold text-[#6e3e23] transition hover:bg-[#dfb98d] focus:outline-none focus:ring-4 focus:ring-[#6e3e23]/40" type="submit">
+										Claim My New Client Offer
+									</button>
+									<p className="text-center text-sm font-medium">Safe on all skin types. FDA-approved technology.</p>
+								</form>
 							</div>
-						</div>
-					);
+						</section>
+					</div>
+				);
 				});
 			}, popupTimeout);
-		}
 	}, []);
 
 	return null;
