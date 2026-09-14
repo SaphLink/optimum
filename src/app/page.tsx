@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
+import Image from "next/image"; import { useState } from "react"; import Popup from "./popup";
+
 
 const serif = { fontFamily: "Georgia, 'Times New Roman', serif" };
 const sans = { fontFamily: "Aptos, 'Segoe UI', sans-serif" };
@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#fbf0df] pb-20 text-[#35281e] sm:pb-0" style={sans}>
-      <section className="mx-auto grid max-w-6xl gap-7 px-5 pb-14 pt-40 sm:px-8 sm:pt-44 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:pb-20">
+      <Popup />      <section className="mx-auto grid max-w-6xl gap-7 px-5 pb-14 pt-40 sm:px-8 sm:pt-44 lg:grid-cols-[1.05fr_.95fr] lg:items-center lg:pb-20">
         <div>
           <p className="text-xs font-bold tracking-[0.26em] text-[#8a593d]">MANHASSET · LONG ISLAND</p>
           <h1 className="mt-4 max-w-3xl text-5xl leading-[.98] tracking-[-0.04em] sm:text-7xl" style={serif}>Laser hair removal that feels <em className="font-normal text-[#ae7c50]">personal.</em></h1>
