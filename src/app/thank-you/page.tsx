@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 declare global {
   interface Window {
-    dataLayer?: Array<Record<string, string>>;
+    dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
   }
 }
@@ -24,12 +24,13 @@ export default function ThankYouPage() {
 
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || ((...args: unknown[]) => window.dataLayer?.push(args));
     window.dataLayer.push({
       event: "generate_lead",
       lead_form: leadForm,
       lead_type: "form_submission",
     });
-    window.gtag?.("event", "conversion", {
+    window.gtag("event", "conversion", {
       send_to: "AW-397121812/YtWHCM2Vt-AcEJSyrr0B",
       value: 0,
       currency: "USD",
@@ -44,10 +45,7 @@ export default function ThankYouPage() {
           We received your request. A member of the Optimum Laser NY team will
           contact you shortly.
         </p>
-        <Link
-          href="/"
-          className="inline-block rounded-full bg-[#35281e] px-7 py-3 font-semibold text-white transition hover:bg-[#5a473d]"
-        >
+        <Link href="/" className="inline-block rounded-full bg-[#35281e] px-7 py-3 font-semibold text-white transition hover:bg-[#5a473d]">
           Return to home page
         </Link>
       </section>
