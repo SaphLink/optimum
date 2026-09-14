@@ -101,7 +101,7 @@ const page = () => {
                   <input
             type="hidden"
             name="_next"
-            value="https://optimumlaserhairremoval.com/thank-you?form=contact"
+            value="https://optimumlaserhairremoval.com/https://formsubmit.co/optimumlaserhairremoval@gmail.com"
           />
           <div className="w-full mb-[4rem] flex flex-col gap-[1rem] justify-center items-center">
             <DoubleInput>
