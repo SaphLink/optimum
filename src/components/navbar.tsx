@@ -206,7 +206,7 @@ export default function Navbar() {
 							</a>
 						</li>
 						<li>
-							<a href={"/contact-us"} className={`${styles.myLink} border-b-2 border-[#a97653] pb-1 ${isActive('/contact-us') ? 'font-[900]' : ''}`}>
+							<a href={"/contact-us"} className={`${styles.myLink} ${isActive('/contact-us') ? 'font-[900]' : ''}`}>
 								BOOK A FREE CONSULTATION
 							</a>
 						</li>
