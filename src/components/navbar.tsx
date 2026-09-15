@@ -5,7 +5,6 @@ import styles from "../styles/navbar.module.css";
 import { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GoTriangleDown } from "react-icons/go";
-import { PiCursor, PiCursorBold, PiCursorFill } from "react-icons/pi";
 
 import { usePathname } from 'next/navigation';
 
@@ -83,25 +82,6 @@ export default function Navbar() {
 						></div>
 					</div>
 
-                    <div className={`hidden md:block absolute right-0 md:translate-x-2 lg:translate-x-0 ${styles.ctaRightMini} ${styles.ctaRightNudge}`} style={{zIndex: 2}}>
-						<a href="/contact-us">
-                            <button
-                                className={
-                                    styles.buttonStyles +
-                                    " relative text-[0.6rem] lg:text-base xl:text-xl px-2 lg:px-4 text-center " +
-                                    styles.ctaRightPad
-                                }
-                            >
-								<img
-									alt="cursor"
-									src="/icons/cursor.png"
-									className="absolute translate-x-[50%] translate-y-[50%] right-0 bottom-0 h-[2.5rem] w-[2.5rem]"
-								/>
-								<span className={styles.ctaLine1}>CLICK FOR FREE</span>{' '}
-								<span className={styles.ctaLine2}>CONSULTATION</span>
-							</button>
-						</a>
-					</div>
 				</div>
 <div					className={`w-full overflow-hidden md:overflow-visible grid md:flex ${pathname === '/about-us' ? 'mb-0 md:mb-[1rem]' : 'mb-[1rem]'}`}
 					style={{
@@ -226,8 +206,8 @@ export default function Navbar() {
 							</a>
 						</li>
 						<li>
-							<a href={"/contact-us"} className={`${styles.myLink} ${isActive('/contact-us') ? 'font-[900]' : ''}`}>
-								CONTACT US
+							<a href={"/contact-us"} className={`${styles.myLink} border-b-2 border-[#a97653] pb-1 ${isActive('/contact-us') ? 'font-[900]' : ''}`}>
+								BOOK A FREE CONSULTATION
 							</a>
 						</li>
 					</ul>
