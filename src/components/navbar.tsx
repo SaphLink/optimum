@@ -102,7 +102,7 @@ export default function Navbar() {
 							</button>
 						</a>
 					</div>
-                    
+				</div>
 <div					className={`w-full overflow-hidden md:overflow-visible grid md:flex ${pathname === '/about-us' ? 'mb-0 md:mb-[1rem]' : 'mb-[1rem]'}`}
 					style={{
 						gridTemplateRows: menuOpen ? "1fr" : "0fr",
