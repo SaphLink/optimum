@@ -6,7 +6,7 @@ import { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GoTriangleDown } from "react-icons/go";
 import { PiCursor, PiCursorBold, PiCursorFill } from "react-icons/pi";
-import { FaCalendarCheck } from "react-icons/fa";
+
 import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
@@ -102,26 +102,8 @@ export default function Navbar() {
 							</button>
 						</a>
 					</div>
-                    <div className={`absolute left-0 ${styles.ctaLeftMini} ${styles.ctaLeftNudge}`}>
-						<a href="/booking">
-                            <button
-                                className={
-                                    styles.buttonStyles +
-									" relative hidden md:block text-[0.6rem] lg:text-base xl:text-xl md:px-4 lg:px-6 " +
-                                    styles.ctaLeftButton
-                                }
-                            >
-								<span className={styles.ctaLeftLine1}>SET AN</span>{' '}
-								<span className={styles.ctaLeftLine2}>APPOINTMENT</span>
-							</button>
-							<div className="block md:hidden p-[1rem] rounded-full bg-[#35281e] duration-300 hover:bg-[#5a473d]">
-								<FaCalendarCheck className="text-[1.5rem] text-white" />
-							</div>
-						</a>
-					</div>
-				</div>
-				<div
-					className={`w-full overflow-hidden md:overflow-visible grid md:flex ${pathname === '/about-us' ? 'mb-0 md:mb-[1rem]' : 'mb-[1rem]'}`}
+                    
+<div					className={`w-full overflow-hidden md:overflow-visible grid md:flex ${pathname === '/about-us' ? 'mb-0 md:mb-[1rem]' : 'mb-[1rem]'}`}
 					style={{
 						gridTemplateRows: menuOpen ? "1fr" : "0fr",
 						transition: "0.2s",
