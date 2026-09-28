@@ -25,7 +25,15 @@ export default function ThankYouPage() {
   const isPreview = searchParams.get("preview") === "1";
 
   useEffect(() => {
-    if (isPreview) return;
+    if (isPreview || !/^(www\.)?optimumlaserhairremoval\.com$/.test(window.location.hostname)) return;
+    let submission: { id: string; created: number };
+    try {
+      const stored = sessionStorage.getItem("optimum_pending_lead");
+      if (!stored) return;
+      submission = JSON.parse(stored);
+      if (!submission.id || Date.now() - submission.created > 60 * 60 * 1000) return;
+      sessionStorage.removeItem("optimum_pending_lead");
+    } catch { return; }
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || ((...args: unknown[]) => window.dataLayer?.push(args));
     window.dataLayer.push({
@@ -35,6 +43,7 @@ export default function ThankYouPage() {
     });
     window.gtag("event", "conversion", {
       send_to: "AW-397121812/YtWHCM2Vt-AcEJSyrr0B",
+      transaction_id: submission.id,
       value: 0,
       currency: "USD",
     });
