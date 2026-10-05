@@ -36,6 +36,7 @@ export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | 
         <p className="text-center text-xs leading-relaxed text-[#5b4638]">Our team will contact you about your package and bonus session.</p>
         <button className={buttonClass} style={{ fontFamily: "inherit" }} type="submit">Request My Offer</button>
       </form>
+      <div className="mt-4 text-center text-sm text-[#5b4638]"><a className="font-bold underline underline-offset-4" href="/payment-options">Monthly payment options with Cherry →</a><p className="mt-1 text-xs">Subject to approval. Rates and terms vary.</p></div>
       <p className="mt-5 border-t border-[#eadbcd] pt-4 text-center text-xs leading-relaxed text-[#5b4638]">New clients only. Package purchase required. Includes one session on one eligible small area.</p>
     </div>
   );
