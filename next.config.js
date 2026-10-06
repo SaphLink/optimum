@@ -3,7 +3,7 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
-    // Security headers for external scripts (booking plugin and chat widget)
+    // Security headers for external scripts (booking plugin, chat widget, and Cherry financing)
     async headers() {
         return [
             {
@@ -11,7 +11,7 @@ const nextConfig = {
                 headers: [
                     {
                         key: 'Content-Security-Policy',
-                        value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://plugin.myonlineappointment.com https://cdn.chaty.app; frame-src 'self' https://plugin.myonlineappointment.com;"
+                        value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://plugin.myonlineappointment.com https://cdn.chaty.app https://files.withcherry.com; frame-src 'self' https://plugin.myonlineappointment.com;"
                     }
                 ]
             }
