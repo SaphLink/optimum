@@ -225,3 +225,14 @@
         line-height: 1.1;
     }
 }
+
+/* Keep the expanded navigation readable with Payment Options. */
+.paymentLink { color: #7a6f9b; }
+@media (min-width: 1024px) {
+ .navbarItems .myLink { font-size: 0.8125rem; letter-spacing: 0.1rem; white-space: nowrap; }
+ .navbarItems .myPhone { font-size: 0.875rem; letter-spacing: 0.07rem; white-space: nowrap; }
+}
+@media (min-width: 740px) and (max-width: 767px) {
+ .navbarItems { display: flex !important; }
+ .navbarItems .myLink, .navbarItems .myPhone { display: block !important; }
+}

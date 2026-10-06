@@ -53,16 +53,16 @@ export default function Navbar() {
 						<a href={"/"} className={"flex items-center"}>
 							<img
 								className={`object-contain duration-300 ${
-									scrolled ? "h-[72px]" : "md:h-[110px] h-[90px] sm:h-[90px]"
-								}  w-32 sm:w-48 md:w-56 lg:w-72`}
+									scrolled ? "h-[72px]" : "lg:h-[110px] h-[90px] sm:h-[90px]"
+								}  w-32 sm:w-48 lg:w-56 lg:w-72`}
 								src="/images/homepage/Optimum Laser Brown Logo.png"
 								alt={"navbar logo"}
 							/>
 						</a>
 					</div>
 
-					<div
-						className="md:hidden absolute right-0 flex flex-col gap-[7px] items-center justify-center cursor-pointer"
+					<button type="button" aria-label="Toggle navigation menu" aria-expanded={menuOpen}
+						className="lg:hidden absolute right-0 flex flex-col gap-[7px] items-center justify-center cursor-pointer"
 						onClick={() => setMenuOpen((prev) => !prev)}
 					>
 						<div
@@ -80,19 +80,19 @@ export default function Navbar() {
 								menuOpen ? "rotate-[-45deg] translate-y-[-8px]" : ""
 							}`}
 						></div>
-					</div>
+					</button>
 
 				</div>
-<div					className={`w-full overflow-hidden md:overflow-visible grid md:flex ${pathname === '/about-us' ? 'mb-0 md:mb-[1rem]' : 'mb-[1rem]'}`}
+<div					className={`w-full overflow-hidden lg:overflow-visible grid lg:flex ${pathname === '/about-us' ? 'mb-0 lg:mb-[1rem]' : 'mb-[1rem]'}`}
 					style={{
 						gridTemplateRows: menuOpen ? "1fr" : "0fr",
 						transition: "0.2s",
 					}}
 				>
 					<ul
-						className={`items-center min-h-0 flex-1 justify-start md:justify-evenly duration-200 flex md:p-0  flex-col md:flex-row gap-[2rem] ${
+						className={`items-center min-h-0 flex-1 justify-start lg:justify-evenly duration-200 flex lg:p-0  flex-col lg:flex-row gap-[2rem] ${
 							menuOpen ? "min-h-[100vh]" : ""
-						} md:gap-0  md:mt-0 ${styles.navbarItems}`}
+						} lg:gap-0  lg:mt-0 ${styles.navbarItems}`}
 					>
 						<li>
 							<a
@@ -137,7 +137,7 @@ export default function Navbar() {
                                     onMouseLeave={() => setIsOpen(false)}
                                     className={`menu-dropdown grid ${
                                         isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                                    } md:absolute md:top-[100%] md:left-[50%] md:translate-x-[-50%] w-full md:min-w-[400px] z-[2000] md:shadow-[0px_4px_32px_rgba(0,0,0,0.1)]  rounded-[10px] md:${
+                                    } lg:absolute lg:top-[100%] lg:left-[50%] lg:translate-x-[-50%] w-full lg:min-w-[400px] z-[2000] lg:shadow-[0px_4px_32px_rgba(0,0,0,0.1)]  rounded-[10px] lg:${
                                         isOpen ? "translate-y-[0px]" : "translate-y-[10px]"
                                     }`}
                                     style={{
@@ -204,6 +204,9 @@ export default function Navbar() {
 							<a href={"/about-us"} className={`${styles.myLink} ${isActive('/about-us') ? 'font-[900]' : ''}`}>
 								ABOUT US
 							</a>
+						</li>
+						<li>
+							<a href="/payment-options" onClick={() => setMenuOpen(false)} aria-current={isActive("/payment-options") ? "page" : undefined} className={`${styles.myLink} ${styles.paymentLink}`} style={{ color: "#7a6f9b" }}>PAYMENT OPTIONS</a>
 						</li>
 						<li>
 							<a href={"/contact-us"} className={`${styles.myLink} ${isActive('/contact-us') ? 'font-[900]' : ''}`}>
