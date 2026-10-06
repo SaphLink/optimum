@@ -9,9 +9,10 @@ export default function PaymentOptions() {
       <section className="mx-auto max-w-4xl text-center">
         <p className="text-xs font-bold tracking-[0.26em] text-[#8a593d]">OPTIMUM LASER · PAYMENT OPTIONS</p>
         <h1 className="mt-4 text-4xl font-normal leading-tight tracking-[-0.04em] sm:text-6xl" style={{ fontFamily: "Georgia, Times New Roman, serif" }}>Your treatment.<br /><em className="text-[#ae7c50]">More ways to pay.</em></h1>
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#5b4638]">Choose a laser package tailored to your goals, with the option to spread the cost through Cherry. Explore estimated payments below, then review the options available to you.</p>
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-[#5b4638]">Choose a laser package tailored to your goals, with the option to spread the cost through Cherry. Explore payment options with Cherry, then review the terms available to you.</p>
         <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[#5b4638]">Financing is subject to approval. Rates and terms vary. The calculator starts with a $750 example; enter your quoted package price for a relevant estimate. This is not a package price or a guaranteed payment offer.</p>
         <a className="mt-5 inline-block font-bold underline underline-offset-4" href="/contact-us">Need a personalized treatment quote? Book a free consultation →</a>
+        <div className="mx-auto mt-7 max-w-xl rounded-3xl border border-[#7a6f9b]/20 bg-white p-6"><h2 className="text-2xl font-normal" style={{fontFamily:"Georgia, Times New Roman, serif"}}>Pay over time with Cherry</h2><p className="mt-3 text-sm leading-relaxed">Explore available payment plans on Cherry’s secure website.</p><a href="https://pay.withcherry.com/optimum-laser-ny" target="_blank" rel="noopener noreferrer" className="mt-5 inline-block rounded-full bg-[#7a6f9b] px-7 py-4 font-bold text-white">Explore Payment Options ↗</a><p className="mt-3 text-xs">Opens Cherry in a new tab. Subject to approval. Rates and terms vary.</p></div>
       </section>
       <section aria-label="Cherry payment plans and calculator" className="mx-auto mt-10 max-w-6xl overflow-hidden rounded-[2rem] bg-[#fffdfb]">
         <div id="all" />
