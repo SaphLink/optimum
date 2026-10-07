@@ -11,7 +11,7 @@ const nextConfig = {
                 headers: [
                     {
                         key: 'Content-Security-Policy',
-                        value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://plugin.myonlineappointment.com https://cdn.chaty.app https://files.withcherry.com; frame-src 'self' https://plugin.myonlineappointment.com;"
+                        value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://plugin.myonlineappointment.com https://cdn.chaty.app https://files.withcherry.com https://www.googletagmanager.com https://www.googleadservices.com https://www.google.com; frame-src 'self' https://plugin.myonlineappointment.com https://www.googletagmanager.com https://www.google.com;"
                     }
                 ]
             }
