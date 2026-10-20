@@ -3,7 +3,7 @@
 import { modal } from "@/components/modal";
 import Image from "next/image";
 import { IoCloseSharp } from "react-icons/io5";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 const serif = { fontFamily: "Georgia, Times New Roman, serif" };
 const sans = { fontFamily: "Aptos, Segoe UI, sans-serif" };
@@ -11,33 +11,28 @@ const fieldClass = "min-h-12 w-full rounded-xl border border-[#e1c9b5] bg-white 
 const buttonClass = "min-h-12 w-full rounded-xl bg-[#35281e] px-5 py-4 text-center font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ae7c50]";
 
 export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | "popup" }) {
-  const [formOpen, setFormOpen] = useState(false);
   const prefix = source === "popup" ? "popup" : "offer";
   return (
     <div className="p-5 text-[#35281e] sm:p-8" style={sans}>
       <Image alt="Optimum Laser" className="h-auto w-28 object-contain sm:w-32" height={120} src="/images/homepage/Optimum Laser Brown Logo.png" width={260} />
-      <p className="mt-5 text-center text-xs font-bold tracking-[0.26em] text-[#8a593d]">NEW CLIENT EXCLUSIVE</p>
-      <h2 className="my-4 text-center text-3xl font-normal leading-tight tracking-[-0.04em] sm:text-4xl" id={prefix + "-special-title"} style={serif}>One FREE session.<br /><em className="font-normal text-[#ae7c50]">A little extra smooth.</em></h2>
-      <p className="mb-5 text-center text-base leading-relaxed text-[#5b4638]">Purchase <strong>any laser hair removal package</strong> and receive one free session on an eligible small area of your choice.</p>
-      {!formOpen && <button aria-controls={prefix + "-form"} aria-expanded={false} className={buttonClass} onClick={() => setFormOpen(true)} style={{ fontFamily: "inherit" }} type="button">Claim My Free Session</button>}
-      <form action="https://formsubmit.co/optimumlaserhairremoval@gmail.com" className={formOpen ? "grid gap-2.5" : "hidden"} id={prefix + "-form"} method="POST">
-        <input name="_next" type="hidden" value="https://optimumlaserhairremoval.com/thank-you?form=discount-popup" />
-        <input name="_subject" type="hidden" value="Optimum Laser - New Client Bonus Inquiry" />
-        <input name="form_source" type="hidden" value={source === "popup" ? "Free small-area session popup" : "Homepage new-client offer"} />
+      <p className="mt-5 text-center text-xs font-bold tracking-[0.26em] text-[#8a593d]">NEW CLIENT OFFER</p>
+      <h2 className="my-4 text-center text-3xl font-normal leading-tight tracking-[-0.04em] sm:text-4xl" id={prefix + "-special-title"} style={serif}><em className="block text-5xl not-italic font-normal text-[#ae7c50] sm:text-6xl">50% OFF</em>Your first laser session</h2>
+      <p className="mb-5 text-center text-base leading-relaxed text-[#5b4638]">One eligible area.<br />No package purchase required.</p>
+      <form action="https://formsubmit.co/optimumlaserhairremoval@gmail.com" className="grid gap-2.5" id={prefix + "-form"} method="POST">
+        <input name="_next" type="hidden" value={"https://optimumlaserhairremoval.com/thank-you?form=" + source} />
+        <input name="_subject" type="hidden" value={"Optimum Laser - New Client 50% Offer - " + (source === "popup" ? "Popup" : "Homepage")} />
+        <input name="form_source" type="hidden" value={source === "popup" ? "50% introductory session popup" : "Homepage new-client offer"} />
         <input name="_template" type="hidden" value="table" />
-        <input name="offer" type="hidden" value="One free small-area session with purchase of any laser hair removal package" />
+        <input name="offer" type="hidden" value="50% off one introductory session on one eligible area at regular single-session price; packages excluded; no package credit" />
         <input aria-hidden="true" autoComplete="off" className="hidden" name="_honey" tabIndex={-1} type="text" />
         <label className="text-sm" htmlFor={prefix + "-name"}>First name</label>
         <input autoComplete="given-name" className={fieldClass} id={prefix + "-name"} maxLength={100} name="name" required style={{ fontFamily: "inherit" }} />
         <label className="text-sm" htmlFor={prefix + "-phone"}>Phone number</label>
         <input autoComplete="tel" className={fieldClass} id={prefix + "-phone"} inputMode="tel" maxLength={30} minLength={7} name="phone" required style={{ fontFamily: "inherit" }} type="tel" />
-        <label className="text-sm" htmlFor={prefix + "-email"}>Email address (optional)</label>
-        <input autoComplete="email" className={fieldClass} id={prefix + "-email"} maxLength={254} name="email" style={{ fontFamily: "inherit" }} type="email" />
-        <p className="text-center text-xs leading-relaxed text-[#5b4638]">Our team will contact you about your package and bonus session.</p>
-        <button className={buttonClass} style={{ fontFamily: "inherit" }} type="submit">Request My Offer</button>
+        <p className="text-center text-xs leading-relaxed text-[#5b4638]">We’ll contact you to arrange your consultation.</p>
+        <button className={buttonClass} style={{ fontFamily: "inherit" }} type="submit">Request My 50% Offer</button>
       </form>
-      <div className="mt-4 text-center text-sm text-[#5b4638]"><a className="font-bold underline underline-offset-4" href="/payment-options">Monthly payment options with Cherry →</a><p className="mt-1 text-xs">Subject to approval. Rates and terms vary.</p></div>
-      <p className="mt-5 border-t border-[#eadbcd] pt-4 text-center text-xs leading-relaxed text-[#5b4638]">New clients only. Package purchase required. Includes one session on one eligible small area.</p>
+      <p className="mt-5 border-t border-[#eadbcd] pt-4 text-center text-xs leading-relaxed text-[#5b4638]">New clients only. Applies to the regular single-session price. Excludes packages; introductory payment is not credited toward a package. Consultation required.</p>
     </div>
   );
 }
