@@ -5,6 +5,9 @@ import Script from "next/script";
 import "@/styles/globals.css";
 import Providers from "./providers";
 
+
+
+
 export default function RootLayout({
   children,
 }: {
@@ -16,6 +19,7 @@ export default function RootLayout({
         <style>{`body:has(#widget-floatingEstimator-mount:not(:empty)) #floatingEstimator { display: none; }`}</style>
         <Script strategy="beforeInteractive" id="google-ads-config" dangerouslySetInnerHTML={{ __html: "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} window.gtag = gtag; gtag('js', new Date()); gtag('config', 'AW-397121812'); gtag('config', 'AW-397121812/vA2dCNbkpOAcEJSyrr0B', { phone_conversion_number: '516-495-4908' });" }} />
         <Script strategy="afterInteractive" id="google-ads-library" src="https://www.googletagmanager.com/gtag/js?id=AW-397121812" />
+        <Script strategy="beforeInteractive" id="thank-you-conversion-fallback" dangerouslySetInnerHTML={{ __html: "(function(){\n  function recordCompletedLead(){\n    if(!/^(www\\.)?optimumlaserhairremoval\\.com$/.test(location.hostname) || location.pathname !== '/thank-you') return;\n    try {\n      var stored=sessionStorage.getItem('optimum_pending_lead');\n      if(!stored) return;\n      var submission=JSON.parse(stored);\n      if(!submission.id || !submission.created || Date.now()-submission.created>60*60*1000) return;\n      sessionStorage.removeItem('optimum_pending_lead');\n      window.dataLayer=window.dataLayer||[];\n      window.dataLayer.push({event:'generate_lead',lead_form:submission.form||'website',lead_type:'form_submission'});\n      var send=window.gtag||function(){window.dataLayer.push(arguments);};\n      send('event','conversion',{send_to:'AW-397121812/CqaHCJPbrq0dEJSyrr0B',transaction_id:submission.id,value:0,currency:'USD'});\n    } catch(error) {}\n  }\n  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',recordCompletedLead,{once:true});\n  else recordCompletedLead();\n})();" }} />
         <Script strategy="beforeInteractive" id="optimum-lead-tracking" dangerouslySetInnerHTML={{ __html: "(function(){\n  if(window.__optimumLeadTracking) return;\n  window.__optimumLeadTracking=true;\n  var live=/^(www\\.)?optimumlaserhairremoval\\.com$/.test(location.hostname);\n  document.addEventListener('click',function(event){\n    var target=event.target instanceof Element ? event.target.closest('a[href^=\"tel:\"]') : null;\n    if(!target || !live) return;\n    window.gtag('event','conversion',{send_to:'AW-397121812/MOdwCNec7P4BEJSyrr0B',transport_type:'beacon'});\n  });\n  document.addEventListener('submit',function(event){\n    var form=event.target;\n    if(!(form instanceof HTMLFormElement) || event.defaultPrevented || !form.checkValidity()) return;\n    var endpoint=new URL(form.action,location.href);\n    if(endpoint.hostname !== 'formsubmit.co') return;\n    var source=location.pathname === '/contact-us' ? 'contact' : location.pathname === '/' ? 'homepage' : 'website';\n    var next=form.querySelector('input[name=\"_next\"]');\n    if(!next){next=document.createElement('input');next.type='hidden';next.name='_next';form.appendChild(next);}\n    var destination=new URL('/thank-you',location.origin);\n    destination.searchParams.set('form',source);\n    next.value=destination.href;\n    try {sessionStorage.setItem('optimum_pending_lead',JSON.stringify({id:crypto.randomUUID(),form:source,created:Date.now()}));}catch(error){}\n    if(live) window.gtag('event','form_submit_attempt',{send_to:'AW-397121812',form_name:source,transport_type:'beacon'});\n  });\n})();" }} />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
       <link rel="icon" href="/images/thumbnail/favicon.ico" sizes="any" />
@@ -27,6 +31,9 @@ export default function RootLayout({
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TG7MTK4H');`}
         </Script>
 
+
+
+
         <Navbar />
         <Providers>{children}</Providers>
         <div id="floatingEstimator"><a href="https://pay.withcherry.com/optimum-laser-ny" target="_blank" rel="noopener noreferrer" aria-label="Explore payment options with Cherry (opens in a new tab)" style={{position:"fixed",right:16,bottom:100,zIndex:450,background:"#7a6f9b",color:"#fff",padding:"14px 20px",borderRadius:999,fontFamily:"Montserrat, sans-serif",fontSize:14,fontWeight:700,boxShadow:"0 4px 20px #35281e30"}}>Pay over time with Cherry ↗</a></div>
@@ -34,10 +41,3 @@ export default function RootLayout({
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG7MTK4H" height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe></noscript>
       </body>
     </html>
-  );
-}
-
-export const metadata = {
-  title: "Laser Hair Removal in Manhasset - Optimum Laser",
-  description: "Optimum Laser",
-};
