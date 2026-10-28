@@ -1,8 +1,10 @@
 "use client";
 
+
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect } from "react";
+
 
 declare global {
   interface Window {
@@ -11,18 +13,22 @@ declare global {
   }
 }
 
+
 const formNames: Record<string, string> = {
   contact: "contact_form",
   homepage: "homepage_chat_form",
   "discount-popup": "discount_popup_form",
 };
 
+
 export default function ThankYouPage() {
   const searchParams = useSearchParams();
   const submittedForm = searchParams.get("form") ?? "contact";
   const leadForm = formNames[submittedForm] ?? "contact_form";
 
+
   const isPreview = searchParams.get("preview") === "1";
+
 
   useEffect(() => {
     if (isPreview || !/^(www\.)?optimumlaserhairremoval\.com$/.test(window.location.hostname)) return;
@@ -42,12 +48,13 @@ export default function ThankYouPage() {
       lead_type: "form_submission",
     });
     window.gtag("event", "conversion", {
-      send_to: "AW-397121812/YtWHCM2Vt-AcEJSyrr0B",
+      send_to: "AW-397121812/CqaHCJPbrq0dEJSyrr0B",
       transaction_id: submission.id,
       value: 0,
       currency: "USD",
     });
   }, [leadForm, isPreview]);
+
 
   return (
     <main id="thank-you-page">
