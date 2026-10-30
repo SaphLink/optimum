@@ -38,3 +38,11 @@ export default function RootLayout({
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG7MTK4H" height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe></noscript>
       </body>
     </html>
+
+  );
+}
+
+export const metadata = {
+  title: "Laser Hair Removal in Manhasset - Optimum Laser",
+  description: "Optimum Laser",
+};
