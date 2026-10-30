@@ -8,6 +8,10 @@ import Providers from "./providers";
 
 
 
+
+
+
+
 export default function RootLayout({
   children,
 }: {
@@ -17,7 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <head>
         <style>{`body:has(#widget-floatingEstimator-mount:not(:empty)) #floatingEstimator { display: none; }`}</style>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-397121812"></script>
+        <script src="/optimum-google-tag.js" defer></script>
         <script id="google-ads-config" dangerouslySetInnerHTML={{ __html: "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','AW-397121812');gtag('config','AW-397121812/vA2dCNbkpOAcEJSyrr0B',{phone_conversion_number:'516-495-4908'});" }} />
         <script id="optimum-lead-tracking" dangerouslySetInnerHTML={{ __html: "(function(){if(window.__optimumLeadTracking)return;window.__optimumLeadTracking=true;var live=/^(www\\.)?optimumlaserhairremoval\\.com$/.test(location.hostname);document.addEventListener('click',function(event){var target=event.target instanceof Element?event.target.closest('a[href^=\"tel:\"]'):null;if(!target||!live)return;window.gtag('event','conversion',{send_to:'AW-397121812/MOdwCNec7P4BEJSyrr0B',transport_type:'beacon'});});document.addEventListener('submit',function(event){var form=event.target;if(!(form instanceof HTMLFormElement)||event.defaultPrevented||!form.checkValidity())return;var endpoint=new URL(form.action,location.href);if(endpoint.hostname!=='formsubmit.co')return;var source=location.pathname==='/contact-us'?'contact':location.pathname==='/'?'homepage':'website';var next=form.querySelector('input[name=\"_next\"]');if(!next){next=document.createElement('input');next.type='hidden';next.name='_next';form.appendChild(next);}var destination=new URL('/thank-you',location.origin);destination.searchParams.set('form',source);next.value=destination.href;try{sessionStorage.setItem('optimum_pending_lead',JSON.stringify({id:crypto.randomUUID(),form:source,created:Date.now()}));}catch(error){}if(live)window.gtag('event','form_submit_attempt',{send_to:'AW-397121812',form_name:source,transport_type:'beacon'});});})();" }} />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" />
@@ -34,10 +38,3 @@ export default function RootLayout({
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG7MTK4H" height="0" width="0" style={{display: "none", visibility: "hidden"}}></iframe></noscript>
       </body>
     </html>
-  );
-}
-
-export const metadata = {
-  title: "Laser Hair Removal in Manhasset - Optimum Laser",
-  description: "Optimum Laser",
-};
