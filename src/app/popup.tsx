@@ -17,7 +17,7 @@ export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | 
       <Image alt="Optimum Laser" className="h-auto w-28 object-contain sm:w-32" height={120} src="/images/homepage/Optimum Laser Brown Logo.png" width={260} />
       <p className="mt-5 text-center text-xs font-bold tracking-[0.26em] text-[#8a593d]">NEW CLIENT OFFER</p>
       <h2 className="my-4 text-center text-3xl font-normal leading-tight tracking-[-0.04em] sm:text-4xl" id={prefix + "-special-title"} style={serif}><em className="block text-5xl not-italic font-normal text-[#ae7c50] sm:text-6xl">50% OFF</em>Your first laser session</h2>
-      <p className="mb-5 text-center text-base leading-relaxed text-[#5b4638]">One eligible area.<br />No package purchase required.</p>
+      <p className="mb-5 text-center text-base leading-relaxed text-[#5b4638]">Choose the treatment area that’s right for you.<br /><strong>Popular first visits: Underarms from $35 · Brazilian from $99</strong></p>
       <form action="https://formsubmit.co/optimumlaserhairremoval@gmail.com" className="grid gap-2.5" id={prefix + "-form"} method="POST">
         <input name="_next" type="hidden" value={"https://optimumlaserhairremoval.com/thank-you?form=" + source} />
         <input name="_subject" type="hidden" value={"Optimum Laser - New Client 50% Offer - " + (source === "popup" ? "Popup" : "Homepage")} />
@@ -30,9 +30,9 @@ export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | 
         <label className="text-sm" htmlFor={prefix + "-phone"}>Phone number</label>
         <input autoComplete="tel" className={fieldClass} id={prefix + "-phone"} inputMode="tel" maxLength={30} minLength={7} name="phone" required style={{ fontFamily: "inherit" }} type="tel" />
         <p className="text-center text-xs leading-relaxed text-[#5b4638]">We’ll contact you to arrange your consultation.</p>
-        <button className={buttonClass} style={{ fontFamily: "inherit" }} type="submit">Request My 50% Offer</button>
+        <button className={buttonClass} style={{ fontFamily: "inherit" }} type="submit">Claim My New Client Offer</button>
       </form>
-      <p className="mt-5 border-t border-[#eadbcd] pt-4 text-center text-xs leading-relaxed text-[#5b4638]">New clients only. Applies to the regular single-session price. Excludes packages; introductory payment is not credited toward a package. Consultation required.</p>
+      <p className="mt-5 border-t border-[#eadbcd] pt-4 text-center text-xs leading-relaxed text-[#5b4638]">New clients only. Consultation required. Offer applies to the regular single-session price; pricing varies by treatment area. Excludes packages.</p>
     </div>
   );
 }
