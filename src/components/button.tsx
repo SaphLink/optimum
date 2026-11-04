@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { CSSProperties, MouseEventHandler } from "react";
 
 interface CustomButtonProps {
-    children: React.ReactNode;
+  children: React.ReactNode;
   onClick?: MouseEventHandler;
   style?: CSSProperties;
   center?: boolean;
@@ -22,39 +22,39 @@ const buttonTypes = {
       fontWeight: "bold",
     },
   },
-  secondary : {
-    classname: "font-bold text-[1.4rem] py-[0.7rem] px-[5rem] shadow-md bg-gradient-to-r from-[#faebd4] to-[#f6edde] rounded-[1rem]"
+  secondary: {
+    classname: "font-bold text-[1.4rem] py-[0.7rem] px-[5rem] shadow-md bg-gradient-to-r from-[#faebd4] to-[#f6edde] rounded-[1rem]",
   },
-    tertiary : {
-    classname: "font-bold text-[1rem] py-[0.5rem] px-[3rem] shadow-md bg-gradient-to-r from-[#faebd4] to-[#f6edde] rounded-[2rem]"
-    }
+  tertiary: {
+    classname: "font-bold text-[1rem] py-[0.5rem] px-[3rem] shadow-md bg-gradient-to-r from-[#faebd4] to-[#f6edde] rounded-[2rem]",
+  },
 };
 
-const CustomButton: React.FC<CustomButtonProps> = ({ children,center,href, onClick, style, className, type,submit }) => {
+const CustomButton: React.FC<CustomButtonProps> = ({ children, center, href, onClick, style, className, type, submit }) => {
+  const bookingUrl = "https://optimumlaserhairremoval.myonlineappointment.com/Booking/?sid=0&guid=dc3faad1-130b-4594-9fd0-27c386264ba3&customerId=29772";
+  const resolvedHref = href === "#consultation" ? bookingUrl : href;
   // @ts-ignore
   const btnClass = type ? buttonTypes[type]?.classname || "" : "";
   // @ts-ignore
   const btnStyle = type ? buttonTypes[type]?.style || {} : {};
 
-
-  if(type === 'primary'){
-    center = true
+  if (type === "primary") {
+    center = true;
   }
 
-  const Component = href ? Link : (props: any) => <button {...props}>{props.children}</button>;
+  const Component = resolvedHref ? Link : (props: any) => <button {...props}>{props.children}</button>;
 
   return (
-    <div
-        className={`custom-button w-fit text-center ${center ? "mx-auto" : ""}`}
-    >
-    <Component href={href || ""} onClick={onClick} style={{ ...btnStyle, 
-         ...(style || {}),
-          ...(href ? { scrollBehavior: 'smooth' } : {})
-         }} className={btnClass + " " + className}
-      type={submit ? "submit" : "button"}
-         >
-      {children}
-    </Component>
+    <div className={`custom-button w-fit text-center ${center ? "mx-auto" : ""}`}>
+      <Component
+        href={resolvedHref || ""}
+        onClick={onClick}
+        style={{ ...btnStyle, ...(style || {}), ...(resolvedHref ? { scrollBehavior: "smooth" } : {}) }}
+        className={btnClass + " " + className}
+        type={submit ? "submit" : "button"}
+      >
+        {children}
+      </Component>
     </div>
   );
 };
