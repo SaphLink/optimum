@@ -69,7 +69,7 @@ const LaserHeroTW: React.FC = () => {
               </div>
               <div className="custom-button w-fit text-center mx-auto md:mx-0 mt-1">
                 <a
-                  href="#consultation"
+                  href="https://optimumlaserhairremoval.myonlineappointment.com/Booking/?sid=0&guid=dc3faad1-130b-4594-9fd0-27c386264ba3&customerId=29772"
                   className="duration-300 text-[#35281e] bg-white hover:translate-y-[-2px] py-[0.7rem] px-[2.6rem] sm:px-[3rem] rounded-[1rem] w-fit text-[1.2rem] tracking-[0.2rem] inline-block"
                 >
                   BOOK A FREE CONSULTATION
