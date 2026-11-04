@@ -210,7 +210,7 @@ export default function Navbar() {
 						</li>
 						<li>
 							<a href={"/contact-us"} className={`${styles.myLink} ${isActive('/contact-us') ? 'font-[900]' : ''}`}>
-								BOOK A FREE CONSULTATION
+								CONTACT US
 							</a>
 						</li>
 					</ul>
