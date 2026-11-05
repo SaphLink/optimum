@@ -20,7 +20,7 @@
 
   var isLive = /^(www\.)?optimumlaserhairremoval\.com$/.test(window.location.hostname);
   var pendingKey = 'optimum_pending_lead';
-  var bookingUrl = '/booking';
+  var bookingUrl = '/daysmart-booking.html';
 
   function formSource(form) {
     var named = form.querySelector('[name="form_name"], [name="form"]');
