@@ -7,7 +7,8 @@
   <style>
     body { margin: 0; background: #fbf6ef; color: #35281e; font-family: Arial, sans-serif; }
     header { padding: 24px 20px 12px; text-align: center; }
-    header a { color: inherit; text-decoration: none; font-weight: 700; letter-spacing: .14em; }
+    .brand { display: inline-block; line-height: 0; }
+    .brand img { display: block; width: min(260px, 68vw); height: auto; }
     h1 { margin: 12px 0 6px; font-family: Georgia, serif; font-size: clamp(1.7rem, 4vw, 2.5rem); }
     p { margin: 0 0 24px; color: #5b4638; }
     #booking { width: min(700px, calc(100% - 32px)); margin: 0 auto 48px; }
@@ -15,7 +16,9 @@
 </head>
 <body>
   <header>
-    <a href="/">OPTIMUM LASER</a>
+    <a class="brand" href="/" aria-label="Optimum Laser home">
+      <img src="/images/homepage/Optimum%20Laser%20Brown%20Logo.png" alt="Optimum Laser" />
+    </a>
     <h1>Book a Free Consultation</h1>
     <p>Choose a time that works for you.</p>
   </header>
