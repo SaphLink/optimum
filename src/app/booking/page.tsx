@@ -1,81 +1,38 @@
 "use client";
-import React from "react";
 
-const page = () => {
+import { useEffect } from "react";
+
+const DAYSMART_PLUGIN = "https://plugin.myonlineappointment.com/Scripts/external/bookingplugin.js";
+
+export default function BookingPage() {
+  useEffect(() => {
+    const win = window as typeof window & Record<string, string | number>;
+    win.daysmart_acc = "dc3faad1-130b-4594-9fd0-27c386264ba3";
+    win.daysmart_iframe_width = 700;
+    win.daysmart_iframe_height = 0;
+    win.daysmart_website_root = "https://plugin.myonlineappointment.com";
+    win.load_in_iframe = "false";
+
+    const existing = document.querySelector('script[data-optimum-daysmart-plugin]');
+    if (existing) return;
+
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = DAYSMART_PLUGIN;
+    script.async = false;
+    script.dataset.optimumDaysmartPlugin = "true";
+    document.body.appendChild(script);
+
+    return () => script.remove();
+  }, []);
+
   return (
-    <>
-      <script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `daysmart_acc = "dc3faad1-130b-4594-9fd0-27c386264ba3"; daysmart_iframe_width = 700; daysmart_iframe_height = 0; daysmart_website_root = "https://plugin.myonlineappointment.com"; load_in_iframe = "false"; `,
-        }}
-      ></script>
-      <script type="text/javascript" src="https://plugin.myonlineappointment.com/Scripts/external/bookingplugin.js"></script>
-      <script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `
-          function adjustMarginTop() {
-            const fr = document.querySelector('#externalBookingPluginContainer');
-            const minWidthForMobile = 768; // Width in pixels to define mobile devices
-        
-            if (window.innerWidth < minWidthForMobile) {
-              fr.style.marginTop = '100px'; // Margin top for mobile devices
-            } else {
-              fr.style.marginTop = '170px'; // Margin top for non-mobile devices
-            }
-          }
-        
-          window.addEventListener('resize', adjustMarginTop);
-          adjustMarginTop(); // Initial call to set the margin
-        
-          const fr = document.querySelector('#externalBookingPluginContainer');
-          fr.style.maxWidth = '100%';
-          document.querySelector('#externalBookingPlugin').style.minHeight = 'calc(100vh - 170px)';
-        `,
-        }}
-      >
-      </script>
-      <script
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `
-          // Cleanup function to remove booking widget when navigating away
-          function cleanupBookingWidget() {
-            const containers = document.querySelectorAll('#externalBookingPluginContainer, #externalBookingPlugin');
-            containers.forEach(container => {
-              if (container && container.parentNode) {
-                container.parentNode.removeChild(container);
-              }
-            });
-            
-            // Clean up global variables
-            delete window.daysmart_acc;
-            delete window.daysmart_iframe_width;
-            delete window.daysmart_iframe_height;
-            delete window.daysmart_website_root;
-            delete window.load_in_iframe;
-          }
-          
-          // Listen for navigation events
-          window.addEventListener('beforeunload', cleanupBookingWidget);
-          window.addEventListener('popstate', function() {
-            setTimeout(cleanupBookingWidget, 100);
-          });
-          
-          // Listen for clicks on navigation links
-          document.addEventListener('click', function(e) {
-            const target = e.target.closest('a');
-            if (target && target.href && !target.href.includes('/booking')) {
-              setTimeout(cleanupBookingWidget, 100);
-            }
-          });
-        `,
-        }}
-      >
-      </script>
-    </>
+    <main className="min-h-screen bg-[#fbf6ef] px-5 py-20 text-center text-[#35281e]">
+      <p className="text-sm font-semibold tracking-[0.18em]">OPTIMUM LASER</p>
+      <h1 className="mt-4 font-serif text-4xl">Opening secure online booking…</h1>
+      <p className="mx-auto mt-4 max-w-xl text-lg text-[#5b4638]">
+        Please wait while DaySmart opens your free consultation booking page.
+      </p>
+    </main>
   );
-};
-
-export default page;
+}
