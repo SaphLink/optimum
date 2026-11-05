@@ -20,7 +20,7 @@
 
   var isLive = /^(www\.)?optimumlaserhairremoval\.com$/.test(window.location.hostname);
   var pendingKey = 'optimum_pending_lead';
-  var bookingUrl = 'https://optimumlaserhairremoval.myonlineappointment.com/Booking/?sid=0&guid=dc3faad1-130b-4594-9fd0-27c386264ba3&customerId=29772';
+  var bookingUrl = '/booking';
 
   function formSource(form) {
     var named = form.querySelector('[name="form_name"], [name="form"]');
