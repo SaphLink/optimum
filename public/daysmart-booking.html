@@ -14,14 +14,13 @@
     h1 { margin: 0; font-family: Georgia, serif; font-size: clamp(1.15rem, 2.6vw, 1.6rem); line-height: 1.1; }
     p { margin: 3px 0 0; color: #5b4638; font-size: clamp(.78rem, 1.8vw, .95rem); }
     #booking { box-sizing: border-box; display: flex; flex: 1 1 auto; min-height: 0; width: min(700px, 100%); margin: 0 auto; padding: 0 12px 12px; }
-    #externalBookingPluginContainer { box-sizing: border-box !important; flex: 1 1 auto; width: 100% !important; height: 100% !important; min-height: 0 !important; max-height: 100% !important; overflow: hidden !important; border: 1px solid #eadbc9; border-radius: 14px; box-shadow: 0 8px 24px rgba(53, 40, 30, .09); }
-    #externalBookingPlugin { display: block; box-sizing: border-box; width: 100% !important; height: 100% !important; min-height: 0 !important; max-height: 100% !important; border: 0; }
+    #externalBookingPlugin { display: block; box-sizing: border-box; flex: 1 1 auto; width: 100%; height: 100%; min-height: 0; border: 1px solid #eadbc9; border-radius: 14px; background: #fff; box-shadow: 0 8px 24px rgba(53, 40, 30, .09); }
     @media (max-width: 480px) {
       header { gap: 10px; padding: 7px 12px; }
       .brand img { width: 104px; }
       p { display: none; }
       #booking { padding: 0 8px 8px; }
-      #externalBookingPluginContainer { border-radius: 10px; }
+      #externalBookingPlugin { border-radius: 10px; }
     }
   </style>
 </head>
@@ -35,15 +34,8 @@
       <p>Choose a time that works for you.</p>
     </div>
   </header>
-  <div id="booking">
-    <script type="text/javascript">
-      var daysmart_acc = "dc3faad1-130b-4594-9fd0-27c386264ba3";
-      var daysmart_iframe_width = 700;
-      var daysmart_iframe_height = 0;
-      var daysmart_website_root = "https://plugin.myonlineappointment.com";
-      var load_in_iframe = "false";
-    </script>
-    <script type="text/javascript" src="https://plugin.myonlineappointment.com/Scripts/external/bookingplugin.js"></script>
-  </div>
+  <main id="booking" aria-label="Optimum Laser online booking">
+    <iframe id="externalBookingPlugin" title="Book a free consultation with Optimum Laser" src="https://plugin.myonlineappointment.com/External/BookingPlugin/?guid=dc3faad1-130b-4594-9fd0-27c386264ba3&amp;bookThroughNewTab=false" scrolling="auto"></iframe>
+  </main>
 </body>
 </html>
