@@ -5,13 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Book a Free Consultation | Optimum Laser</title>
   <style>
-    body { margin: 0; background: #fbf6ef; color: #35281e; font-family: Arial, sans-serif; }
-    header { padding: 24px 20px 12px; text-align: center; }
-    .brand { display: inline-block; line-height: 0; }
-    .brand img { display: block; width: min(260px, 68vw); height: auto; }
-    h1 { margin: 12px 0 6px; font-family: Georgia, serif; font-size: clamp(1.7rem, 4vw, 2.5rem); }
-    p { margin: 0 0 24px; color: #5b4638; }
-    #booking { width: min(700px, calc(100% - 32px)); margin: 0 auto 48px; }
+    html, body { height: 100%; }
+    body { margin: 0; min-height: 100dvh; overflow: hidden; display: flex; flex-direction: column; background: #fbf6ef; color: #35281e; font-family: Arial, sans-serif; }
+    header { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; gap: 14px; padding: 8px 16px; text-align: left; }
+    .brand { display: inline-block; flex: 0 0 auto; line-height: 0; }
+    .brand img { display: block; width: clamp(112px, 18vw, 162px); height: auto; }
+    .heading { min-width: 0; }
+    h1 { margin: 0; font-family: Georgia, serif; font-size: clamp(1.15rem, 2.6vw, 1.6rem); line-height: 1.1; }
+    p { margin: 3px 0 0; color: #5b4638; font-size: clamp(.78rem, 1.8vw, .95rem); }
+    #booking { box-sizing: border-box; display: flex; flex: 1 1 auto; min-height: 0; width: min(700px, 100%); margin: 0 auto; padding: 0 12px 12px; }
+    #externalBookingPluginContainer { box-sizing: border-box !important; flex: 1 1 auto; width: 100% !important; height: 100% !important; min-height: 0 !important; max-height: 100% !important; overflow: hidden !important; border: 1px solid #eadbc9; border-radius: 14px; box-shadow: 0 8px 24px rgba(53, 40, 30, .09); }
+    #externalBookingPlugin { display: block; box-sizing: border-box; width: 100% !important; height: 100% !important; min-height: 0 !important; max-height: 100% !important; border: 0; }
+    @media (max-width: 480px) {
+      header { gap: 10px; padding: 7px 12px; }
+      .brand img { width: 104px; }
+      p { display: none; }
+      #booking { padding: 0 8px 8px; }
+      #externalBookingPluginContainer { border-radius: 10px; }
+    }
   </style>
 </head>
 <body>
@@ -19,8 +30,10 @@
     <a class="brand" href="/" aria-label="Optimum Laser home">
       <img src="/images/homepage/Optimum%20Laser%20Brown%20Logo.png" alt="Optimum Laser" />
     </a>
-    <h1>Book a Free Consultation</h1>
-    <p>Choose a time that works for you.</p>
+    <div class="heading">
+      <h1>Book a Free Consultation</h1>
+      <p>Choose a time that works for you.</p>
+    </div>
   </header>
   <div id="booking">
     <script type="text/javascript">
