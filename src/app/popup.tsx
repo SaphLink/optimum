@@ -18,8 +18,11 @@ export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | 
       <p className="mt-5 text-center text-xs font-bold tracking-[0.26em] text-[#8a593d]">NEW CLIENT OFFER</p>
       <h2 className="my-4 text-center text-3xl font-normal leading-tight tracking-[-0.04em] sm:text-4xl" id={prefix + "-special-title"} style={serif}><em className="block text-5xl not-italic font-normal text-[#ae7c50] sm:text-6xl">50% OFF</em>Your first laser session</h2>
       <p className="mb-5 text-center text-base leading-relaxed text-[#5b4638]">Choose the treatment area that’s right for you.<br /><strong>Popular first visits: Underarms from $35 and Brazilian from $99</strong></p>
-      <form action="https://formsubmit.co/optimumlaserhairremoval@gmail.com" className="grid gap-2.5" id={prefix + "-form"} method="POST">
-        <input name="_next" type="hidden" value={"https://optimumlaserhairremoval.com/thank-you?form=" + source} />
+      <form action="https://api.web3forms.com/submit" className="grid gap-2.5" id={prefix + "-form"} method="POST">
+        <input name="access_key" type="hidden" value="a716156d-540b-46e2-b5c5-92fe9efc84c5" />
+        <input name="redirect" type="hidden" value={"https://optimumlaserhairremoval.com/thank-you?form=" + source} />
+        <input name="from_name" type="hidden" value="Optimum Laser Website" />
+        <input name="subject" type="hidden" value={"New Optimum Laser lead — " + source} />
         <input name="_subject" type="hidden" value={"Optimum Laser - New Client 50% Offer - " + (source === "popup" ? "Popup" : "Homepage")} />
         <input name="form_source" type="hidden" value={source === "popup" ? "50% introductory session popup" : "Homepage new-client offer"} />
         <input name="_template" type="hidden" value="table" />
