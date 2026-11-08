@@ -30,6 +30,8 @@ export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | 
         <input aria-hidden="true" autoComplete="off" className="hidden" name="_honey" tabIndex={-1} type="text" />
         <label className="text-sm" htmlFor={prefix + "-name"}>Full name</label>
         <input autoComplete="given-name" className={fieldClass} id={prefix + "-name"} maxLength={100} name="name" required style={{ fontFamily: "inherit" }} />
+        <label className="text-sm" htmlFor={prefix + "-email"}>Email address</label>
+        <input autoComplete="email" className={fieldClass} id={prefix + "-email"} maxLength={254} name="email" required style={{ fontFamily: "inherit" }} type="email" />
         <label className="text-sm" htmlFor={prefix + "-phone"}>Phone number</label>
         <input autoComplete="tel" className={fieldClass} id={prefix + "-phone"} inputMode="tel" maxLength={30} minLength={7} name="phone" required style={{ fontFamily: "inherit" }} type="tel" />
         <p className="text-center text-xs leading-relaxed text-[#5b4638]">We’ll contact you to arrange your consultation.</p>
