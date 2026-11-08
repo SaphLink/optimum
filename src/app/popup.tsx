@@ -17,7 +17,6 @@ export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | 
       <Image alt="Optimum Laser" className="h-auto w-28 object-contain sm:w-32" height={120} src="/images/homepage/Optimum Laser Brown Logo.png" width={260} />
       <p className="mt-5 text-center text-xs font-bold tracking-[0.26em] text-[#8a593d]">NEW CLIENT OFFER</p>
       <h2 className="my-4 text-center text-3xl font-normal leading-tight tracking-[-0.04em] sm:text-4xl" id={prefix + "-special-title"} style={serif}><em className="block text-5xl not-italic font-normal text-[#ae7c50] sm:text-6xl">50% OFF</em>Your first laser session</h2>
-      <p className="mb-5 text-center text-base leading-relaxed text-[#5b4638]">Choose the treatment area that’s right for you.<br /><strong>Popular first visits: Underarms from $35 and Brazilian from $99</strong></p>
       <form action="https://api.web3forms.com/submit" className="grid gap-2.5" id={prefix + "-form"} method="POST">
         <input name="access_key" type="hidden" value="a716156d-540b-46e2-b5c5-92fe9efc84c5" />
         <input name="redirect" type="hidden" value={"https://optimumlaserhairremoval.com/thank-you?form=" + source} />
@@ -27,8 +26,9 @@ export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | 
         <input name="form_source" type="hidden" value={source === "popup" ? "50% introductory session popup" : "Homepage new-client offer"} />
         <input name="_template" type="hidden" value="table" />
         <input name="offer" type="hidden" value="50% off one introductory session on one eligible area at regular single-session price; packages excluded; no package credit" />
+        <input name="form_name" type="hidden" value={source} />
         <input aria-hidden="true" autoComplete="off" className="hidden" name="_honey" tabIndex={-1} type="text" />
-        <label className="text-sm" htmlFor={prefix + "-name"}>First name</label>
+        <label className="text-sm" htmlFor={prefix + "-name"}>Full name</label>
         <input autoComplete="given-name" className={fieldClass} id={prefix + "-name"} maxLength={100} name="name" required style={{ fontFamily: "inherit" }} />
         <label className="text-sm" htmlFor={prefix + "-phone"}>Phone number</label>
         <input autoComplete="tel" className={fieldClass} id={prefix + "-phone"} inputMode="tel" maxLength={30} minLength={7} name="phone" required style={{ fontFamily: "inherit" }} type="tel" />
