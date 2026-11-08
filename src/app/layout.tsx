@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-                <style id="optimum-critical-font">{`html { font-family: Aptos, "Segoe UI", Arial, sans-serif; } body { font-family: inherit; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; } button, input, select, textarea { font: inherit; }`}</style>
+                <style id="optimum-critical-font">{`html { font-family: Aptos, "Segoe UI", Arial, sans-serif; } @media (max-width: 640px) { html { font-size: 12px; } } body { font-family: inherit; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; } button, input, select, textarea { font: inherit; }`}</style>
         <style>{`body:has(#widget-floatingEstimator-mount:not(:empty)) #floatingEstimator { display: none; }
           #ol-mobile-text { display: none; }
           @media (max-width: 639px) {
