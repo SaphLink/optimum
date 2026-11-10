@@ -28,14 +28,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <head>
-                <style id="optimum-critical-font">{`html { font-family: Aptos, "Segoe UI", Arial, sans-serif; } @media (max-width: 640px) { html { font-size: 12px; } } body { font-family: inherit; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; } button, input, select, textarea { font: inherit; }`}</style>
-        <style>{`body:has(#widget-floatingEstimator-mount:not(:empty)) #floatingEstimator { display: none; }
+                <style id="optimum-critical-font" dangerouslySetInnerHTML={{ __html: `html { font-family: Aptos, "Segoe UI", Arial, sans-serif; } @media (max-width: 640px) { html { font-size: 12px; } } body { font-family: inherit; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; } button, input, select, textarea { font: inherit; }` }} />
+        <style dangerouslySetInnerHTML={{ __html: `body:has(#widget-floatingEstimator-mount:not(:empty)) #floatingEstimator { display: none; }
           #ol-mobile-text { display: none; }
           @media (max-width: 639px) {
             #chaty-app-elements { display: none !important; }
             body:has(#ol-mobile-book) #ol-mobile-text { position: fixed; right: 14px; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 401; display: grid; min-height: 48px; padding: 0 12px; place-items: center; border-radius: 10px; background: #ecd0ad; color: #35281e; font: 700 13px/1 Aptos, 'Segoe UI', sans-serif; text-decoration: none; }
             #ol-mobile-book a:last-child { margin-right: 60px; }
-          }`}</style>
+          }` }} />
         <script src="/site-runtime.js" defer></script>
         <script id="google-ads-config" dangerouslySetInnerHTML={{ __html: "window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=gtag;gtag('js',new Date());gtag('config','AW-397121812');gtag('config','AW-397121812/vA2dCNbkpOAcEJSyrr0B',{phone_conversion_number:'516-495-4908'});" }} />
         <script id="optimum-lead-tracking" dangerouslySetInnerHTML={{ __html: "(function(){if(window.__optimumLeadTracking)return;window.__optimumLeadTracking=true;var live=/^(www\\.)?optimumlaserhairremoval\\.com$/.test(location.hostname);document.addEventListener('click',function(event){var target=event.target instanceof Element?event.target.closest('a[href^=\"tel:\"]'):null;if(!target||!live)return;window.gtag('event','conversion',{send_to:'AW-397121812/MOdwCNec7P4BEJSyrr0B',transport_type:'beacon'});});document.addEventListener('submit',function(event){var form=event.target;if(!(form instanceof HTMLFormElement)||event.defaultPrevented||!form.checkValidity())return;var endpoint=new URL(form.action,location.href);if(endpoint.hostname!=='formsubmit.co')return;var source=location.pathname==='/contact-us'?'contact':location.pathname==='/'?'homepage':'website';var next=form.querySelector('input[name=\"_next\"]');if(!next){next=document.createElement('input');next.type='hidden';next.name='_next';form.appendChild(next);}var destination=new URL('/thank-you',location.origin);destination.searchParams.set('form',source);next.value=destination.href;try{sessionStorage.setItem('optimum_pending_lead',JSON.stringify({id:crypto.randomUUID(),form:source,created:Date.now()}));}catch(error){}if(live)window.gtag('event','form_submit_attempt',{send_to:'AW-397121812',form_name:source,transport_type:'beacon'});});})();" }} />
@@ -64,4 +64,5 @@ export const metadata = {
   title: "Laser Hair Removal in Manhasset - Optimum Laser",
   description: "Optimum Laser",
 };
+
 
