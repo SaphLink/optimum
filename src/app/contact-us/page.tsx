@@ -49,12 +49,12 @@ export default function ContactPage() {
     <p>Tell us how to reach you. We’ll help you explore treatments, pricing, and your next step.</p>
     <div className="expectations"><h2>Let’s find what’s right for you.</h2><p>Discuss your goals.<br/>Ask your questions.<br/>Explore a personalized treatment plan.</p></div>
   </section><section className="formbox"><h2>Let’s get started.</h2><p>Leave your details. Our team will take it from here.</p><p className="small">* Required fields</p>
-  <form action="https://formsubmit.co/optimumlaserhairremoval@gmail.com" method="POST" onSubmit={event => {
+  <form action="https://api.web3forms.com/submit" method="POST" onSubmit={event => {
     const phone = event.currentTarget.elements.namedItem("phone") as HTMLInputElement;
     const digits = phone.value.replace(/[^0-9]/g, "");
     if (digits.length < 10 || digits.length > 15) { event.preventDefault(); phone.setCustomValidity("Please enter a valid mobile number, including area code."); phone.reportValidity(); }
   }}>
-    <input type="hidden" name="_next" value={nextUrl}/><input type="hidden" name="_subject" value="New inquiry — Optimum Laser consultation"/><input type="hidden" name="_template" value="table"/>
+    <input type="hidden" name="access_key" value="a716156d-540b-46e2-b5c5-92fe9efc84c5"/><input type="hidden" name="redirect" value={nextUrl}/><input type="hidden" name="from_name" value="Optimum Laser Website"/><input type="hidden" name="subject" value="New Optimum Laser lead — contact"/><input type="hidden" name="form_source" value="Contact Us page"/><input type="hidden" name="form_name" value="contact"/>
     <input type="text" name="_honey" autoComplete="off" tabIndex={-1} aria-hidden="true" style={{display:"none"}}/>
     <label htmlFor="contact-name">Full name *</label><input id="contact-name" name="name" autoComplete="name" placeholder="Full name" required pattern=".*\S.*" maxLength={160}/>
     <label htmlFor="contact-email">Email address *</label><input id="contact-email" name="email" type="email" autoComplete="email" placeholder="you@example.com" required maxLength={254}/>
