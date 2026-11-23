@@ -24,7 +24,7 @@ function OfferPackages({ compact = false }: { compact?: boolean }) {
 }
 
 function PopupOffer({ onBrowse }: { onBrowse?: () => void }) {
-  return <div className="max-h-[calc(100dvh-24px)] overflow-y-auto p-4 text-center sm:p-6" style={sans}>
+  return <div className="max-h-[calc(100dvh-24px)] overflow-y-auto px-4 pb-4 pt-16 text-center sm:px-6 sm:pb-6" style={sans}>
     <h2 className="text-3xl leading-tight text-[#35281e] sm:text-4xl" id="popup-special-title" style={{ fontFamily: "Georgia, Times New Roman, serif" }}>Up to <strong className="font-extrabold">50% OFF</strong> Select Laser Hair Removal Packages</h2>
     <p className="mt-2 text-[11px] font-bold tracking-[0.18em] text-[#8a593d]">Limited Time Deal Ends November 29th</p>
     <form action="https://api.web3forms.com/submit" className="mt-4 grid gap-2 text-left" method="POST">
