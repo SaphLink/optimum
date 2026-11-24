@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities, @next/next/no-img-element */
 "use client";
 
-import Popup, { NewClientOffer } from "./popup";
 import { useEffect, useRef } from "react";
 
 const serif = { fontFamily: "Georgia, Times New Roman, serif" };
@@ -26,7 +25,6 @@ export default function Home() {
   }, []);
 
   return <main className="min-h-screen bg-[#fbf0df] pb-20 text-[#35281e] sm:pb-0">
-    <Popup />
     <section className="pt-[106px] lg:pt-[168px]" aria-labelledby="homepage-video-title">
       <div className="relative isolate grid aspect-video w-full items-end lg:max-h-[70vh]">
         <video
@@ -51,7 +49,7 @@ export default function Home() {
         </div>
       </div>
     </section>
-    <section className="mx-auto grid max-w-6xl gap-7 px-5 pb-14 pt-12 sm:px-8 sm:pt-16 lg:grid-cols-2 lg:items-center lg:pb-20">
+    <section className="mx-auto grid max-w-6xl gap-7 px-5 pb-14 pt-12 sm:px-8 sm:pt-16 lg:pb-20">
       <div>
         <p className="text-xs font-bold tracking-[0.26em] text-[#8a593d]">MANHASSET · LONG ISLAND</p>
         <h2 className="mt-4 max-w-3xl text-5xl leading-[.98] tracking-[-0.04em] sm:text-7xl" style={serif}>Laser hair removal that feels <em className="font-normal text-[#ae7c50]">personal.</em></h2>
@@ -59,7 +57,6 @@ export default function Home() {
         <a className="mt-7 inline-block rounded-xl bg-[#35281e] px-6 py-4 font-bold text-white" href={bookingUrl}>Book Now</a>
         <div className="mt-7 flex flex-wrap gap-2 text-xs font-bold tracking-[0.1em] text-[#70432b]"><span className="rounded-full bg-white px-3 py-2">4.9★ GOOGLE RATING</span><span className="rounded-full bg-white px-3 py-2">300+ REVIEWS</span><span className="rounded-full bg-white px-3 py-2">15+ YEARS</span><span className="rounded-full bg-white px-3 py-2">ALL SKIN TYPES</span></div>
       </div>
-      <div className="order-first overflow-hidden rounded-[2rem] border-2 border-[#750c32]/30 bg-[#fffdfb] shadow-xl lg:order-last"><NewClientOffer source="homepage" /></div>
     </section>
 
     <section className="bg-[#fffaf5] px-5 py-16 sm:px-8"><div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:gap-16"><div><p className="text-xs font-bold tracking-[0.25em] text-[#8a593d]">MANHASSET · LONG ISLAND</p><h2 className="mt-4 text-4xl leading-tight sm:text-5xl" style={serif}>Laser Hair Removal in <em className="font-normal text-[#ae7c50]">Manhasset, NY</em></h2><p className="mt-6 max-w-xl text-lg leading-relaxed text-[#5b4638]">Personalized laser hair removal near Great Neck, Roslyn, Port Washington, Garden City, and nearby Nassau County communities. Every plan is tailored to your goals, skin, hair, schedule, and comfort.</p></div><div><p className="text-xs font-bold tracking-[0.25em] text-[#8a593d]">PERSONALIZED CARE</p><h2 className="mt-4 text-4xl leading-tight sm:text-5xl" style={serif}>Care for Different <em className="font-normal text-[#ae7c50]">Skin Types</em></h2><p className="mt-6 max-w-xl text-lg leading-relaxed text-[#5b4638]">We use FDA-approved Cynosure technology and assess individual needs before recommending treatment.</p></div></div><div className="mx-auto mt-12 max-w-6xl rounded-2xl border border-[#eadbcd] bg-white p-7 sm:p-9"><p className="text-xs font-bold tracking-[0.25em] text-[#8a593d]">POPULAR TREATMENT AREAS</p><div className="mt-5 flex flex-wrap gap-3">{["Face & upper lip", "Underarms", "Bikini & Brazilian", "Legs", "Back & shoulders", "Arms & chest"].map((area) => <span key={area} className="rounded-full bg-[#f5e7d6] px-4 py-2 font-semibold text-[#5b4638]">{area}</span>)}</div></div></section>
