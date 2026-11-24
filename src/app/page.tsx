@@ -18,6 +18,7 @@ export default function Home() {
 
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const syncPlayback = () => {
+      video.autoplay = !reducedMotion.matches;
       if (reducedMotion.matches) video.pause();
       else void video.play().catch(() => {});
     };
@@ -54,7 +55,8 @@ export default function Home() {
           className="pointer-events-none absolute inset-0 h-full w-full object-contain lg:object-cover"
           src="/videos/optimum-homepage.mp4"
           poster="/videos/optimum-homepage-poster.webp"
-          preload="none"
+          preload="auto"
+          autoPlay
           muted
           loop
           playsInline
