@@ -2,7 +2,7 @@
 
 import { modal } from "@/components/modal";
 import { IoCloseSharp } from "react-icons/io5";
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 
 const sans = { fontFamily: "Aptos, Segoe UI, sans-serif" };
 const fieldClass = "min-h-12 w-full rounded-xl border border-[#e1c9b5] bg-white px-3 text-base text-[#35281e] focus:outline-none focus:ring-4 focus:ring-[#d8b18c]/50";
@@ -46,8 +46,23 @@ export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | 
   </div>;
 }
 
-export default function Popup() {
+export function useOfferPopup() {
   const shown = useRef(false);
-  useEffect(() => { if (shown.current) return; const timer = window.setTimeout(() => { shown.current = true; void modal(({ show, proceed }: any) => <div className="fixed inset-0 z-[500] flex items-center justify-center p-3 sm:p-6" style={sans}><div className={show ? "absolute inset-0 bg-[#35281e]/45 backdrop-blur-[2px]" : "pointer-events-none absolute inset-0 opacity-0"} onClick={proceed} /><section aria-labelledby="popup-special-title" aria-modal="true" className={"relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-[#eadbcd] bg-[#fffdfb] text-[#35281e] shadow-2xl transition " + (show ? "pointer-events-auto" : "pointer-events-none opacity-0")} role="dialog"><button aria-label="Close Black Friday offer" className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-[#eadbcd] bg-[#fffdfb] text-[#35281e]" onClick={proceed} type="button"><IoCloseSharp className="text-2xl" /></button><PopupOffer onBrowse={() => proceed()} /></section></div>); }, 6000); return () => window.clearTimeout(timer); }, []);
-  return null;
+  const open = useRef(false);
+
+  const openOffer = useCallback(() => {
+    if (open.current) return;
+    shown.current = true;
+    open.current = true;
+    void modal(({ show, proceed }: any) => <div className="fixed inset-0 z-[500] flex items-center justify-center p-3 sm:p-6" style={sans}><div className={show ? "absolute inset-0 bg-[#35281e]/45 backdrop-blur-[2px]" : "pointer-events-none absolute inset-0 opacity-0"} onClick={proceed} /><section aria-labelledby="popup-special-title" aria-modal="true" className={"relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-[#eadbcd] bg-[#fffdfb] text-[#35281e] shadow-2xl transition " + (show ? "pointer-events-auto" : "pointer-events-none opacity-0")} role="dialog"><button aria-label="Close Black Friday offer" className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-[#eadbcd] bg-[#fffdfb] text-[#35281e]" onClick={proceed} type="button"><IoCloseSharp className="text-2xl" /></button><PopupOffer onBrowse={() => proceed()} /></section></div>).finally(() => { open.current = false; });
+  }, []);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      if (!shown.current) openOffer();
+    }, 6000);
+    return () => window.clearTimeout(timer);
+  }, [openOffer]);
+
+  return openOffer;
 }
