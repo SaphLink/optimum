@@ -30,6 +30,15 @@ export default function RootLayout({
       <head>
                 <style id="optimum-critical-font" dangerouslySetInnerHTML={{ __html: `html { font-family: Aptos, "Segoe UI", Arial, sans-serif; } @media (max-width: 640px) { html { font-size: 12px; } } body { font-family: inherit; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; } button, input, select, textarea { font: inherit; }` }} />
         <style dangerouslySetInnerHTML={{ __html: `body:has(#widget-floatingEstimator-mount:not(:empty)) #floatingEstimator { display: none; }
+          body:has(#homepage-video-title) #widget-floatingEstimator-mount:not(:empty),
+          body:has(#homepage-video-title) #floatingEstimator { display: flex; justify-content: flex-end; padding: 12px 16px; }
+          body:has(#homepage-video-title):has(#widget-floatingEstimator-mount:not(:empty)) #floatingEstimator { display: none; }
+          body:has(#homepage-video-title) #widget-floatingEstimator-mount [class*="floatingEstimator-floatingContainer"],
+          body:has(#homepage-video-title) #floatingEstimator > a { position: relative !important; inset: auto !important; }
+          @media (max-width: 639px) {
+            body:has(#homepage-video-title) #widget-floatingEstimator-mount:not(:empty),
+            body:has(#homepage-video-title) #floatingEstimator { padding-bottom: calc(88px + env(safe-area-inset-bottom)); }
+          }
           #ol-mobile-text { display: none; }
           @media (max-width: 639px) {
             #chaty-app-elements { display: none !important; }
