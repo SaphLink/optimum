@@ -81,7 +81,7 @@ export default function Home() {
         <p className="text-xs font-bold tracking-[0.26em] text-[#8a593d]">MANHASSET · LONG ISLAND</p>
         <h2 className="mt-4 max-w-3xl text-5xl leading-[.98] tracking-[-0.04em] sm:text-7xl" style={serif}>Laser hair removal that feels <em className="font-normal text-[#ae7c50]">personal.</em></h2>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#5b4638]">Personalized laser hair removal using the FDA-cleared Cynosure Elite+ system. Every treatment plan is personalized for your skin type, hair type, goals, and comfort—so you can feel confident from consultation to results.</p>
-        <a className="mt-7 inline-block rounded-xl bg-[#35281e] px-6 py-4 font-bold text-white" href={bookingUrl}>Book Online</a>
+        <a className="mx-auto mt-7 block w-fit rounded-xl bg-[#35281e] px-6 py-4 font-bold text-white" href={bookingUrl}>Book Online</a>
         <div className="mt-7 flex flex-wrap gap-2 text-xs font-bold tracking-[0.1em] text-[#70432b]"><span className="rounded-full bg-white px-3 py-2">4.9★ GOOGLE RATING</span><span className="rounded-full bg-white px-3 py-2">300+ REVIEWS</span><span className="rounded-full bg-white px-3 py-2">15+ YEARS</span><span className="rounded-full bg-white px-3 py-2">ALL SKIN TYPES</span></div>
       </div>
     </section>
