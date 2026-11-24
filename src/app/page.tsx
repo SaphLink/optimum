@@ -1,13 +1,14 @@
 /* eslint-disable react/no-unescaped-entities, @next/next/no-img-element */
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const serif = { fontFamily: "Georgia, Times New Roman, serif" };
 const bookingUrl = "https://plugin.myonlineappointment.com/External/BookingPlugin/?sid=0&guid=dc3faad1-130b-4594-9fd0-27c386264ba3&customerId=29772";
 
 export default function Home() {
   const montage = useRef<HTMLVideoElement>(null);
+  const [showPackageOffer, setShowPackageOffer] = useState(true);
 
   useEffect(() => {
     const video = montage.current;
@@ -25,6 +26,25 @@ export default function Home() {
   }, []);
 
   return <main className="min-h-screen bg-[#fbf0df] pb-20 text-[#35281e] sm:pb-0">
+    {showPackageOffer && (
+      <aside
+        aria-label="Laser packages offer"
+        className="fixed inset-x-3 bottom-[calc(76px+env(safe-area-inset-bottom))] z-[90] flex items-center gap-1 rounded-xl border border-[#ecd0ad]/40 bg-[#35281e] text-[#fff9f2] shadow-lg sm:inset-x-auto sm:bottom-5 sm:left-5"
+      >
+        <a href="/contact-us" className="flex min-h-[48px] min-w-0 flex-1 flex-wrap items-center gap-x-2 px-4 py-2 font-bold hover:underline focus-visible:underline">
+          <span className="whitespace-nowrap text-[#ecd0ad]">UP TO 50% OFF</span>
+          <span className="whitespace-nowrap">LASER PACKAGES</span>
+        </a>
+        <button
+          type="button"
+          aria-label="Dismiss laser packages offer"
+          onClick={() => setShowPackageOffer(false)}
+          className="m-1 grid h-[44px] w-[44px] shrink-0 place-items-center rounded-lg text-xl hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#ecd0ad]"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </aside>
+    )}
     <section className="pt-[106px] lg:pt-[168px]" aria-labelledby="homepage-video-title">
       <div className="relative isolate grid aspect-video w-full items-end lg:max-h-[70vh]">
         <video
