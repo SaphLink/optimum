@@ -47,7 +47,7 @@ export default function Home() {
         </button>
       </aside>
     )}
-    <section className="pt-[106px] lg:pt-[168px]" aria-labelledby="homepage-video-title">
+    <section className="pt-[102px] lg:pt-[161px]" aria-labelledby="homepage-video-title">
       <div className="relative isolate grid aspect-video w-full items-end lg:max-h-[70vh]">
         <video
           ref={montage}
