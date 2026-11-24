@@ -46,7 +46,7 @@ export function NewClientOffer({ source = "homepage" }: { source?: "homepage" | 
   </div>;
 }
 
-export function useOfferPopup() {
+export function useOfferPopup(onExit?: () => void) {
   const shown = useRef(false);
   const open = useRef(false);
 
@@ -54,8 +54,8 @@ export function useOfferPopup() {
     if (open.current) return;
     shown.current = true;
     open.current = true;
-    void modal(({ show, proceed }: any) => <div className="fixed inset-0 z-[500] flex items-center justify-center p-3 sm:p-6" style={sans}><div className={show ? "absolute inset-0 bg-[#35281e]/45 backdrop-blur-[2px]" : "pointer-events-none absolute inset-0 opacity-0"} onClick={proceed} /><section aria-labelledby="popup-special-title" aria-modal="true" className={"relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-[#eadbcd] bg-[#fffdfb] text-[#35281e] shadow-2xl transition " + (show ? "pointer-events-auto" : "pointer-events-none opacity-0")} role="dialog"><button aria-label="Close Black Friday offer" className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-[#eadbcd] bg-[#fffdfb] text-[#35281e]" onClick={proceed} type="button"><IoCloseSharp className="text-2xl" /></button><PopupOffer onBrowse={() => proceed()} /></section></div>).finally(() => { open.current = false; });
-  }, []);
+    void modal(({ show, proceed }: any) => <div className="fixed inset-0 z-[500] flex items-center justify-center p-3 sm:p-6" style={sans}><div className={show ? "absolute inset-0 bg-[#35281e]/45 backdrop-blur-[2px]" : "pointer-events-none absolute inset-0 opacity-0"} onClick={proceed} /><section aria-labelledby="popup-special-title" aria-modal="true" className={"relative w-full max-w-xl overflow-hidden rounded-[2rem] border border-[#eadbcd] bg-[#fffdfb] text-[#35281e] shadow-2xl transition " + (show ? "pointer-events-auto" : "pointer-events-none opacity-0")} role="dialog"><button aria-label="Close Black Friday offer" className="absolute right-3 top-3 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-[#eadbcd] bg-[#fffdfb] text-[#35281e]" onClick={proceed} type="button"><IoCloseSharp className="text-2xl" /></button><PopupOffer onBrowse={() => proceed()} /></section></div>).then(onExit).finally(() => { open.current = false; });
+  }, [onExit]);
 
   useEffect(() => {
     const timer = window.setTimeout(() => {
