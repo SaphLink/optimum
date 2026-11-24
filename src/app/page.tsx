@@ -31,9 +31,9 @@ export default function Home() {
     {showPackageOffer && (
       <aside
         aria-label="Laser packages offer"
-        className="fixed inset-x-3 bottom-[calc(76px+env(safe-area-inset-bottom))] z-[90] flex items-center gap-1 rounded-xl border border-[#ecd0ad]/40 bg-[#35281e] text-[#fff9f2] shadow-lg sm:inset-x-auto sm:bottom-5 sm:left-5"
+        className="fixed left-3 bottom-[calc(76px+env(safe-area-inset-bottom))] z-[90] flex max-w-[calc(100%-24px)] items-center rounded-full border border-[#ecd0ad]/40 bg-[#35281e] text-[#fff9f2] shadow-lg sm:bottom-5 sm:left-5"
       >
-        <button type="button" onClick={openOffer} aria-haspopup="dialog" className="flex min-h-[48px] min-w-0 flex-1 flex-wrap items-center gap-x-2 px-4 py-2 font-bold hover:underline focus-visible:underline">
+        <button type="button" onClick={openOffer} aria-haspopup="dialog" className="flex min-h-[44px] min-w-0 flex-wrap items-center gap-x-1.5 px-3 text-left text-[11px] font-bold hover:underline focus-visible:underline">
           <span className="whitespace-nowrap text-[#ecd0ad]">UP TO 50% OFF</span>
           <span className="whitespace-nowrap">LASER PACKAGES</span>
         </button>
@@ -41,7 +41,7 @@ export default function Home() {
           type="button"
           aria-label="Dismiss laser packages offer"
           onClick={() => setShowPackageOffer(false)}
-          className="m-1 grid h-[44px] w-[44px] shrink-0 place-items-center rounded-lg text-xl hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#ecd0ad]"
+          className="grid h-[44px] w-[44px] shrink-0 place-items-center rounded-full text-base hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#ecd0ad]"
         >
           <span aria-hidden="true">&times;</span>
         </button>
