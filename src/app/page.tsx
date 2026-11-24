@@ -35,7 +35,7 @@ export default function Home() {
         aria-label="Laser packages offer"
         className="fixed left-3 bottom-[calc(76px+env(safe-area-inset-bottom))] z-[90] grid w-[151px] max-w-[calc(100%-24px)] grid-cols-[31px_minmax(0,1fr)_31px] items-center rounded-full lg:w-[207px] lg:grid-cols-[42px_minmax(0,1fr)_42px] border border-[#ecd0ad]/40 bg-[#35281e] text-[#fff9f2] shadow-lg sm:bottom-5 sm:left-5"
       >
-        <button type="button" onClick={openOffer} aria-haspopup="dialog" className="col-start-2 row-start-1 flex min-h-[44px] min-w-0 flex-col items-center justify-center text-center text-[11px] font-bold leading-tight hover:underline focus-visible:underline lg:min-h-[60px] lg:text-[14px]">
+        <button type="button" onClick={openOffer} aria-haspopup="dialog" className="col-start-2 row-start-1 flex min-h-[44px] min-w-0 flex-col items-center justify-center text-center text-[11px] font-bold leading-tight focus-visible:underline lg:min-h-[60px] lg:text-[14px]">
           <span className="whitespace-nowrap text-[#ecd0ad]">UP TO 50% OFF</span>
           <span className="whitespace-nowrap">LASER PACKAGES</span>
         </button>
