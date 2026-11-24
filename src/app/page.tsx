@@ -51,7 +51,7 @@ export default function Home() {
       <div className="relative isolate grid aspect-video w-full items-end lg:max-h-[70vh]">
         <video
           ref={montage}
-          className="pointer-events-none absolute inset-0 h-full w-full object-contain lg:object-cover lg:object-top"
+          className="pointer-events-none absolute inset-0 h-full w-full object-contain lg:object-cover"
           src="/videos/optimum-homepage.mp4"
           poster="/videos/optimum-homepage-poster.webp"
           preload="none"
