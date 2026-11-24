@@ -2,17 +2,59 @@
 "use client";
 
 import Popup, { NewClientOffer } from "./popup";
+import { useEffect, useRef } from "react";
 
 const serif = { fontFamily: "Georgia, Times New Roman, serif" };
 const bookingUrl = "https://plugin.myonlineappointment.com/External/BookingPlugin/?sid=0&guid=dc3faad1-130b-4594-9fd0-27c386264ba3&customerId=29772";
 
 export default function Home() {
+  const montage = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = montage.current;
+    if (!video) return;
+
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const syncPlayback = () => {
+      if (reducedMotion.matches) video.pause();
+      else void video.play().catch(() => {});
+    };
+    video.muted = true;
+    syncPlayback();
+    reducedMotion.addEventListener("change", syncPlayback);
+    return () => reducedMotion.removeEventListener("change", syncPlayback);
+  }, []);
+
   return <main className="min-h-screen bg-[#fbf0df] pb-20 text-[#35281e] sm:pb-0">
     <Popup />
-    <section className="mx-auto grid max-w-6xl gap-7 px-5 pb-14 pt-40 sm:px-8 sm:pt-44 lg:grid-cols-2 lg:items-center lg:pb-20">
+    <section className="pt-[106px] lg:pt-[168px]" aria-labelledby="homepage-video-title">
+      <div className="relative isolate grid aspect-video w-full items-end lg:max-h-[70vh]">
+        <video
+          ref={montage}
+          className="pointer-events-none absolute inset-0 h-full w-full object-contain lg:object-cover"
+          src="/videos/optimum-homepage.mp4"
+          poster="/videos/optimum-homepage-poster.webp"
+          preload="none"
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#241b15]/80 via-transparent to-transparent" />
+        <div className="relative grid justify-items-center gap-2 px-4 pb-4 text-center text-white sm:gap-4 sm:pb-9">
+          <h1 id="homepage-video-title" className="text-[clamp(1.55rem,6vw,4.5rem)] leading-tight" style={serif}>
+            Laser Hair Removal
+          </h1>
+          <a className="rounded-lg bg-[#fbf0df] px-4 py-3 text-sm font-bold text-[#35281e] sm:px-6" href="/contact-us">
+            Book a Consultation
+          </a>
+        </div>
+      </div>
+    </section>
+    <section className="mx-auto grid max-w-6xl gap-7 px-5 pb-14 pt-12 sm:px-8 sm:pt-16 lg:grid-cols-2 lg:items-center lg:pb-20">
       <div>
         <p className="text-xs font-bold tracking-[0.26em] text-[#8a593d]">MANHASSET · LONG ISLAND</p>
-        <h1 className="mt-4 max-w-3xl text-5xl leading-[.98] tracking-[-0.04em] sm:text-7xl" style={serif}>Laser hair removal that feels <em className="font-normal text-[#ae7c50]">personal.</em></h1>
+        <h2 className="mt-4 max-w-3xl text-5xl leading-[.98] tracking-[-0.04em] sm:text-7xl" style={serif}>Laser hair removal that feels <em className="font-normal text-[#ae7c50]">personal.</em></h2>
         <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#5b4638]">Safe, effective laser hair removal using FDA-approved Cynosure technology. Every treatment plan is personalized for your skin type, hair type, goals, and comfort—so you can feel confident from consultation to results.</p>
         <a className="mt-7 inline-block rounded-xl bg-[#35281e] px-6 py-4 font-bold text-white" href={bookingUrl}>Book Now</a>
         <div className="mt-7 flex flex-wrap gap-2 text-xs font-bold tracking-[0.1em] text-[#70432b]"><span className="rounded-full bg-white px-3 py-2">4.9★ GOOGLE RATING</span><span className="rounded-full bg-white px-3 py-2">300+ REVIEWS</span><span className="rounded-full bg-white px-3 py-2">15+ YEARS</span><span className="rounded-full bg-white px-3 py-2">ALL SKIN TYPES</span></div>
