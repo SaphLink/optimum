@@ -2,6 +2,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Popup from "./popup";
 
 const serif = { fontFamily: "Georgia, Times New Roman, serif" };
 const bookingUrl = "https://plugin.myonlineappointment.com/External/BookingPlugin/?sid=0&guid=dc3faad1-130b-4594-9fd0-27c386264ba3&customerId=29772";
@@ -26,6 +27,7 @@ export default function Home() {
   }, []);
 
   return <main className="min-h-screen bg-[#fbf0df] pb-20 text-[#35281e] sm:pb-0">
+    <Popup />
     {showPackageOffer && (
       <aside
         aria-label="Laser packages offer"
