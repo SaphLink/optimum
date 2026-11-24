@@ -69,7 +69,7 @@ export default function Home() {
             Laser Hair Removal
           </h1>
           <p className="max-w-[32rem] text-[13px] leading-snug text-white [text-shadow:0_1px_4px_#241b15] sm:text-lg">
-            Long Island's Primary Laser Hair Removal Studio.
+            Long Island's Primary Laser Hair Removal Studio
           </p>
           <a className="rounded-lg bg-[#fbf0df] px-4 py-3 text-sm font-bold text-[#35281e] sm:px-6" href="/contact-us">
             Request a Free Consultation
